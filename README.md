@@ -51,3 +51,10 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+
+## Contributors
+<a href="https://github.com/flytoagi/SoraFlows/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=flytoagi/SoraFlows" />
+</a>
