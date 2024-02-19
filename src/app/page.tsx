@@ -1,71 +1,20 @@
 'use client'
-import Image from "next/image";
-import Head from "next/head";
-import React from "react";
-import Footer from "./Footer";
+import {LayoutHeader} from "@/app/Header";
+import MainContent from "@/app/MainContent";
+import VideoCarousel from "@/components/VideoCarousel";
+import Footer from "@/app/Footer";
 
 export default function Home() {
-  return (
-    <div className='flex flex-col justify-between items-center min-h-screen'>
-      <h1>Welcome to Sora Video Flows H</h1>
-      <Head>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
-      </Head>
-      <div className='py-20'>
-        <Image src='' alt='' />
-        Logo Here
-      </div>
-      {/*<div className=''>*/}
-      <h1 className="text-8xl py-16 flex justify-center overflow-visible">
-        <span className="wave text-red-500" style={{ animationDelay: '0.2s' }}>S</span>
-        <span className="wave text-green-500" style={{ animationDelay: '0.4s' }}>o</span>
-        <span className="wave text-blue-500" style={{ animationDelay: '0.6s' }}>r</span>
-        <span className="wave text-yellow-500" style={{ animationDelay: '0.8s' }}>a</span>
-        <span className="wave text-purple-500" style={{ animationDelay: '1s' }}>F</span>
-        <span className="wave text-pink-500" style={{ animationDelay: '1.2s' }}>l</span>
-        <span className="wave text-indigo-500" style={{ animationDelay: '1.4s' }}>o</span>
-        <span className="wave text-orange-500" style={{ animationDelay: '1.6s' }}>w</span>
-        <span className="wave text-lime-500" style={{ animationDelay: '1.8s' }}>s</span>
-      </h1>
-
-      <p className='text-2xl font-bold'>The most advanced model, start from here</p>
-      {/*</div>*/}
-      <div className='py-10'>
-        {/*鼠标移动上去变大*/}
-        <button
-          onClick={() => {
-            console.log('click')
-          }}
-          className='text-4xl text-white rounded-xl bg-blue-500 hover:bg-blue-500 hover:scale-125 transform-gpu transition px-4 py-2'>
-          Get Started
-        </button>
-      </div>
-      <style jsx>{`
-              .wave {
-                display: inline-block;
-                font-family: 'Roboto Slab', serif;
-                transition: transform 0.5s ease;
-                animation: wave-animation 0.5s ease forwards;
-              }
-
-              .wave:hover {
-                transform: scale(1.5);
-              }
-
-              @keyframes wave-animation {
-                0% {
-                  transform: translateY(0);
-                }
-                50% {
-                  transform: translateY(-20px) scale(1.5);
-                }
-                100% {
-                  transform: translateY(0) scale(1);
-                }
-              }
-            `}</style>
-      <Footer year={new Date().getFullYear()} companyName="SoraFlows" />
-    </div>
-
-  )
+    const videos = [
+        'https://cdn.openai.com/sora/videos/gold-rush.mp4',
+        'https://cdn.openai.com/sora/videos/zen-garden-gnome.mp4'
+    ];
+    return (
+        <main className="flex min-h-screen flex-col items-center justify-between p-24">
+            <LayoutHeader/>
+            <MainContent/>
+            <VideoCarousel videos={videos}/>
+            <Footer year={new Date().getFullYear()} companyName="SoraFlows" />
+        </main>
+    )
 }
