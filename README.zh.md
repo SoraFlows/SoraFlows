@@ -1,4 +1,15 @@
+<div align="center">
+    <img src="./public/logo.png" alt="SoraFlows">
+</div>
+
 # SoraFlows
+<h4 align="center">
+    <p>
+        <a href="https://github.com/flytoagi/SoraFlows/blob/main/README.md">English</a> |
+        <b>简体中文</b> 
+    <p>
+</h4>
+[English](./README.md) |  简体中文
 
 ![stars](https://img.shields.io/github/stars/flytoagi/SoraFlows.svg) ![forks](https://img.shields.io/github/forks/flytoagi/SoraFlows.svg)
 
@@ -14,7 +25,9 @@
 
 在线编辑器：https://www.soraflows.com
 
-# 知识库
+## Latest News
+
+## 知识库
 
 [世界模型Sora 全网最强资料](https://youmiais.feishu.cn/wiki/Le8qwM1whin6mokJ5NGc0FRDnFd?fromScene=spaceOverview)
 
