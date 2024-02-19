@@ -5,14 +5,14 @@ import React, { useState } from 'react';
 const VideoCarousel = ({ videos }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const goToPrevious = (e) => {
+    const goToPrevious = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         const isFirstVideo = currentIndex === 0;
         const newIndex = isFirstVideo ? videos.length - 1 : currentIndex - 1;
         setCurrentIndex(newIndex);
     };
 
-    const goToNext = (e) => {
+    const goToNext = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         const isLastVideo = currentIndex === videos.length - 1;
         const newIndex = isLastVideo ? 0 : currentIndex + 1;
