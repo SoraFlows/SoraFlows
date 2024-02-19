@@ -10,8 +10,8 @@ interface FooterProps {
 export default function Footer({ year, companyName }: FooterProps) {
     // 定义Props类型，如果需要的话
     return (
-        <footer className="text-center">
-            <p> &copy; {year} <a href='https://github.com/flytoagi/SoraFlows' className='hover:text-blue-700'>{companyName}.</a></p>
+        <footer className="flex flex-col items-center justify-end text-center mt-auto p-4 bg-gray-100 text-gray-800">
+            
 
             {/* 插入Google统计脚本*/}
             {/* <!-- Google tag (gtag.js) --> */}
@@ -36,6 +36,7 @@ export default function Footer({ year, companyName }: FooterProps) {
             s.parentNode.insertBefore(hm, s);
           })();
         ` }} />
+        <p className='mt-auto'> &copy; {year} <a href='https://github.com/flytoagi/SoraFlows' className='hover:text-blue-700'>{companyName}.</a></p>
         </footer>
     )
 }

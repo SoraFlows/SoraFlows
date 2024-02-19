@@ -38,13 +38,7 @@
 首先，运行开发服务器：
 
 ```bash
-npm run dev
-# 或者
 yarn dev
-# 或者
-pnpm dev
-# 或者
-bun dev
 ```
 
 用浏览器打开 [http://localhost:3000](http://localhost:3000) 查看结果。
