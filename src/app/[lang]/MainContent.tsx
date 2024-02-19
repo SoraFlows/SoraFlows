@@ -3,7 +3,7 @@ import Image from "next/image";
 import Head from "next/head";
 import React from "react";
 
-export default function MainContent() {
+export default function MainContent({dictionary}) {
     return (
         <div className='flex flex-col justify-between items-center'>
             <Head>
@@ -26,17 +26,20 @@ export default function MainContent() {
                 <span className="wave text-lime-500" style={{ animationDelay: '0.1s' }}>s</span>
             </h1>
 
-            <p className='text-2xl font-bold'>The most advanced model, start from here</p>
+            <p className='text-2xl font-bold'>{dictionary["homepage"]["introduce"]}</p>
             {/*</div>*/}
             <div className='py-10'>
                 {/*鼠标移动上去变大*/}
-                <button
-                    onClick={() => {
-                        console.log('click')
-                    }}
-                    className='text-xl text-white rounded-xl bg-[#0c8ce9] hover:bg-[#0c8ce9] hover:scale-105 transform-gpu transition px-4 py-2'>
-                    Get Started
-                </button>
+                <form>
+                    <input id='email' placeholder='Get informed at once' type='email' className='rounded-xl text-xl px-4 py-2'/>
+                    <button
+                        onClick={() => {
+                            console.log('click')
+                        }}
+                        className='text-xl text-white rounded-xl bg-[#0c8ce9] hover:bg-[#0c8ce9] hover:scale-105 transform-gpu transition px-4 py-2'>
+                        Get Started
+                    </button>
+                </form>
             </div>
             {/*<div>*/}
             {/*    <video width="750" controls>*/}
