@@ -10,11 +10,13 @@ export default function Home() {
         'https://cdn.openai.com/sora/videos/zen-garden-gnome.mp4'
     ];
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <main className="flex min-h-screen py-auto flex-col items-center justify-center p-24 bg-home-background bg-cover">
             <LayoutHeader/>
-            <MainContent/>
-            <VideoCarousel videos={videos}/>
-            <Footer year={new Date().getFullYear()} companyName="SoraFlows" />
+            <div className='flex flex-row justify-around w-full'>
+                <MainContent/>
+                <VideoCarousel videos={videos}/>
+            </div>
+            <Footer year={new Date().getFullYear()} companyName="SoraFlows"/>
         </main>
     )
 }

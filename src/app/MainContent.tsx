@@ -14,16 +14,16 @@ export default function MainContent() {
                 Logo Here
             </div>
             {/*<div className=''>*/}
-            <h1 className="text-8xl py-16 flex justify-center overflow-visible">
-                <span className="wave text-red-500" style={{ animationDelay: '0.2s' }}>S</span>
-                <span className="wave text-green-500" style={{ animationDelay: '0.4s' }}>o</span>
-                <span className="wave text-blue-500" style={{ animationDelay: '0.6s' }}>r</span>
-                <span className="wave text-yellow-500" style={{ animationDelay: '0.8s' }}>a</span>
-                <span className="wave text-purple-500" style={{ animationDelay: '1s' }}>F</span>
-                <span className="wave text-pink-500" style={{ animationDelay: '1.2s' }}>l</span>
-                <span className="wave text-indigo-500" style={{ animationDelay: '1.4s' }}>o</span>
-                <span className="wave text-orange-500" style={{ animationDelay: '1.6s' }}>w</span>
-                <span className="wave text-lime-500" style={{ animationDelay: '1.8s' }}>s</span>
+            <h1 className="text-7xl py-8 flex justify-center overflow-visible">
+                <span className="wave text-red-500" style={{ animationDelay: '0.1s' }}>S</span>
+                <span className="wave text-green-500" style={{ animationDelay: '0.2s' }}>o</span>
+                <span className="wave text-blue-500" style={{ animationDelay: '0.3s' }}>r</span>
+                <span className="wave text-yellow-500" style={{ animationDelay: '0.4s' }}>a</span>
+                <span className="wave text-purple-500" style={{ animationDelay: '0.5s' }}>F</span>
+                <span className="wave text-pink-500" style={{ animationDelay: '0.4s' }}>l</span>
+                <span className="wave text-indigo-500" style={{ animationDelay: '0.3s' }}>o</span>
+                <span className="wave text-orange-500" style={{ animationDelay: '0.2s' }}>w</span>
+                <span className="wave text-lime-500" style={{ animationDelay: '0.1s' }}>s</span>
             </h1>
 
             <p className='text-2xl font-bold'>The most advanced model, start from here</p>
@@ -34,7 +34,7 @@ export default function MainContent() {
                     onClick={() => {
                         console.log('click')
                     }}
-                    className='text-4xl text-white rounded-xl bg-blue-500 hover:bg-blue-500 hover:scale-125 transform-gpu transition px-4 py-2'>
+                    className='text-xl text-white rounded-xl bg-[#0c8ce9] hover:bg-[#0c8ce9] hover:scale-105 transform-gpu transition px-4 py-2'>
                     Get Started
                 </button>
             </div>
@@ -47,13 +47,13 @@ export default function MainContent() {
             <style jsx>{`
               .wave {
                 display: inline-block;
-                font-family: 'Roboto Slab', serif;
+                font-family: serif;
                 transition: transform 0.5s ease;
                 animation: wave-animation 0.5s ease forwards;
               }
 
               .wave:hover {
-                transform: scale(1.5);
+                transform: scale(1.2);
               }
 
               @keyframes wave-animation {
@@ -61,7 +61,7 @@ export default function MainContent() {
                   transform: translateY(0);
                 }
                 50% {
-                  transform: translateY(-20px) scale(1.5);
+                  transform: translateY(-10px) scale(1.2);
                 }
                 100% {
                   transform: translateY(0) scale(1);
