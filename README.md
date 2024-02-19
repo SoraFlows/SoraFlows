@@ -1,7 +1,19 @@
 # SoraFlows
+
+![starts](https://img.shields.io/github/stars/flytoagi/SoraFlows.svg)  ![starts](https://img.shields.io/github/forks/flytoagi/SoraFlows.svg)
+
+The most powerful and modular Sora Video Editor GUI, api and backend with graph/nodes interface.
+
+Collecting the highest quality prompts for Sora.
+
+using NextJs and Tailwind CSS
+
+
+![](./public/image.png).
+
 This is a sora video online editor. also a sora webui.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Online Editor: https://www.soraflows.com
 
 ## Getting Started
 
