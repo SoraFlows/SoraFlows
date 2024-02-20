@@ -289,17 +289,27 @@ export const allExampleVideoList = [
   }
 ]
 
+// 假设 allExampleVideoList 的类型是这样的数组
+interface Video {
+  id: number;
+  title: string;
+  // 可能还有其他属性...
+}
 
-export const randomVideo = () => {
-  // 定义一个空数组来存放随机数
-  let randomNumbers = [];
-  const resultVideoList = [];
-  // 循环获取多个不同的随机数
-  while (randomNumbers.length < 5) {
-    let randomNumber = Math.floor(Math.random() * (allExampleVideoList.length + 1));
+export const randomVideo = (): Video[] => {
+  // 使用类型注解显式声明数组类型
+  let randomNumbers: number[] = [];
+  const resultVideoList: Video[] = [];
+
+  while (randomNumbers.length < 5 && randomNumbers.length < allExampleVideoList.length) {
+    let randomNumber = Math.floor(Math.random() * allExampleVideoList.length);
     if (!randomNumbers.includes(randomNumber)) {
       randomNumbers.push(randomNumber);
-      resultVideoList.push(allExampleVideoList[randomNumber])
+      const video: Video = {
+        id: randomNumber,
+        title: allExampleVideoList[randomNumber].prompt,
+      };
+      resultVideoList.push(video);
     }
   }
   return resultVideoList;
