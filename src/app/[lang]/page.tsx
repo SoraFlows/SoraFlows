@@ -26,12 +26,13 @@ export default async function Home({params: {lang}}: { params: { lang: Locale } 
             <header>
                 <title>{metadata.title}</title>
                 <meta name="description" content={metadata.description} />
+                <link rel="icon" href="/logo.png"></link>
             </header>
             <main
-                className="flex min-h-screen py-auto flex-col items-center justify-center p-24 bg-home-background bg-cover">
+                className="flex flex-col min-h-screen py-auto flex-col items-center justify-center  bg-home-background bg-cover">
 
                 <LayoutHeader/>
-                <div className="md:absolute top-[10%] left-[15%]">
+                <div className="flex flex-row items-center w-full top-[10%] left-[15%]">
                     <MainContent dictionary={dictionary}/>
                 </div>
                 <div
