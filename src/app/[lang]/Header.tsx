@@ -16,28 +16,22 @@ export const LayoutHeader = () => {
             Go Home
           </Link>
         </div>
-        <div className="flex">
+        <div className="flex justify-end mr-4">
           <Link
             href="/"
-            className="hidden lg:flex font-bold opacity-90 md:text-base px-4"
+            className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
           >
             Contact Us
           </Link>
           <Link
             href="/"
-            className="hidden lg:flex font-bold opacity-90 md:text-base px-4"
+            className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
           >
             Home
           </Link>
           <Link
             href="/"
-            className="hidden lg:flex font-bold opacity-90 md:text-base px-4"
-          >
-            About us
-          </Link>
-          <Link
-            href="/"
-            className="hidden lg:flex font-bold opacity-90 md:text-base px-4"
+            className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
           >
             About us
           </Link>
