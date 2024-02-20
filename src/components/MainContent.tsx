@@ -8,9 +8,10 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
     return (
         <div className="flex flex-col justify-between items-center">
             <Head>
-                {/*<link rel="icon" href="/logo.png" />*/}
+                
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
                       rel="stylesheet" />
+                      
             </Head>
             <div className="py-20">
                 <Image src="/logo.png" alt="logo" width={200} height={200} />

@@ -1,8 +1,8 @@
 'use server'
-import {LayoutHeader} from '@/app/[lang]/Header'
-import MainContent from '@/app/[lang]/MainContent'
+import  MainContent from '@/components/MainContent'
+import {LayoutHeader} from '@/components/Header'
 import VideoCarousel from '@/components/VideoCarousel'
-import Footer from '@/app/[lang]/Footer'
+import Footer from '@/components/Footer'
 import {getDictionary} from './dictionaries'
 import {Locale} from '@/i18n-config'
 import {translations} from "@/config/translations";
