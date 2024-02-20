@@ -11,8 +11,6 @@ export default function Footer({ year, companyName }: FooterProps) {
     // 定义Props类型，如果需要的话
     return (
         <footer className="flex flex-col items-center justify-end text-center mt-auto p-4 bg-gray-100 text-gray-800">
-            
-
             {/* 插入Google统计脚本*/}
             {/* <!-- Google tag (gtag.js) --> */}
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCB2RC3FFG"></script>

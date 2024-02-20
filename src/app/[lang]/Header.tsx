@@ -12,9 +12,9 @@ export const LayoutHeader = () => {
                 <Link href="/" className="font-bold opacity-90 md:text-base mr-4 lg:mr-8">Go Home</Link>
                 </div>
                 <div className='flex'>
-                    <Link href="/dashboard" className="hidden lg:flex font-bold opacity-90 md:text-base px-4">Contact Us</Link>
-                    <Link href="/dashboard" className="hidden lg:flex font-bold opacity-90 md:text-base px-4">Home</Link>
-                    <Link href="/dashboard" className="hidden lg:flex font-bold opacity-90 md:text-base px-4">About us</Link>
+                    <Link href="/" className="hidden lg:flex font-bold opacity-90 md:text-base px-4">Contact Us</Link>
+                    <Link href="/" className="hidden lg:flex font-bold opacity-90 md:text-base px-4">Home</Link>
+                    <Link href="/" className="hidden lg:flex font-bold opacity-90 md:text-base px-4">About us</Link>
                 </div>
             </nav>
         </header>
