@@ -33,7 +33,7 @@ const VideoCarousel = ({ videos }) => {
                     Your browser does not support the video tag.
                 </video>
                 </div>
-            </div>   
+            </div>
             <button onClick={(e) => goToNext(e)} className="mx-4 p-4 icon-[mingcute--arrow-right-fill]">
                 {/*<div className='text-4xl'>*/}
                 {/*    Next*/}
