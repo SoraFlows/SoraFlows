@@ -9,7 +9,6 @@
         <b>简体中文</b> 
     <p>
 </h4>
-[English](./README.md) |  简体中文
 
 ![stars](https://img.shields.io/github/stars/flytoagi/SoraFlows.svg) ![forks](https://img.shields.io/github/forks/flytoagi/SoraFlows.svg)
 
