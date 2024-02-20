@@ -5,6 +5,7 @@ import VideoCarousel from '@/components/VideoCarousel'
 import Footer from '@/app/[lang]/Footer'
 import {getDictionary} from './dictionaries'
 import {Locale} from '@/i18n-config'
+import {translations} from "@/config/translations";
 
 export default async function Home({params: {lang}}: { params: { lang: Locale } }) {
     const dictionary = await getDictionary(lang) // en
