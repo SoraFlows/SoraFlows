@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React from "react";
 import Head from "next/head";
+import { FaGithub } from 'react-icons/fa'; // 引入GitHub图标
 
 export const LayoutHeader = () => {
   return (
@@ -34,6 +35,12 @@ export const LayoutHeader = () => {
             className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
           >
             About us
+          </Link>
+          <Link
+            href="https://github.com/flytoagi/SoraFlows"
+            className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
+          >
+            <FaGithub className="text-xl" /> {/* 设置图标大小 */}
           </Link>
         </div>
       </nav>
