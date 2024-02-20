@@ -7,10 +7,20 @@ import {Menu, Transition} from '@headlessui/react'
 import {FaChevronDown, FaGithub} from 'react-icons/fa';
 import {languages} from "@/config/locale";
 import {Locale} from "@/i18n-config";
+import LoadingModal from "./LoadingModal";
 import {AiOutlineGlobal} from "react-icons/ai"; // 引入GitHub图标
 
 
-export const LayoutHeader = ({locale = ''}) => {
+export const LayoutHeader = ({
+    locale = '',
+    page='',
+    currentLanguageText={
+        loginText: 'Log in',
+        loadingText: 'Loading...',
+        generateText: 'Generating',
+    }
+
+}) => {
 
     const checkLocalAndLoading = (lang: string) => {
         if (locale != lang) {
@@ -21,6 +31,7 @@ export const LayoutHeader = ({locale = ''}) => {
     return (
         <header
             className="fixed left-0 right-0 top-0 z-[19] border-b-[0.5px] border-zinc-200 bg-white/80 pl-6 backdrop-blur">
+            <LoadingModal loadingText={currentLanguageText.generateText}/>
             <nav className="flex h-16 justify-between items-center">
                 <div>
                     <Link
