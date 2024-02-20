@@ -1,12 +1,17 @@
 'use server'
-import { LayoutHeader } from '@/app/[lang]/Header'
+import {LayoutHeader} from '@/app/[lang]/Header'
 import MainContent from '@/app/[lang]/MainContent'
 import VideoCarousel from '@/components/VideoCarousel'
 import Footer from '@/app/[lang]/Footer'
-import { getDictionary } from './dictionaries'
-import { Locale } from '@/i18n-config'
-export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
+import {getDictionary} from './dictionaries'
+import {Locale} from '@/i18n-config'
+import {translations} from "@/config/translations";
+
+export default async function Home({params: {lang}}: { params: { lang: Locale } }) {
     const dictionary = await getDictionary(lang) // en
+
+    // const params = useSearchParams();
+    // console.log(params.get('lang'))
     const videos = [
         'https://cdn.openai.com/sora/videos/gold-rush.mp4',
         'https://cdn.openai.com/sora/videos/zen-garden-gnome.mp4',
@@ -15,16 +20,26 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
         'https://cdn.openai.com/tmp/s/prompting_7.mp4',
         'https://cdn.openai.com/tmp/s/bike_1.mp4'
     ]
+    const metadata = translations[lang || 'zh-CN'];
     return (
-        <main className="flex min-h-screen py-auto flex-col items-center justify-center p-24 bg-home-background bg-cover">
-            <LayoutHeader />
-            <div className="md:absolute top-[10%] left-[15%]">
-                <MainContent dictionary={dictionary} />
-            </div>
-            <div className="md:absolute md:w-1/2 md:left-[70%] top-[50%] transform md:-translate-x-1/2 md:-translate-y-1/2">
-                <VideoCarousel videos={videos} />
-            </div>
-            <Footer year={new Date().getFullYear()} companyName="SoraFlows" />
-        </main>
+        <>
+            <header>
+                <title>{metadata.title}</title>
+                <meta name="description" content={metadata.description} />
+            </header>
+            <main
+                className="flex min-h-screen py-auto flex-col items-center justify-center p-24 bg-home-background bg-cover">
+
+                <LayoutHeader/>
+                <div className="md:absolute top-[10%] left-[15%]">
+                    <MainContent dictionary={dictionary}/>
+                </div>
+                <div
+                    className="md:absolute md:w-1/2 md:left-[70%] top-[50%] transform md:-translate-x-1/2 md:-translate-y-1/2">
+                    <VideoCarousel videos={videos}/>
+                </div>
+                <Footer year={new Date().getFullYear()} companyName="SoraFlows"/>
+            </main>
+        </>
     )
 }
