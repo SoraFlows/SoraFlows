@@ -29,6 +29,7 @@ export function middleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname;
 
     if (pathname.startsWith('/v1')) {
+        // 直接返回，不进行国际化处理
         return NextResponse.next();
     }
 
