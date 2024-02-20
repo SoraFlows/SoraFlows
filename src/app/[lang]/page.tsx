@@ -6,7 +6,6 @@ import Footer from "@/app/[lang]/Footer";
 import { getDictionary } from './dictionaries'
 import {Locale} from "@/i18n-config";
 export default async function Home({params: {lang}}: {params: {lang: Locale}}) {
-
     const dictionary = await getDictionary(lang) // en
     const videos = [
         'https://cdn.openai.com/sora/videos/gold-rush.mp4',
@@ -15,7 +14,6 @@ export default async function Home({params: {lang}}: {params: {lang: Locale}}) {
     return (
         <main
             className="flex min-h-screen py-auto flex-col items-center justify-center p-24 bg-home-background bg-cover">
-            {/*{dictionary["homepage"]["introduce"]}*/}
             <LayoutHeader/>
             <div className='flex flex-row justify-around w-full'>
                 <MainContent dictionary={dictionary}/>
