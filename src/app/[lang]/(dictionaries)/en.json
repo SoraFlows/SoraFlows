@@ -5,5 +5,8 @@
     "introduce_2": "start from here, join us",
     "email_lint": "Enter your email",
     "submit": "Get Started SoraFlows"
+  },
+  "attention": {
+    "input_email": "Please input your email"
   }
 }

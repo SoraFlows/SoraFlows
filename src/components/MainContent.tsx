@@ -1,12 +1,15 @@
 'use client'
 import Image from 'next/image'
 import Head from 'next/head'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { LocaleDictionary } from '@/types/locale'
 import { useRouter } from 'next/navigation'
 
 export default function MainContent({ dictionary }: LocaleDictionary) {
     const router = useRouter(); // 使用 useRouter 钩子
+    const [email, setEmail] = useState('');
+    const [showPrompt, setShowPrompt] = useState(false);
+    const [showAnimation, setShowAnimation] = useState(false); // 新状态控制动画显示
 
     useEffect(() => {
         // 使用 useEffect 确保下面的逻辑在客户端执行
@@ -15,13 +18,25 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form submitted');
-        // 示例：在这里添加异步操作，如 API 调用
+        // 检查邮箱输入是否为空（或只包含空格）
+        if (email.trim() === '') {
+            setShowPrompt(true); // 显示提示信息
+            setShowAnimation(true); // 激活动画
+            setTimeout(() => setShowAnimation(false), 1500); // 1.5秒后移除动画效果
+            return; // 阻止表单提交和页面跳转
+        }
+        console.log('Form submitted with email:', email);
+        // 在这里添加异步操作，如 API 调用
         // 假设有一个异步函数 fetchData() 需要在表单提交时调用
         // await fetchData();
-        // 确保异步操作完成后执行跳转
+        // 表单提交后跳转
         await router.push('/studio');
     };
+
+    useEffect(() => {
+        // 当邮箱输入为空时显示提示，否则不显示
+        setShowPrompt(email.trim() === '');
+    }, [email]);
 
 
     return (
@@ -56,6 +71,7 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
                     <button type="submit" className="text-xl text-white rounded-xl bg-[#0c8ce9] hover:bg-[#0c8ce9] hover:scale-105 transform-gpu transition px-4 py-2">
                         {dictionary.homepage.submit}
                     </button>
+                    {showPrompt && <p className={`text-red-500 ${showAnimation ? 'animate-pulse' : ''}`}>{dictionary.attention.input_email}</p>}
                 </form>
             </div>
             <style jsx>{`
