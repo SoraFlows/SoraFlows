@@ -38,12 +38,12 @@ const VideoCarousel = ({ videos }) => {
                         {inView ? (
                             <>
                                 <video
-                                    key={videos.url}
+                                    key={videos.videoUrl}
                                     controls
                                     preload="metadata"
                                     className="top-0 left-0 h-full w-full"
                                 >
-                                    <source src={videos.url} type="video/mp4" />
+                                    <source src={videos.videoUrl} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
                                 <div><span className="text-gray-600 font-bold italic">{videos.prompt}</span></div>
