@@ -25,7 +25,7 @@ One-Click to get a well-designed cross-platform Sora web UI
 ## Quick Started
 Deploy on Railway
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/5acb64ce-ade1-4f9a-a34d-2af785bf0a7a?referralCode=KRIchJ)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/39bNf0?referralCode=KRIchJ)
 
 Deploy on Vercel
 
