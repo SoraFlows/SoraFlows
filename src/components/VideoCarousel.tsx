@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import { useInView } from 'react-intersection-observer'
 
 // @ts-ignore
@@ -24,6 +24,7 @@ const VideoCarousel = ({ videos }) => {
     //     setCurrentIndex(newIndex)
     // }
 
+    // @ts-ignore
     return (
         <div className="flex items-center justify-center">
             {/*<button onClick={(e) => goToPrevious(e)} className="mx-4 p-4 icon-[mingcute--arrow-left-fill]">*/}
