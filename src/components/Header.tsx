@@ -99,7 +99,7 @@ export const LayoutHeader = ({
                                 className="inline-flex w-full justify-center gap-x-1.5 border border-[rgba(255,255,255,0.5)] rounded-md px-3 py-2 text-sm font-semibold hover:border-[rgba(255,255,255,0.9)]">
                                 <AiOutlineGlobal className="w-5 h-5" />
                                 {locale == 'default' ? 'zh-CN' : locale.toUpperCase()}
-                                <FaChevronDown className="-mr-1 h-5 w-5" aria-hidden="true" />
+                                <FaChevronDown className="-mr-1 h-5 w-5 scale-75" aria-hidden="true" />
                             </Menu.Button>
                         </div>
 
@@ -125,7 +125,7 @@ export const LayoutHeader = ({
                                                 <Menu.Item key={item.lang}>
                                                     <Link href={hrefValue} onClick={() => checkLocalAndLoading(item.lang)}>
                                                         <span
-                                                            className={'text-gray-700 block px-4 py-2 text-sm hover:text-[#2d6ae0]'}
+                                                            className={'text-gray-700 break-keep block px-4 py-2 text-sm hover:text-[#2d6ae0]'}
                                                         >
                                                             {item.language}
                                                         </span>
