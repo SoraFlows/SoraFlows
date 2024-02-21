@@ -20,6 +20,10 @@ export async function POST(req: Request, res: Response) {
   const quality = json.quality;
   // duration of video
   const duration = json.duration;
+  // aspect ratio of video
+  const aspect_ratio = json.aspect_ratio;
+  // frame per second of video
+  const fps = json.fps;
 
   if (!bearStr) {
     const errorResult = {
@@ -97,6 +101,42 @@ export async function POST(req: Request, res: Response) {
     }
     return Response.json(errorResult);
   }
+
+  if(!duration) {
+    const errorResult = {
+      "error": {
+        "code": null,
+        "message": `${duration} is not one of ['10', '30', '60', '120'] - 'duration'`,
+        "param": null,
+        "type": "invalid_request_error"
+      }
+    }
+    return Response.json(errorResult);
+  }
+
+  if(!aspect_ratio) {
+    const errorResult = {
+      "error": {
+        "code": null,
+        "message": `${aspect_ratio} is not one of ['16:9', '9:16', '4:5', '1:1', '4:3'] - 'aspect_ratio'`,
+        "param": null,
+        "type": "invalid_request_error"
+      }
+    }
+    return Response.json(errorResult);
+  }
+  if(!fps) {
+    const errorResult = {
+      "error": {
+        "code": null,
+        "message": `${fps} is not one of ['15', '30', '60', '120'] - 'fps'`,
+        "param": null,
+        "type": "invalid_request_error"
+      }
+    }
+    return Response.json(errorResult);
+  }
+  
 
   //todo call openai api in the future
 
