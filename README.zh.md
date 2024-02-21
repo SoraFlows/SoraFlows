@@ -19,22 +19,24 @@ SoraFlows 是一个面向 OpenAI Sora 的浏览器界面，可以简单地生成
 ![starts](https://img.shields.io/github/stars/flytoagi/SoraFlows.svg)  ![starts](https://img.shields.io/github/forks/flytoagi/SoraFlows.svg)
 
 ## Quick Started
+
+在 Railway 上部署
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/39bNf0?referralCode=KRIchJ)
+
 在 Vercel 上部署
 
-[![Deploy with Vercel](https://vercel.com/button)]()
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fflytoagi%2FSoraFlows&project-name=SoraFlows&repository-name=SoraFlows&external-id=https%3A%2F%2Fgithub.com%2Fflytoagi%2FSoraFlows%2Ftree%2Fmain&showOptionalTeamCreation=false)
 
 在 Zeabur 上部署
 
 [![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/L6DZF5)
 
-在 Railway 上部署
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/5acb64ce-ade1-4f9a-a34d-2af785bf0a7a?referralCode=KRIchJ)
 1. 克隆项目
 ```shell
 git clone git@github.com:flytoagi/SoraFlows.git
 ```
-2. 安装依赖
+1. 安装依赖
 ```shell
 cd SoraFlows && yarn
 #or
@@ -42,7 +44,7 @@ cd SoraFlows && npm install
 #or
 cd SoraFlows && pnpm install
 ```
-3. 运行
+1. 运行
 ```shell
 yarn dev
 #or
@@ -51,6 +53,12 @@ npm run dev
 pnpm dev
 ```
 1. 打开浏览器 http://localhost:3000 访问
+
+## 交流群
+
+欢迎加入微信交流群，反馈Bug~
+![Wechat QR Code](./public/group_code.jpg)
+
 
 ## Sora
 
