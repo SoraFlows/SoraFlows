@@ -39,26 +39,27 @@ export default function Studio() {
         setShowVideo(true); // 显示视频
     }
     return (
-
-        <div className='bg-white/80 py-12 px-4 h-screen'>
-            <LayoutHeader/>
-            {showVideo && <VideoDisplay videoUrl={videoUrl} prompt={videoPrompt}/>}
-            <div
-                className="absolute border-black border-2 p-4 rounded-2xl bottom-[5%] left-[50%] -translate-x-1/2 flex items-center bg-gray-200]">
-                <button className="scale-150 hover:opacity-75">
-                    <MdOutlineAttachFile/>
-                </button>
-                <input id="prompt-input"
-                       className="outline-0 relative resize-none p-2 mx-4 h-12 rounded min-w-[80vh] text-xl bg-gray-200"
-                       placeholder="Describe your magic"
-                       value={prompt}
-                       onChange={(e) => setPrompt(e.target.value)}>
-                </input>
-                <button onClick={handleSetVideo}
-                        className="-right-0 p-2 scale-125 rounded bg-gray-300 hover:opacity-75">
-                    <FaStarOfDavid/>
-                </button>
+        <>
+            <div className='bg-white/80 py-12 px-4 h-screen'>
+                <LayoutHeader/>
+                {showVideo && <VideoDisplay videoUrl={videoUrl} prompt={videoPrompt}/>}
+                <div
+                    className="absolute border-black border-2 p-4 rounded-2xl bottom-[5%] left-[50%] -translate-x-1/2 flex items-center bg-gray-200]">
+                    <button className="scale-150 hover:opacity-75">
+                        <MdOutlineAttachFile/>
+                    </button>
+                    <input id="prompt-input"
+                           className="outline-0 relative resize-none p-2 mx-4 h-12 rounded min-w-[80vh] text-xl bg-gray-200"
+                           placeholder="Describe your magic"
+                           value={prompt}
+                           onChange={(e) => setPrompt(e.target.value)}>
+                    </input>
+                    <button onClick={handleSetVideo}
+                            className="-right-0 p-2 scale-125 rounded bg-gray-300 hover:opacity-75">
+                        <FaStarOfDavid/>
+                    </button>
+                </div>
             </div>
-        </div>
+        </>
     );
 }

@@ -75,10 +75,10 @@ export const LayoutHeader = ({
                         Go Home
                     </Link> */}
                 </div>
-                <div className="hidden md:flex justify-end items-center space-x-4">
+                <div className="md:flex justify-end items-center space-x-4">
                     <Link
                         href="/studio"
-                        className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
+                        className="lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
                     >
                         Start SoraFlows
                     </Link>
