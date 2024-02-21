@@ -1,5 +1,5 @@
 import {headers} from "next/headers";
-import {getExampleVideo} from "@/app/server/exampleVideo";
+import {getExampleVideo} from "@/app/server/similarExampleVideo";
 
 
 export async function POST(req: Request, res: Response) {
