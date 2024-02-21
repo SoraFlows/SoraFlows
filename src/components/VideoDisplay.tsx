@@ -26,7 +26,6 @@ export default function VideoDisplay({videoUrl, prompt}) {
                     </div>
 
                     <div className="flex ">
-
                         <div className="text-white py-2">
                             <button className='hover:opacity-75'>
                                 <IoCopy className="text-gray-600 scale-125" />
@@ -38,7 +37,6 @@ export default function VideoDisplay({videoUrl, prompt}) {
                         </div>
                     </div>
                 </div>
-
             </div>
 
 
