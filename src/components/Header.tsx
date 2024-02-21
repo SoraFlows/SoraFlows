@@ -40,7 +40,6 @@ export const LayoutHeader = ({
         }
     }, []);
 
-
     const checkLocalAndLoading = (lang: string) => {
         if (locale != lang) {
             console.log('loading');
@@ -76,7 +75,7 @@ export const LayoutHeader = ({
                 </div>
                 <div className="hidden md:flex justify-end items-center space-x-4">
                     <Link
-                        href="/"
+                        href="/studio"
                         className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
                     >
                         Start SoraFlows
