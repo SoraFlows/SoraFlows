@@ -6,7 +6,6 @@ import Footer from '@/components/Footer'
 import { getDictionary } from './dictionaries'
 import { Locale } from '@/i18n-config'
 import { translations } from '@/config/translations'
-import { InView, useInView } from 'react-intersection-observer'
 import { allExampleVideoList } from '@/app/data/openaiExampleVideo'
 
 export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
