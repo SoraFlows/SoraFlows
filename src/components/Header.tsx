@@ -1,12 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import React, {Fragment, useEffect, useRef} from "react";
-import Head from "next/head";
+import React, {Fragment, useEffect, useRef, useState} from "react";
 import {Menu, Transition} from '@headlessui/react'
 import {FaChevronDown, FaGithub} from 'react-icons/fa';
-import {languages} from "@/config/locale";
-import {Locale} from "@/i18n-config";
+import {languages} from "@/i18n-config";
 import LoadingModal from "./LoadingModal";
 import {AiOutlineGlobal} from "react-icons/ai"; // 引入GitHub图标
 import Image from "next/image";
@@ -24,7 +22,7 @@ export const LayoutHeader = ({
 
                              }) => {
     const {showLoadingModal, setShowLoadingModal} = useCommonContext();
-
+    const [hovered, setHovered] = useState(false);
     const useCustomEffect = (effect, deps) => {
         const isInitialMount = useRef(true);
         useEffect(() => {
@@ -78,16 +76,29 @@ export const LayoutHeader = ({
                 <div className="md:flex justify-end items-center space-x-4">
                     <Link
                         href="/studio"
-                        className="lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
+                        className="lg:flex font-bold opacity-90 md:text-base px-4 py-2 pr-4 hover:bg-gray-200 rounded-xl transition duration-300"
                     >
                         Start SoraFlows
                     </Link>
                     <Link
                         href="/about"
-                        className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
+                        className="hidden lg:flex font-bold opacity-90 md:text-base px-4 py-2 pr-4 hover:bg-gray-200 rounded-xl transition duration-300"
                     >
                         About us
                     </Link>
+                    <p
+                        className="hidden lg:flex font-bold opacity-90 md:text-base px-4 py-2 pr-4 relative hover:bg-gray-200 rounded-xl transition duration-300"
+                        onMouseEnter={() => setHovered(true)}
+                        onMouseLeave={() => setHovered(false)}
+                    >
+                        Wechat Group
+                        {hovered && (
+                            <Image className='absolute top-12 rounded-xl p-2 border-2 shadow-md transition duration-150'
+                                   src='/wx-group.jpg' alt='wx-group' width={200}
+                                   height={200}/>
+                        )}
+                    </p>
+
                     <Link
                         href="https://github.com/flytoagi/SoraFlows"
                         className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"

@@ -46,7 +46,7 @@ export default function Studio() {
     }
     return (
         <>
-            <div className='bg-white/80 py-12 px-4 h-screen'>
+            <div className='bg-white/80 p-4 h-screen'>
                 <LayoutHeader/>
                 {showVideo && <VideoDisplay videoUrl={videoUrl} prompt={videoPrompt}/>}
                 <div

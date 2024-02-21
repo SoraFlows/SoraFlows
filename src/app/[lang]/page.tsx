@@ -1,14 +1,14 @@
 'use server'
 import MainContent from '@/components/MainContent'
-import { LayoutHeader } from '@/components/Header'
+import {LayoutHeader} from '@/components/Header'
 import VideoCarousel from '@/components/VideoCarousel'
 import Footer from '@/components/Footer'
-import { getDictionary } from './dictionaries'
-import { Locale } from '@/i18n-config'
-import { translations } from '@/config/translations'
-import { allExampleVideoList } from '@/app/data/openaiExampleVideo'
+import {getDictionary} from './dictionaries'
+import {translations} from '@/i18n-config'
+import {allExampleVideoList} from '@/app/data/openaiExampleVideo'
+import {Locale} from "@/i18n-config";
 
-export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
+export default async function Home({params: {lang}}: { params: { lang: Locale } }) {
     const dictionary = await getDictionary(lang) // en
     const videos = allExampleVideoList;
     const metadata = translations[lang || 'zh-CN']
@@ -16,14 +16,14 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
         <>
             <header>
                 <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
+                <meta name="description" content={metadata.description}/>
                 <link rel="icon" href="/logo.png"></link>
             </header>
             <main
-                className="flex min-h-screen py-auto flex-col items-center justify-center py-12 px-4 bg-home-background bg-cover space-y-6 bg-center">
-                <LayoutHeader />
+                className="flex min-h-screen py-auto flex-col items-center justify-center p-4 bg-home-background bg-cover space-y-6 bg-center">
+                <LayoutHeader/>
                 <div className="top-[10%] left-[15%]">
-                    <MainContent dictionary={dictionary} />
+                    <MainContent dictionary={dictionary}/>
 
                 </div>
                 {/*<div*/}
@@ -37,14 +37,14 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
                                 return (
                                     <li key={item.number}
                                         className="px-[2vh] py-[2vh]  border-y border-y-gray-200 p-2 max-w-2xl">
-                                        <VideoCarousel videos={item} />
+                                        <VideoCarousel videos={item}/>
                                     </li>
                                 )
                             })}
                         </ul>
                     </div>
                 </div>
-                <Footer year={new Date().getFullYear()} companyName="SoraFlows" />
+                <Footer year={new Date().getFullYear()} companyName="SoraFlows"/>
             </main>
         </>
     )
