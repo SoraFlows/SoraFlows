@@ -15,7 +15,7 @@ export default function Studio() {
     const handleSetVideo = async () => {
         const formData = {
             "model": "sora",
-            "prompt": 'A Boy',
+            "prompt": `${prompt}`,
             "size": "1024x1024",
             "quality": "high",
             "duration": "3s",
