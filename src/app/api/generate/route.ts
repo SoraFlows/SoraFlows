@@ -9,7 +9,11 @@ export async function POST(req: Request, res: Response) {
   const body = {
     "model": model,
     "prompt": prompt,
-    "size": "1920X1080"
+    "size": "1920X1080",
+    "quality": "medium",
+    "duration": 30,
+    "aspect_ratio": "16:9",
+    "fps": 30
   }
 
   // 检查当前是在线环境还是本地环境 通过localhost判断
