@@ -56,8 +56,10 @@ pnpm dev
 
 ## 交流群
 
-欢迎加入微信交流群，反馈Bug~
-![Wechat QR Code](./public/group_code.jpg)
+欢迎加入微信交流群，反馈Bug~<br>
+<p align="center">
+  <img src="./public/group_code.jpg" alt="Wechat QR Code" width="300"/>
+</p>
 
 
 ## Sora
