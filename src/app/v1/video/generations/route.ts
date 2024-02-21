@@ -86,6 +86,18 @@ export async function POST(req: Request, res: Response) {
     return Response.json(errorResult);
   }
 
+  if(!quality) {
+    const errorResult = {
+      "error": {
+        "code": null,
+        "message": `${quality} is not one of ['low', 'medium', 'high'] - 'quality'`,
+        "param": null,
+        "type": "invalid_request_error"
+      }
+    }
+    return Response.json(errorResult);
+  }
+
   //todo call openai api in the future
 
 

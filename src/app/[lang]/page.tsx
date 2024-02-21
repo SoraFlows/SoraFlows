@@ -38,6 +38,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
             <header>
                 <title>{metadata.title}</title>
                 <meta name="description" content={metadata.description} />
+                <link rel="icon" href="/logo.png"></link>
             </header>
             <main
                 className="flex min-h-screen py-auto flex-col items-center justify-center p-24 bg-home-background bg-cover space-y-6">
@@ -45,6 +46,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
                 <LayoutHeader />
                 <div className="top-[10%] left-[15%]">
                     <MainContent dictionary={dictionary} />
+
                 </div>
                 {/*<div*/}
                 {/*    className="md:w-1/2 md:left-[70%] top-[50%] transform md:-translate-x-1/2 md:-translate-y-1/2">*/}

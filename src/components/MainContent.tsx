@@ -1,17 +1,37 @@
 'use client'
 import Image from 'next/image'
 import Head from 'next/head'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { LocaleDictionary } from '@/types/locale'
+import { useRouter } from 'next/router'
 
 export default function MainContent({ dictionary }: LocaleDictionary) {
+    const router = useRouter(); // 使用 useRouter 钩子
+
+    useEffect(() => {
+        // 使用 useEffect 确保下面的逻辑在客户端执行
+        console.log('Router path:', router.pathname);
+    }, [router]);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log('Form submitted');
+        // 示例：在这里添加异步操作，如 API 调用
+        // 假设有一个异步函数 fetchData() 需要在表单提交时调用
+        // await fetchData();
+
+        // 确保异步操作完成后执行跳转
+        router.push('/studio');
+    };
+
+
     return (
         <div className="flex flex-col justify-between items-center">
             <Head>
-                
+
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
-                      rel="stylesheet" />
-                      
+                    rel="stylesheet" />
+
             </Head>
             <div className="py-10">
                 <Image src="/logo.png" alt="logo" width={200} height={200} />
@@ -32,14 +52,9 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
             <p className="text-2xl font-bold">{dictionary.homepage.introduce}</p>
             <p className="text-2xl font-bold">{dictionary.homepage.introduce_2}</p>
             <div className="py-10">
-                <form>
-                    <input id="email" placeholder={dictionary.homepage.email_lint} type="email"
-                           className="rounded-xl text-xl px-4 py-2" />
-                    <button
-                        onClick={() => {
-                            console.log('click')
-                        }}
-                        className="text-xl text-white rounded-xl bg-[#0c8ce9] hover:bg-[#0c8ce9] hover:scale-105 transform-gpu transition px-4 py-2">
+                <form onSubmit={handleSubmit}>
+                    <input id="email" placeholder={dictionary.homepage.email_lint} type="email" className="rounded-xl text-xl px-4 py-2" />
+                    <button type="submit" className="text-xl text-white rounded-xl bg-[#0c8ce9] hover:bg-[#0c8ce9] hover:scale-105 transform-gpu transition px-4 py-2">
                         {dictionary.homepage.submit}
                     </button>
                 </form>
