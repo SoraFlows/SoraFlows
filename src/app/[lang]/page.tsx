@@ -37,7 +37,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
                             {videos.map((item) => {
                                 return (
                                     <li key={item.number}
-                                        className="px-[5vh] py-[2vh]  border-y border-y-gray-200 p-2 max-w-2xl">
+                                        className="px-[2vh] py-[2vh]  border-y border-y-gray-200 p-2 max-w-2xl">
                                         <VideoCarousel videos={item} />
                                     </li>
                                 )
