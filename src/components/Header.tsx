@@ -79,13 +79,7 @@ export const LayoutHeader = ({
                         href="/"
                         className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
                     >
-                        Contact Us
-                    </Link>
-                    <Link
-                        href="/"
-                        className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
-                    >
-                        Home
+                        Start SoraFlows
                     </Link>
                     <Link
                         href="/"
