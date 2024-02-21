@@ -52,7 +52,7 @@ export const LayoutHeader = ({
         // className="sticky top-0 bg-[#020d24] z-20 w-full"
         >
             <LoadingModal loadingText={currentLanguageText.generateText} />
-            <nav className="flex items-center justify-between w-full max-w-7xl" aria-label="Global">
+            <nav className="flex items-center justify-between w-full" aria-label="Global">
 
                 <div className="flex items-center space-x-2">
                     <a href={`/${locale}`} className="-m-1.5 p-1.5" onClick={() => setShowLoadingModal(true)}>

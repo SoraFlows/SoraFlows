@@ -3,14 +3,14 @@ import Image from 'next/image'
 import Head from 'next/head'
 import React, { useEffect } from 'react'
 import { LocaleDictionary } from '@/types/locale'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 
 export default function MainContent({ dictionary }: LocaleDictionary) {
     const router = useRouter(); // 使用 useRouter 钩子
 
     useEffect(() => {
         // 使用 useEffect 确保下面的逻辑在客户端执行
-        console.log('Router path:', router.pathname);
+        console.log('Router path:', router);
     }, [router]);
 
     const handleSubmit = async (e) => {
@@ -19,9 +19,8 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
         // 示例：在这里添加异步操作，如 API 调用
         // 假设有一个异步函数 fetchData() 需要在表单提交时调用
         // await fetchData();
-
         // 确保异步操作完成后执行跳转
-        router.push('/studio');
+        await router.push('/studio');
     };
 
 
