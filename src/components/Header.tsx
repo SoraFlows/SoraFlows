@@ -81,7 +81,7 @@ export const LayoutHeader = ({
                         Start SoraFlows
                     </Link>
                     <Link
-                        href="/"
+                        href="/about"
                         className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
                     >
                         About us
