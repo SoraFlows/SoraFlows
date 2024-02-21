@@ -5,6 +5,7 @@ export async function POST(req: Request, res: Response) {
   const json = await req.json();
   console.log(json);
   const prompt = json.prompt;
+  const model = json.model;
 
   const body = {
     "model": model,
