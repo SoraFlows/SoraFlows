@@ -59,6 +59,11 @@ pnpm dev
 4.Open http://localhost with your browser to see it.
 ![SoraFlows Demo](./public/demo1.png)
 
+## Communication groups
+
+Welcom to Wechat Group
+![Wechat QR Code](./public/group_code.jpg)
+
 ## Sora
 Introduced by OpenAI, Sora is an advanced AI model capable of generating realistic and imaginative scenes from text instructions. This tool has the unique ability to produce sophisticated videos up to 60 seconds in length, featuring highly detailed scenes, complex camera movements, and characters exhibiting a wide range of emotions. However, Sora is not yet available to the public.
 
