@@ -29,7 +29,7 @@ Deploy on Railway
 
 Deploy on Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)]()
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fflytoagi%2FSoraFlows&project-name=SoraFlows&repository-name=SoraFlows&external-id=https%3A%2F%2Fgithub.com%2Fflytoagi%2FSoraFlows%2Ftree%2Fmain&showOptionalTeamCreation=false)
 
 Deploy on Zeabur
 
