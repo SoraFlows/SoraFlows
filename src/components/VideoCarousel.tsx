@@ -1,8 +1,13 @@
 'use client'
 import React, { useState } from 'react'
+import { useInView } from 'react-intersection-observer'
 
 // @ts-ignore
 const VideoCarousel = ({ videos }) => {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        rootMargin: '200px 0px'
+    })
     // const [currentIndex, setCurrentIndex] = useState(0)
     //
     // const goToPrevious = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -25,21 +30,33 @@ const VideoCarousel = ({ videos }) => {
             {/*</button>*/}
             <div className="relative w-full min-w-2xl max-w-2xl mx-auto">
 
-                <div className='flex justify-center items-center flex-col'>
-                    <video
-                        key={videos.url}
-                        controls
-                        preload="metadata"
-                        className="top-0 left-0 h-full w-full"
+                <div className="flex justify-center items-center flex-col">
+                    <div
+                        ref={ref}
+                        className={`transition-opacity ${inView ? 'opacity-1' : 'opacity-0'}`}
                     >
-                        <source src={videos.url} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                    <div><span className='text-gray-600 font-bold italic'>{videos.prompt}</span></div>
+                        {inView ? (
+                            <>
+                                <video
+                                    key={videos.videoUrl}
+                                    controls
+                                    preload="metadata"
+                                    className="top-0 left-0 h-full w-full"
+                                >
+                                    <source src={videos.videoUrl} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div><span className="text-gray-600 font-bold italic">{videos.prompt}</span></div>
+                            </>
+                        ) : null}
+                    </div>
+
                 </div>
             </div>
-            {/*<button onClick={(e) => goToNext(e)} className="mx-4 p-4 icon-[mingcute--arrow-right-fill]">*/}
-            {/*</button>*/}
+            {/*<button onClick={(e) => goToNext(e)} className="mx-4 p-4 icon-[mingcute--arrow-right-fill]">*/
+            }
+            {/*</button>*/
+            }
         </div>
     )
 }

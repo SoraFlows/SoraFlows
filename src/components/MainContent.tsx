@@ -1,17 +1,51 @@
 'use client'
 import Image from 'next/image'
 import Head from 'next/head'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { LocaleDictionary } from '@/types/locale'
+import { useRouter } from 'next/navigation'
 
 export default function MainContent({ dictionary }: LocaleDictionary) {
+    const router = useRouter(); // 使用 useRouter 钩子
+    const [email, setEmail] = useState('');
+    const [showPrompt, setShowPrompt] = useState(false);
+    const [showAnimation, setShowAnimation] = useState(false); // 新状态控制动画显示
+
+    useEffect(() => {
+        // 使用 useEffect 确保下面的逻辑在客户端执行
+        console.log('Router path:', router);
+    }, [router]);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        // 检查邮箱输入是否为空（或只包含空格）
+        if (email.trim() === '') {
+            setShowPrompt(true); // 显示提示信息
+            setShowAnimation(true); // 激活动画
+            setTimeout(() => setShowAnimation(false), 1500); // 1.5秒后移除动画效果
+            return; // 阻止表单提交和页面跳转
+        }
+        console.log('Form submitted with email:', email);
+        // 在这里添加异步操作，如 API 调用
+        // 假设有一个异步函数 fetchData() 需要在表单提交时调用
+        // await fetchData();
+        // 表单提交后跳转
+        await router.push('/studio');
+    };
+
+    useEffect(() => {
+        // 当邮箱输入为空时显示提示，否则不显示
+        setShowPrompt(email.trim() === '');
+    }, [email]);
+
+
     return (
         <div className="flex flex-col justify-between items-center">
             <Head>
-                
+
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
-                      rel="stylesheet" />
-                      
+                    rel="stylesheet" />
+
             </Head>
             <div className="py-10">
                 <Image src="/logo.png" alt="logo" width={200} height={200} />
@@ -32,16 +66,12 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
             <p className="text-2xl font-bold">{dictionary.homepage.introduce}</p>
             <p className="text-2xl font-bold">{dictionary.homepage.introduce_2}</p>
             <div className="py-10">
-                <form>
-                    <input id="email" placeholder={dictionary.homepage.email_lint} type="email"
-                           className="rounded-xl text-xl px-4 py-2" />
-                    <button
-                        onClick={() => {
-                            console.log('click')
-                        }}
-                        className="text-xl text-white rounded-xl bg-[#0c8ce9] hover:bg-[#0c8ce9] hover:scale-105 transform-gpu transition px-4 py-2">
+                <form onSubmit={handleSubmit}>
+                    <input id="email" placeholder={dictionary.homepage.email_lint} type="email" className="rounded-xl text-xl px-4 py-2" />
+                    <button type="submit" className="text-xl text-white rounded-xl bg-[#0c8ce9] hover:bg-[#0c8ce9] hover:scale-105 transform-gpu transition px-4 py-2">
                         {dictionary.homepage.submit}
                     </button>
+                    {showPrompt && <p className={`text-red-500 ${showAnimation ? 'animate-pulse' : ''}`}>{dictionary.attention.input_email}</p>}
                 </form>
             </div>
             <style jsx>{`

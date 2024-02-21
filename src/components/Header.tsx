@@ -40,7 +40,6 @@ export const LayoutHeader = ({
         }
     }, []);
 
-
     const checkLocalAndLoading = (lang: string) => {
         if (locale != lang) {
             console.log('loading');
@@ -53,7 +52,7 @@ export const LayoutHeader = ({
         // className="sticky top-0 bg-[#020d24] z-20 w-full"
         >
             <LoadingModal loadingText={currentLanguageText.generateText} />
-            <nav className="flex items-center justify-between w-full max-w-7xl" aria-label="Global">
+            <nav className="flex items-center justify-between w-full" aria-label="Global">
 
                 <div className="flex items-center space-x-2">
                     <a href={`/${locale}`} className="-m-1.5 p-1.5" onClick={() => setShowLoadingModal(true)}>
@@ -76,13 +75,13 @@ export const LayoutHeader = ({
                 </div>
                 <div className="hidden md:flex justify-end items-center space-x-4">
                     <Link
-                        href="/"
+                        href="/studio"
                         className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
                     >
                         Start SoraFlows
                     </Link>
                     <Link
-                        href="/"
+                        href="/about"
                         className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
                     >
                         About us
@@ -100,7 +99,7 @@ export const LayoutHeader = ({
                                 className="inline-flex w-full justify-center gap-x-1.5 border border-[rgba(255,255,255,0.5)] rounded-md px-3 py-2 text-sm font-semibold hover:border-[rgba(255,255,255,0.9)]">
                                 <AiOutlineGlobal className="w-5 h-5" />
                                 {locale == 'default' ? 'zh-CN' : locale.toUpperCase()}
-                                <FaChevronDown className="-mr-1 h-5 w-5" aria-hidden="true" />
+                                <FaChevronDown className="-mr-1 h-5 w-5 scale-75" aria-hidden="true" />
                             </Menu.Button>
                         </div>
 
@@ -126,7 +125,7 @@ export const LayoutHeader = ({
                                                 <Menu.Item key={item.lang}>
                                                     <Link href={hrefValue} onClick={() => checkLocalAndLoading(item.lang)}>
                                                         <span
-                                                            className={'text-gray-700 block px-4 py-2 text-sm hover:text-[#2d6ae0]'}
+                                                            className={'text-gray-700 break-keep block px-4 py-2 text-sm hover:text-[#2d6ae0]'}
                                                         >
                                                             {item.language}
                                                         </span>
