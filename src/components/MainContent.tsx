@@ -13,7 +13,7 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
                       rel="stylesheet" />
                       
             </Head>
-            <div className="py-20">
+            <div className="py-10">
                 <Image src="/logo.png" alt="logo" width={200} height={200} />
             </div>
             {/*<div className=''>*/}
