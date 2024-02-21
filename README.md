@@ -3,7 +3,9 @@
 </div>
 
 # SoraFlows
-SoraFlows is a browser interface for OpenAI Sora, generate text-to-video simply. 👉 [SoraWebui](https://www.soraflows.com)
+SoraFlows is a browser interface for OpenAI Sora, generate text-to-video simply. 
+
+Demo here 👉 [SoraWebui](https://www.soraflows.com)
 
 One-Click to get a well-designed cross-platform Sora web UI
 
@@ -21,6 +23,10 @@ One-Click to get a well-designed cross-platform Sora web UI
 ![starts](https://img.shields.io/github/stars/flytoagi/SoraFlows.svg)  ![starts](https://img.shields.io/github/forks/flytoagi/SoraFlows.svg)
 
 ## Quick Started
+Deploy on Railway
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/5acb64ce-ade1-4f9a-a34d-2af785bf0a7a?referralCode=KRIchJ)
+
 Deploy on Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)]()
@@ -29,9 +35,7 @@ Deploy on Zeabur
 
 [![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/L6DZF5)
 
-Deploy on Railway
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/5acb64ce-ade1-4f9a-a34d-2af785bf0a7a?referralCode=KRIchJ)
 1. Clone project
 ```shell
 git clone git@github.com:flytoagi/SoraFlows.git
