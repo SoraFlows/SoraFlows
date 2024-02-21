@@ -25,7 +25,7 @@ One-Click to get a well-designed cross-platform Sora web UI
 ## Quick Started
 Deploy on Railway
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/5acb64ce-ade1-4f9a-a34d-2af785bf0a7a?referralCode=KRIchJ)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/39bNf0?referralCode=KRIchJ)
 
 Deploy on Vercel
 
@@ -36,11 +36,11 @@ Deploy on Zeabur
 [![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/L6DZF5)
 
 
-1. Clone project
+1.Clone project
 ```shell
 git clone git@github.com:flytoagi/SoraFlows.git
 ```
-1. Install dependencies
+2.Install dependencies
 ```shell
 cd SoraFlows && yarn
 #or
@@ -48,7 +48,7 @@ cd SoraFlows && npm install
 #or
 cd SoraFlows && pnpm install
 ```
-1. Run it
+3.Run it
 ```shell
 yarn dev
 #or
@@ -56,7 +56,8 @@ npm run dev
 #or
 pnpm dev
 ```
-1.  Open http://localhost with your browser to see it.
+4.Open http://localhost with your browser to see it.
+![SoraFlows Demo](./public/demo1.png)
 
 ## Sora
 Introduced by OpenAI, Sora is an advanced AI model capable of generating realistic and imaginative scenes from text instructions. This tool has the unique ability to produce sophisticated videos up to 60 seconds in length, featuring highly detailed scenes, complex camera movements, and characters exhibiting a wide range of emotions. However, Sora is not yet available to the public.

@@ -4,6 +4,7 @@ import {getExampleVideo} from "@/app/server/similarExampleVideo";
 
 export async function POST(req: Request, res: Response) {
   const headerAll = headers();
+
   const userIp = headerAll.get("x-forwarded-for");
   console.log('userIp-=-=-=->', userIp);
   const bearStr = headerAll.get("Authorization");
