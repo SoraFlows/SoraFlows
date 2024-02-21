@@ -38,6 +38,12 @@ export default function Studio() {
         setVideoUrl(data.data[0].url)
         setShowVideo(true); // 显示视频
     }
+
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            handleSetVideo();
+        }
+    }
     return (
         <>
             <div className='bg-white/80 py-12 px-4 h-screen'>
@@ -52,7 +58,8 @@ export default function Studio() {
                            className="outline-0 relative resize-none p-2 mx-4 h-12 rounded min-w-[80vh] text-xl bg-gray-200"
                            placeholder="Describe your magic"
                            value={prompt}
-                           onChange={(e) => setPrompt(e.target.value)}>
+                           onChange={(e) => setPrompt(e.target.value)}
+                           onKeyDown={handleKeyPress}>
                     </input>
                     <button onClick={handleSetVideo}
                             className="-right-0 p-2 scale-125 rounded bg-gray-300 hover:opacity-75">
