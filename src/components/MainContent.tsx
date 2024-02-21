@@ -19,34 +19,54 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         // 检查邮箱输入是否为空（或只包含空格）
-        if (email.trim() === '') {
+        // 简单的邮箱格式验证
+        const emailRegex = /\S+@\S+\.\S+/;
+        const isValidEmail = emailRegex.test(email);
+
+        if (email.trim() === '' || !emailRegex.test(email)) {
+            // 如果邮箱不符合格式，则显示提示且不跳转
             setShowPrompt(true); // 显示提示信息
             setShowAnimation(true); // 激活动画
             setTimeout(() => setShowAnimation(false), 1500); // 1.5秒后移除动画效果
             return; // 阻止表单提交和页面跳转
-        }
-        console.log('Form submitted with email:', email);
-        // 在这里添加异步操作，如 API 调用
-        // 假设有一个异步函数 fetchData() 需要在表单提交时调用
-        // await fetchData();
-        // 表单提交后跳转
-        await router.push('/studio');
-    };
+        }else {
+            console.log('Form submitted with email:', email);
+            // 在这里添加异步操作，如 API 调用
+            // 假设有一个异步函数 fetchData() 需要在表单提交时调用
+            // await fetchData();
+            // 表单提交后跳转
+            try {
+                await router.push('/studio');
+            } catch (error) {
+                console.error('Failed to navigate:', error);
+            }
 
-    useEffect(() => {
-        // 当邮箱输入为空时显示提示，否则不显示
-        setShowPrompt(email.trim() === '');
-    }, [email]);
+        }
+
+    };
+    // 用于处理邮箱输入字段的变化
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value); // 更新 email 状态，存储输入的值
+        // 用户开始输入时隐藏提示
+        setShowPrompt(false); // 隐藏提示信息
+        setShowAnimation(false); // 如果想要在用户输入时也立即停止任何动画效果，可以加上这行
+    };
+    
+    
+    // useEffect(() => {
+    //     // 当邮箱输入为空时显示提示，否则不显示
+    //     setShowPrompt(email.trim() === '');
+    // }, [email]);
 
 
     return (
         <div className="flex flex-col justify-between items-center">
-            <Head>
+            {/* <Head>
 
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
                     rel="stylesheet" />
 
-            </Head>
+            </Head> */}
             <div className="py-10">
                 <Image src="/logo.png" alt="logo" width={200} height={200} />
             </div>
@@ -67,7 +87,15 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
             <p className="text-2xl font-bold">{dictionary.homepage.introduce_2}</p>
             <div className="py-10">
                 <form onSubmit={handleSubmit}>
-                    <input id="email" placeholder={dictionary.homepage.email_lint} type="email" className="rounded-xl text-xl px-4 py-2" />
+                    {/* <input id="email" placeholder={dictionary.homepage.email_lint} type="email" className="rounded-xl text-xl px-4 py-2" /> */}
+                    <input
+                        id="email"
+                        placeholder={dictionary.homepage.email_lint}
+                        type="email"
+                        className="rounded-xl text-xl px-4 py-2"
+                        value={email} // 绑定email状态
+                        onChange={handleEmailChange} // 确保更新email状态
+                    />
                     <button type="submit" className="text-xl text-white rounded-xl bg-[#0c8ce9] hover:bg-[#0c8ce9] hover:scale-105 transform-gpu transition px-4 py-2">
                         {dictionary.homepage.submit}
                     </button>
