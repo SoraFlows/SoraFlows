@@ -90,6 +90,7 @@ export const LayoutHeader = ({
                     <Link
                         href="https://github.com/flytoagi/SoraFlows"
                         className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
+                        target="_blank"
                     >
                         <FaGithub className="text-xl" />
                     </Link>
