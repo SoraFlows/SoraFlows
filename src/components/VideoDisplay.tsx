@@ -12,7 +12,7 @@ export default function VideoDisplay({videoUrl, prompt}) {
     return (
         <>
             <div className="flex h-screen flex-col items-center">
-                <div className="pt-16 max-h-[80vh] max-w-[80vh]">
+                <div className="pt-6 max-h-[80vh] max-w-[80vh]">
                     <div className="bg-gray-200 rounded-xl px-16">
                         <video
                             // key={allExampleVideos[0].number}
