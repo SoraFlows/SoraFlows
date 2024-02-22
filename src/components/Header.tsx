@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react'
 import LoadingModal from './LoadingModal'
 import Image from 'next/image'
 import { useCommonContext } from '@/context/common-context'
-import { isMobile } from '@/lib/isMobile'
+import { useIsMobile } from '@/lib/useIsMobile'
 import MobileTopMenu from '@/components/MobileTopMenu'
 import PCTopMenu from '@/components/PCTopMenu'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
@@ -61,7 +61,7 @@ export const LayoutHeader = ({
                     </a>
                 </div>
                 <div className="flex justify-end items-center space-x-4">
-                    {!isMobile() ? <PCTopMenu /> : <MobileTopMenu />}
+                    {!useIsMobile() ? <PCTopMenu /> : <MobileTopMenu />}
                     <LanguageSwitcher locale={locale} />
                 </div>
             </nav>
