@@ -1,0 +1,20 @@
+{
+    "homepage": {
+      "lang": "日本語",
+      "introduce": "Sora、最も進んだ言語からビデオへの変換モデル。",
+      "introduce_2": "ここから始めて、私たちに参加して、使用を開始しましょう。",
+      "email_lint": "正しいメールアドレスを入力してください",
+      "submit": "Soraでビデオ生成を開始",
+      "demo_title": "Soraによって生成されたデモビデオ",
+      "more_video": "その他のデモビデオ"
+    },
+    "attention": {
+      "input_email": "メールアドレスを入力してください"  
+    },
+    "footer": {
+      "subtitle": "SoraFlowsビデオ生成",
+      "site": "サイト",
+      "introduce": "紹介"
+    }
+  }
+  

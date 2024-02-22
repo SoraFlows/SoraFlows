@@ -1,0 +1,20 @@
+{
+    "homepage": {
+      "lang": "Deutsch",
+      "introduce": "Sora, das fortschrittlichste Modell zur Umwandlung von Sprache in Video.",
+      "introduce_2": "Starten Sie hier, treten Sie uns bei und beginnen Sie mit der Nutzung.",
+      "email_lint": "Bitte geben Sie eine korrekte E-Mail-Adresse ein",
+      "submit": "Starten Sie die Videoerzeugung mit Sora",
+      "demo_title": "Von Sora erzeugte Demovideos",
+      "more_video": "Weitere Demovideos"
+    },
+    "attention": {
+      "input_email": "Bitte geben Sie Ihre E-Mail-Adresse ein"  
+    },
+    "footer": {
+      "subtitle": "SoraFlows Videoerstellung",
+      "site": "Website",
+      "introduce": "Einführung"
+    }
+  }
+  

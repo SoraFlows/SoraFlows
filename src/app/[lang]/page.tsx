@@ -26,7 +26,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
                 <link rel="icon" href="/logo.png"></link>
             </header>
             <main
-                className="flex min-h-screen py-auto flex-col items-center justify-center p-4 bg-home-background bg-cover space-y-6 bg-center">
+                className="flex min-h-screen py-auto flex-col items-center justify-center p-4 bg-home-background bg-cover space-y-3 bg-center">
                 <LayoutHeader />
                 <div className="top-[10%] left-[15%]">
                     <MainContent dictionary={dictionary} />
@@ -46,12 +46,12 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
                             )
                         })}
                     </div>
-                    <Link className={`text-3xl flex flex-row justify-center items-center gap-4 text-indigo-400 font-serif hover:text-indigo-600 transition duration-200 hover:scale-105 transform-gpu`}
+                    <Link className={`text-3xl flex flex-row justify-center items-center gap-4 text-indigo-400 hover:text-indigo-600 transition duration-200 hover:scale-105 transform-gpu`}
                           href={`/video-showcase`}>
                         {dictionary.homepage.more_video} {'>>>'}
                     </Link>
                 </div>
-                <Footer year={new Date().getFullYear()} companyName="SoraFlows" />
+                <Footer year={new Date().getFullYear()} companyName="SoraFlows" dictionary={dictionary}/>
             </main>
         </>
     )

@@ -1,0 +1,20 @@
+{
+    "homepage": {
+      "lang": "Español",
+      "introduce": "Sora, el modelo más avanzado de conversión de lenguaje a vídeo.",
+      "introduce_2": "Comienza aquí, únete a nosotros y empieza a usarlo.",
+      "email_lint": "Por favor, introduce una dirección de correo electrónico correcta",
+      "submit": "Comienza a generar vídeos con Sora",
+      "demo_title": "Vídeos de demostración generados por Sora",
+      "more_video": "Más vídeos de demostración"
+    },
+    "attention": {
+      "input_email": "Por favor, introduce tu dirección de correo electrónico"  
+    },
+    "footer": {
+      "subtitle": "Generación de vídeos SoraFlows",
+      "site": "Sitio",
+      "introduce": "Introducción"
+    }
+  }
+  
