@@ -33,7 +33,7 @@ const VideoCarousel = ({ videos }) => {
                                 <RiOpenaiFill /> <span className={`text-xl`}>Sora</span>
                             </a>
 
-                            <div><span className="text-gray-600 font-bold italic">{videos.prompt}</span></div>
+                            <div><span className="text-gray-600 font-bold">{videos.prompt}</span></div>
                         </>
                     ) : null}
 

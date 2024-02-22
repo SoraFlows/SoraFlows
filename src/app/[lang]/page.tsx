@@ -46,7 +46,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
                             )
                         })}
                     </div>
-                    <Link className={`text-3xl flex flex-row justify-center items-center gap-4 text-indigo-400 font-serif hover:text-indigo-600 transition duration-200 hover:scale-105 transform-gpu`}
+                    <Link className={`text-3xl flex flex-row justify-center items-center gap-4 text-indigo-400 hover:text-indigo-600 transition duration-200 hover:scale-105 transform-gpu`}
                           href={`/video-showcase`}>
                         {dictionary.homepage.more_video} {'>>>'}
                     </Link>
