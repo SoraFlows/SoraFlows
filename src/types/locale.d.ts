@@ -13,7 +13,9 @@ interface HomePageDictionary {
     introduce: string,
     introduce_2: string,
     email_lint: string,
-    submit: string
+    submit: string,
+    demo_title: string,
+    more_video: string
 }
 
 // 注意（提示）部分的翻译

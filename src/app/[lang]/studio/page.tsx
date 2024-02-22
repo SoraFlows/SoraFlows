@@ -46,11 +46,11 @@ export default function Studio() {
     }
     return (
         <>
-            <div className='bg-white/80 py-12 px-4 h-screen'>
+            <div className='bg-white/80 p-4 h-screen'>
                 <LayoutHeader/>
                 {showVideo && <VideoDisplay videoUrl={videoUrl} prompt={videoPrompt}/>}
                 <div
-                    className="absolute border-black border-2 p-4 rounded-2xl bottom-[5%] left-[50%] -translate-x-1/2 flex items-center bg-gray-200]">
+                    className="absolute border-black border-2 p-4 rounded-2xl bottom-[5vh] left-[50%] -translate-x-1/2 flex items-center bg-gray-200]">
                     <button className="scale-150 hover:opacity-75">
                         <MdOutlineAttachFile/>
                     </button>

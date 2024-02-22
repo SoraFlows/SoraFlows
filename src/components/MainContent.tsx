@@ -4,6 +4,7 @@ import Head from 'next/head'
 import React, { useEffect, useState } from 'react'
 import { LocaleDictionary } from '@/types/locale'
 import { useRouter } from 'next/navigation'
+import {addEmail} from "@/api/fetchData";
 
 export default function MainContent({ dictionary }: LocaleDictionary) {
     const router = useRouter(); // 使用 useRouter 钩子
@@ -31,12 +32,10 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
             return; // 阻止表单提交和页面跳转
         }else {
             console.log('Form submitted with email:', email);
-            // 在这里添加异步操作，如 API 调用
-            // 假设有一个异步函数 fetchData() 需要在表单提交时调用
-            // await fetchData();
+            await addEmail(email);
             // 表单提交后跳转
             try {
-                await router.push('/studio');
+                router.push('/studio');
             } catch (error) {
                 console.error('Failed to navigate:', error);
             }
@@ -86,7 +85,7 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
             <p className="text-2xl font-bold">{dictionary.homepage.introduce}</p>
             <p className="text-2xl font-bold">{dictionary.homepage.introduce_2}</p>
             <div className="py-10">
-                <form onSubmit={handleSubmit} className='flex flex-col md:flex-row justify-center items-center'>
+                <form onSubmit={handleSubmit} className='flex flex-col md:flex-row justify-center items-center space-x-6'>
                     {/* <input id="email" placeholder={dictionary.homepage.email_lint} type="email" className="rounded-xl text-xl px-4 py-2" /> */}
                     <input
                         id="email"
