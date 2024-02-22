@@ -9,6 +9,8 @@ import { allExampleVideoList } from '@/app/data/openaiExampleVideo'
 import { Locale } from '@/i18n-config'
 import { shuffleArray } from '@/lib/shuffle'
 import { LocaleDictionary } from '@/types/locale'
+import Link from 'next/link'
+import { IoIosMore } from 'react-icons/io'
 
 export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
     const dictionary = await getDictionary(lang) // en
@@ -28,23 +30,27 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
                 <LayoutHeader />
                 <div className="top-[10%] left-[15%]">
                     <MainContent dictionary={dictionary} />
-
                 </div>
                 {/*<div*/}
                 {/*    className="md:w-1/2 md:left-[70%] top-[50%] transform md:-translate-x-1/2 md:-translate-y-1/2">*/}
                 <div className="bg-white rounded-2xl border-[14px] border-b-blue-300 p-16 flex flex-col items-center">
-                    <span className="col-span-3 text-xl md:text-2xl font-bold text-gray-600">{dictionary.homepage.demo_title} </span>
-                    <div className="mb-8 gap-5 py-4 [column-count:1] md:mb-12 md:[column-count:2] lg:mb-16 lg:[column-count:3]">
+                    <span
+                        className="col-span-3 text-xl md:text-2xl font-bold text-gray-600">{dictionary.homepage.demo_title} </span>
+                    <div
+                        className="mb-8 gap-7 py-4 [column-count:1] md:mb-12 md:[column-count:2] lg:mb-16 lg:[column-count:3]">
                         {randomTenVideos.map((item) => {
                             return (
-                                <div key={item.number} className="border-y border-gray-200 p-2 break-inside-avoid">
+                                <div key={item.number} className="p-2 break-inside-avoid">
                                     <VideoCarousel videos={item} />
                                 </div>
                             )
                         })}
                     </div>
+                    <Link className={`text-3xl flex flex-row justify-center items-center gap-4 text-indigo-400 font-serif hover:text-indigo-600 transition duration-200 hover:scale-105 transform-gpu`}
+                          href={`/video-showcase`}>
+                        {dictionary.homepage.more_video} {'>>>'}
+                    </Link>
                 </div>
-
                 <Footer year={new Date().getFullYear()} companyName="SoraFlows" />
             </main>
         </>
