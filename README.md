@@ -63,7 +63,7 @@ pnpm dev
 
 Welcom to Wechat Group
 <p align="center">
-  <img src="./public/group_code.jpg" alt="Wechat QR Code" width="300"/>
+  <img src="./public/wx-group.jpg" alt="Wechat QR Code" width="300"/>
 </p>
 
 ## Sora
