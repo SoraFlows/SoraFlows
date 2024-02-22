@@ -28,7 +28,7 @@ export default function Footer({ year, companyName, dictionary }: FooterProps) {
     // 定义Props类型，如果需要的话
     return (
         <footer
-            className="flex flex-col items-center justify-start text-center mt-auto p-5 bg-gray-50 text-gray-800 w-full h-[25vh] gap-20">
+            className="flex flex-col items-center justify-start text-center mt-auto p-5 bg-gray-50 text-gray-800 w-full  gap-20">
             {/* 国际化路由展示 */}
             <div className="flex flex-col sm:flex-row justify-center items-center w-full mb-5">
                 {languages.map(({ lang, language }) => (
@@ -62,6 +62,7 @@ export default function Footer({ year, companyName, dictionary }: FooterProps) {
           })();
         `
             }} />
+
             <div className={`flex flex-row justify-around w-full`}>
                 <div className={`flex flex-col items-start gap-4`}>
                     <p className={`text-xl font-bold`}>
@@ -90,7 +91,7 @@ export default function Footer({ year, companyName, dictionary }: FooterProps) {
             </div>
 
             <div>
-                © Copyright 2024. <a href={`/`} className={`text-indigo-400 hover:text-indigo-300`}>SoraFlows</a> All rights reserved.
+                © Copyright 2023-{year}. <a href={`/`} className={`text-indigo-400 hover:text-indigo-300`}>SoraFlows</a> All rights reserved.
             </div>
 
 
