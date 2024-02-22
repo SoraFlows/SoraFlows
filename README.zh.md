@@ -7,6 +7,10 @@ SoraFlows 是一个面向 OpenAI Sora 的浏览器界面，可以简单地生成
 
 一键部署设计精良的跨平台 Sora 网页界面
 
+<div align="center">
+<a href="https://www.producthunt.com/posts/soraflows?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-soraflows" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=440901&theme=light" alt="SoraFlows - Open&#0045;source&#0032;AI&#0032;video&#0032;web&#0032;creation&#0032;with&#0032;Sora&#0032;Model | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+<p>欢迎在Product Hunt上关注SoraFlows，欢迎评论和点赞！.</p>
+
 <h4 align="center">
     <p>
         <b>English</b> |
