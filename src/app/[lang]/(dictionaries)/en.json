@@ -10,5 +10,10 @@
   },
   "attention": {
     "input_email": "Please input your email"
+  },
+  "footer": {
+    "subtitle": "SoraFlows Video Generator",
+    "site": "Site",
+    "introduce": "Introduce"
   }
 }

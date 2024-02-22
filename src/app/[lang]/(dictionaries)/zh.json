@@ -10,5 +10,10 @@
   },
   "attention": {
     "input_email": "请输入您的邮箱地址"  
+  },
+  "footer": {
+    "subtitle": "SoraFlows 视频生成",
+    "site": "站点",
+    "introduce": "介绍"
   }
 }

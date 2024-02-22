@@ -51,7 +51,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
                         {dictionary.homepage.more_video} {'>>>'}
                     </Link>
                 </div>
-                <Footer year={new Date().getFullYear()} companyName="SoraFlows" />
+                <Footer year={new Date().getFullYear()} companyName="SoraFlows" dictionary={dictionary}/>
             </main>
         </>
     )
