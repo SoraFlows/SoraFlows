@@ -17,9 +17,9 @@ module.exports = {
             alternateRefs: config.alternateRefs ?? [],
         }
     },
-    additionalPaths: async (config) => [
-        await config.transform(config, '/additional-page'),
-    ],
+    // additionalPaths: async (config) => [
+    //     await config.transform(config, '/additional-page'),
+    // ],
     robotsTxtOptions: {
         policies: [
             {
@@ -32,7 +32,7 @@ module.exports = {
             },
             {
                 userAgent: 'black-listed-bot',
-                disallow: ['/sub-path-1', '/path-2'],
+                disallow: ['/admin'],
             },
         ],
         additionalSitemaps: [],
