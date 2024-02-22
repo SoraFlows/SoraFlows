@@ -12,7 +12,7 @@ export default function Footer({ year, companyName, dictionary }: FooterProps) {
     // 定义Props类型，如果需要的话
     return (
         <footer
-            className="flex flex-col items-center justify-start text-center mt-auto p-5 bg-gray-50 text-gray-800 w-full h-[20vh]">
+            className="flex flex-col items-center justify-start text-center mt-auto p-5 bg-gray-50 text-gray-800 w-full h-[25vh] gap-20">
             {/* 插入Google统计脚本*/}
             {/* <!-- Google tag (gtag.js) --> */}
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCB2RC3FFG"></script>
@@ -63,6 +63,10 @@ export default function Footer({ year, companyName, dictionary }: FooterProps) {
                         OpenAI
                     </a>
                 </div>
+            </div>
+
+            <div>
+                © Copyright 2024. <a href={`/`} className={`text-indigo-400 hover:text-indigo-300`}>SoraFlows</a> All rights reserved.
             </div>
 
 
