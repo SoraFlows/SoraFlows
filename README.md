@@ -3,7 +3,7 @@
 </div>
 
 # SoraFlows
-SoraFlows is a browser interface for OpenAI Sora, generate text-to-video simply. 
+SoraFlows is a browser interface for OpenAI Sora,can generate, edit, share text/picture-to-video simply. 
 
 Demo here 👉 [SoraWebui](https://www.soraflows.com)
 

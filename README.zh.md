@@ -3,7 +3,7 @@
 </div>
 
 # SoraFlows
-SoraFlows 是一个面向 OpenAI Sora 的浏览器界面，可以简单地生成文字到视频。 👉 [SoraWebui](https://www.soraflows.com)
+SoraFlows 是一个面向 OpenAI Sora 的浏览器界面，可以简单地生成, 编辑, 分享 文字/图片->视频。 👉 [SoraWebui](https://www.soraflows.com)
 
 一键部署设计精良的跨平台 Sora 网页界面
 
