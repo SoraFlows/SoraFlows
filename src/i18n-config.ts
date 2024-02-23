@@ -1,7 +1,7 @@
 export const i18n = {
     defaultLocale: "en-US",
     locales: [
-        "en-US", "zh-CN", "zh-TW", "ja-JP", "ko-KR",
+        "en-US", "zh-CN", "zh-TW", "ja-JP", "ar-SA", "ko-KR",
         "pt-BR", "es-ES", "de-DE", "fr-FR",  "vi-VN",
         // "ru-RU", "ar-SA", "hi-IN", "bn-BD", "pl-PL", 
         // "tr-TR", "nl-NL", "sv-SE", "da-DK", "fi-FI", 
@@ -28,6 +28,10 @@ export const languages = [
     {
         lang: "ja-JP",
         language: "日本語",
+    },
+    {
+        lang: "ar-SA",
+        language: "العربية",
     },
     {
         lang: "ko-KR",
@@ -75,6 +79,10 @@ export const translations: Translations = {
         title: "SoraFlows - OpenAIを使用した高度なビデオ編集・生成ツール",
         description: "SoraFlowsは、OpenAIのSoraモデルを使用して高度なビデオを簡単に作成できるオープンソースのWebUiプラットフォームです。",
     },
+    "ar-SA": {
+        title: "SoraFlows - أداة تحرير وإنتاج الفيديو المتقدمة مع OpenAI",
+        description: "SoraFlows هي منصة ويب UI مفتوحة المصدر تتيح للمستخدمين بسهولة إنشاء فيديوهات متقدمة باستخدام نموذج Sora من OpenAI.",
+    },
     'ko-KR': {
         title: "SoraFlows - OpenAI와 함께하는 고급 비디오 편집 및 생성 도구",
         description: "SoraFlows는 사용자가 OpenAI의 Sora 모델을 사용하여 고급 비디오를 쉽게 만들 수 있는 오픈소스 WebUi 플랫폼입니다.",
@@ -105,7 +113,7 @@ export const translations: Translations = {
 
 
 export const locales = [
-    "en-US", "zh-CN", "zh-TW", "ja-JP", "ko-KR", , 
+    "en-US", "zh-CN", "zh-TW", "ja-JP", "ar-SA", "ko-KR",  
     "pt-BR", "es-ES", "de-DE", "fr-FR",  "vi-VN",
     // "ru-RU", "ar-SA", "hi-IN", "bn-BD", "pl-PL", 
     // "tr-TR", "nl-NL", "sv-SE", "da-DK", "fi-FI", 
