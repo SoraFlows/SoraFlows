@@ -90,7 +90,7 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
                         
                     </div>
                     <a href="https://www.producthunt.com/posts/soraflows?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-soraflows" target="_blank">
-                        <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=440901&theme=light" 
+                        <Image src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=440901&theme=light"
                         alt="SoraFlows - Open&#0045;source&#0032;AI&#0032;video&#0032;web&#0032;creation&#0032;with&#0032;Sora&#0032;Model | Product Hunt"
                         width="250" 
                         height="54" />
