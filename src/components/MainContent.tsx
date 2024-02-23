@@ -70,17 +70,35 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
                 <Image src="/logo.png" alt="logo" width={200} height={200} />
             </div>
             {/*<div className=''>*/}
-            <h1 className="text-7xl py-8 flex justify-center overflow-visible">
-                <span className="wave text-red-500" style={{ animationDelay: '0.1s' }}>S</span>
-                <span className="wave text-green-500" style={{ animationDelay: '0.2s' }}>o</span>
-                <span className="wave text-blue-500" style={{ animationDelay: '0.3s' }}>r</span>
-                <span className="wave text-yellow-500" style={{ animationDelay: '0.4s' }}>a</span>
-                <span className="wave text-purple-500" style={{ animationDelay: '0.5s' }}>F</span>
-                <span className="wave text-pink-500" style={{ animationDelay: '0.4s' }}>l</span>
-                <span className="wave text-indigo-500" style={{ animationDelay: '0.3s' }}>o</span>
-                <span className="wave text-orange-500" style={{ animationDelay: '0.2s' }}>w</span>
-                <span className="wave text-lime-500" style={{ animationDelay: '0.1s' }}>s</span>
-            </h1>
+            <div className='mx-auto w-full max-w-7xl px-5 mb-5'>
+                <h1 className="text-7xl py-8 flex justify-center overflow-visible">
+                    <span className="wave text-red-500" style={{ animationDelay: '0.1s' }}>S</span>
+                    <span className="wave text-green-500" style={{ animationDelay: '0.2s' }}>o</span>
+                    <span className="wave text-blue-500" style={{ animationDelay: '0.3s' }}>r</span>
+                    <span className="wave text-yellow-500" style={{ animationDelay: '0.4s' }}>a</span>
+                    <span className="wave text-purple-500" style={{ animationDelay: '0.5s' }}>F</span>
+                    <span className="wave text-pink-500" style={{ animationDelay: '0.4s' }}>l</span>
+                    <span className="wave text-indigo-500" style={{ animationDelay: '0.3s' }}>o</span>
+                    <span className="wave text-orange-500" style={{ animationDelay: '0.2s' }}>w</span>
+                    <span className="wave text-lime-500" style={{ animationDelay: '0.1s' }}>s</span>
+                </h1>
+                <div className='mx-auto flex max-w-4xl flex-col items-center text-center py-10'>
+                    <div className='mb-5 max-w-[528px] lg:mb-8'>
+                        <p className='text-xl font-bold'>
+                            {dictionary.homepage.pDescription}
+                        </p>
+                        
+                    </div>
+                    <a href="https://www.producthunt.com/posts/soraflows?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-soraflows" target="_blank">
+                        <Image src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=440901&theme=light"
+                        alt="SoraFlows - Open&#0045;source&#0032;AI&#0032;video&#0032;web&#0032;creation&#0032;with&#0032;Sora&#0032;Model | Product Hunt"
+                        width="250" 
+                        height="54" />
+                    </a>
+                </div>
+            </div>
+            
+            
 
             <p className="text-2xl font-bold">{dictionary.homepage.introduce}</p>
             <p className="text-2xl font-bold">{dictionary.homepage.introduce_2}</p>

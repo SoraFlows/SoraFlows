@@ -5,6 +5,7 @@ const dictionaries = {
     'zh-CN': () => import('@/app/[lang]/(dictionaries)/zh.json').then((module) => module.default),
     'zh-TW': () => import('@/app/[lang]/(dictionaries)/zh-tw.json').then((module) => module.default),
     'ja-JP': () => import('@/app/[lang]/(dictionaries)/ja.json').then((module) => module.default),
+    'ar-SA': () => import('@/app/[lang]/(dictionaries)/ar.json').then((module) => module.default),
     'ko-KR': () => import('@/app/[lang]/(dictionaries)/ko.json').then((module) => module.default),
     'pt-BR': () => import('@/app/[lang]/(dictionaries)/pt-br.json').then((module) => module.default),
     'es-ES': () => import('@/app/[lang]/(dictionaries)/es.json').then((module) => module.default),

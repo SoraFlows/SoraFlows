@@ -5,6 +5,7 @@ export interface LocaleDictionary {
 
 interface Dictionary {
     homepage: HomePageDictionary
+    
     attention: AttentionDictionary
     footer: FooterDictionary
 }
@@ -17,6 +18,7 @@ interface HomePageDictionary {
     submit: string,
     demo_title: string,
     more_video: string
+    pDescription: string
 }
 
 // 注意（提示）部分的翻译
