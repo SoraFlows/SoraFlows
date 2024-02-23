@@ -43,7 +43,8 @@ export const LayoutHeader = ({
             className={`flex justify-between items-center w-full border-b-[0.5px] border-zinc-200 
             ${(mode === 'light') ? 'bg-white/80' : 'bg-gray-500'} pl-4 pr-4 md:pl-6 md:pr-6 backdrop-blur z-[19]`}
             // className="sticky top-0 bg-[#020d24] z-20 w-full"
-        >
+        >   
+            <meta name="yandex-verification" content="98ea1d5c6ffd0f84" />
             <LoadingModal loadingText={currentLanguageText.generateText} />
             <nav className="flex items-center justify-between w-full" aria-label="Global">
 
