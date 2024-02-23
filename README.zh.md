@@ -14,13 +14,13 @@ SoraFlows 是一个面向 OpenAI Sora 的浏览器界面，可以简单地生成
 <h4 align="center">
     <p>
         <b>English</b> |
-        <a href="https://github.com/flytoagi/SoraFlows/blob/main/README.zh.md">简体中文</a>
+        <a href="https://github.com/SoraFlows/SoraFlows/blob/main/README.zh.md">简体中文</a>
     <p>
 </h4>
 
 [![Website](https://img.shields.io/badge/Website-Demo-20B2AA.svg)](https://www.soraflows.com)
 
-![starts](https://img.shields.io/github/stars/flytoagi/SoraFlows.svg)  ![starts](https://img.shields.io/github/forks/flytoagi/SoraFlows.svg)
+![starts](https://img.shields.io/github/stars/SoraFlows/SoraFlows.svg)  ![starts](https://img.shields.io/github/forks/SoraFlows/SoraFlows.svg)
 
 ## Quick Started
 
@@ -38,7 +38,7 @@ SoraFlows 是一个面向 OpenAI Sora 的浏览器界面，可以简单地生成
 
 1. 克隆项目
 ```shell
-git clone git@github.com:flytoagi/SoraFlows.git
+git clone git@github.com:SoraFlows/SoraFlows.git
 ```
 1. 安装依赖
 ```shell
@@ -136,6 +136,6 @@ Open AI Sora is a tool to create stunning videos from text effortlessly. It allo
 - [ai sora tech](https://www.producthunt.com/products/ai-sora-tech/launches): Explore the latest OpenAI Sora-crafted video collection at aisoratech.com and effortlessly turn your prompts into videos.
 
 ## Contributors
-<a href="https://github.com/flytoagi/SoraFlows/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=flytoagi/SoraFlows" />
+<a href="https://github.com/SoraFlows/SoraFlows/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=SoraFlows/SoraFlows" />
 </a>

@@ -34,7 +34,7 @@ export default function PCTopMenu() {
                 )}
             </p>
             <Link
-                href="https://github.com/flytoagi/SoraFlows"
+                href="https://github.com/SoraFlows/SoraFlows"
                 className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
                 target="_blank"
             >
