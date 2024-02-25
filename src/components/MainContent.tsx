@@ -121,6 +121,14 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
                 </form>
             </div>
             */}
+            <br></br>
+            <button 
+            onClick={() => router.push('/studio')}
+            type="submit" 
+            className="text-xl text-white rounded-xl bg-[#0c8ce9] hover:bg-[#0c8ce9] hover:scale-105 transform-gpu transition px-4 py-2">
+                        {dictionary.homepage.get_started}
+            </button>
+            <br></br>
 
             <style jsx>{`
                 .wave {
