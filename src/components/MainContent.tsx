@@ -102,9 +102,10 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
 
             <p className="text-2xl font-bold">{dictionary.homepage.introduce}</p>
             <p className="text-2xl font-bold">{dictionary.homepage.introduce_2}</p>
+            { /* 
             <div className="py-10">
                 <form onSubmit={handleSubmit} className='flex flex-col md:flex-row justify-center items-center space-x-6'>
-                    {/* <input id="email" placeholder={dictionary.homepage.email_lint} type="email" className="rounded-xl text-xl px-4 py-2" /> */}
+                    <input id="email" placeholder={dictionary.homepage.email_lint} type="email" className="rounded-xl text-xl px-4 py-2" />
                     <input
                         id="email"
                         placeholder={dictionary.homepage.email_lint}
@@ -119,6 +120,8 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
                     {showPrompt && <p className={`text-red-500 ${showAnimation ? 'animate-pulse' : ''}`}>{dictionary.attention.input_email}</p>}
                 </form>
             </div>
+            */}
+
             <style jsx>{`
                 .wave {
                     display: inline-block;

@@ -1,14 +1,15 @@
-import { i18n } from "@/i18n-config";
+import { i18n,languages } from "@/i18n-config";
+
 
 const HeadInfo = ({
                     title = "",
                     description = "",
                     page = "",
-                    locale = "zh-CN"
+                    lang = "zh-CN"
                   }) => {
   return (
     <>
-      <title>{title}</title>
+      {/* <title>{title}</title>
       <meta name="description" content={description}/>
       {
         languages.map((item) => {
@@ -32,11 +33,11 @@ const HeadInfo = ({
           if (item.lang == 'en') {
             href = `${process.env.NEXT_PUBLIC_SITE_URL}${currentPage}`;
           }
-          if (locale == item.lang) {
+          if (lang == item.lang) {
             return <link key={href + 'canonical'} rel="canonical" hrefLang={hrefLang} href={href}/>
           }
         })
-      }
+      } */}
     </>
   )
 }
