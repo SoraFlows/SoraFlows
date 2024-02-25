@@ -14,6 +14,8 @@ const languages = [
     { lang: "zh-CN", language: "简体中文" },
     { lang: "zh-TW", language: "繁體中文" },
     { lang: "ja-JP", language: "日本語" },
+    { lang: 'ar-SA', language: 'العربية'},
+    { lang: "ru-RU", language: "Русский"},
     { lang: "ko-KR", language: "한국어" },
     { lang: "pt-BR", language: "Português (Brasil)" },
     { lang: "es-ES", language: "Español" },
@@ -91,7 +93,7 @@ export default function Footer({ year, companyName, dictionary }: FooterProps) {
             </div>
 
             <div>
-                © Copyright 2023-{year}. <a href={`/`} className={`text-indigo-400 hover:text-indigo-300`}>SoraFlows</a> All rights reserved.
+                © Copyright 2023-{year}. <a href={`/`} className={`text-indigo-400 hover:text-indigo-300`}>{companyName}</a> All rights reserved.
             </div>
 
 

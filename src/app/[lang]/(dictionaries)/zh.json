@@ -6,6 +6,7 @@
     "pDescription": "SoraFlows 是一个视频生成平台，使用最先进的语言转视频模型 Sora 从文本生成视频。它是一个强大的工具，用于创造营销、教育和娱乐视频。",
     "email_lint": "请输入正确的邮箱地址",
     "submit": "开始 Sora 生成视频",
+    "get_started": "开始使用",
     "demo_title": "Sora 生成的示例视频",
     "more_video": "更多示例视频"
   },

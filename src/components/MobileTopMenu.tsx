@@ -59,7 +59,7 @@ export default function MobileTopMenu() {
                     </Menu.Item>
                     <Menu.Item>
                         <Link
-                            href="https://github.com/flytoagi/SoraFlows"
+                            href="https://github.com/SoraFlows/SoraFlows"
                             className="lg:flex font-bold opacity-90 md:text-base p-4"
                             target="_blank"
                         >

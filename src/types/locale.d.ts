@@ -5,7 +5,6 @@ export interface LocaleDictionary {
 
 interface Dictionary {
     homepage: HomePageDictionary
-    
     attention: AttentionDictionary
     footer: FooterDictionary
 }
@@ -15,6 +14,7 @@ interface HomePageDictionary {
     introduce: string,
     introduce_2: string,
     email_lint: string,
+    get_started: string,
     submit: string,
     demo_title: string,
     more_video: string
