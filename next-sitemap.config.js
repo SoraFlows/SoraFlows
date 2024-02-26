@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: process.env.SITE_URL || 'https://www.soraflows.com',
+    siteUrl: process.env.NEXT_PUBLIC_BASE_URL || 'https://www.soraflows.com',
     changefreq: 'daily',
     priority: 0.7,
     sitemapSize: 14000,

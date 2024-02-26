@@ -22,10 +22,10 @@
     "site": "Site",
     "introduce": "Introduction"
   },
-  "aitoolsdir": {
-    "h1": "",
-    "pDescription": "A directory of AI tools and resources for developers and researchers.",
-    "title": "AI Tools Directory",
-    "description": "A directory of AI tools and resources for developers and researchers."
+  "aitoolboard": {
+    "title": "Unveil the Best AI Tools Directory | Top AI Tools Guide | AI ToolBoard",
+    "description": "AI ToolBoard presents a professional guide to the top 200 AI tools globally. Whether you're seeking AI tools for specific purposes like SEO, writing, productivity, or need an extensive AI software directory, our recommendations have got you covered.",
+    "h1": "The Ultimate Guide to Top Global AI Tools | AI ToolBoard",
+    "pDescription": "Welcome to AI ToolBoard — your one-stop platform for discovering and exploring the top AI tools worldwide. We've meticulously selected the top 200 AI tools covering various domains such as SEO, writing, productivity enhancement, and more, aiming to help you find the perfect AI solutions that match your specific needs. Whether you're a tech expert seeking the latest AI software directory or a beginner eager to learn how AI tool platforms can optimize your daily tasks, AI ToolBoard offers the best AI tool recommendations to support your journey of innovation."
   }
 }

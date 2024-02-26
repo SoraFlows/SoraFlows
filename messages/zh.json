@@ -22,10 +22,10 @@
     "site": "站点",
     "introduce": "介绍"
   },
-  "aitoolsdir": {
-    "h1": "这是h1标题",
-    "pDescription": "123",
-    "title": "",
-    "description": ""
-  }
+  "aitoolboard": {
+    "title": "最佳AI工具导航站大全 | 顶尖AI工具导航站指南 | AI Directory ToolBoard",
+    "description": "AI ToolBoard为您提供全球顶尖200个AI工具的专业指南。无论您是寻找提升SEO、写作、生产力的特定AI工具，还是需要全面的AI软件目录，我们的推荐列表都能满足您的需求。",
+    "h1": "全球顶尖AI工具指南 | AI ToolBoard",
+    "pDescription": "欢迎来到AI ToolBoard —— 您一站式发现和探索全球顶尖AI工具的平台。我们精心挑选了200个最佳AI工具导航站，覆盖了SEO、写作、生产力提升等多个领域，旨在帮助您找到完美匹配您特定需求的AI解决方案。无论您是技术专家寻求最新AI软件目录，还是初学者希望了解AI工具平台如何优化日常工作，AI ToolBoard都能提供最佳AI工具推荐，助力您的创新之旅。"
+}
 }
