@@ -5,11 +5,11 @@ import type { Metadata } from 'next'
 import sites from "@/data/aitools.json";
 import HeaderLayout from "@/components/aiToolsDir/Header";
 import GetDictLang from "@/lib/getdictlang"; // Import the getRequestConfig function from the i18n module
+import { Locale } from '@/i18n';
 
-export async function generateMetadata({params}): Promise<Metadata>  {
+export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }){
     // 使用i18next获取翻译文本
-    console.log(params);
-    const data = await GetDictLang(params.lang); 
+    const data = await GetDictLang(lang); 
     console.log(data);
     console.log(data.aitoolboard.title);
     return {
@@ -28,7 +28,7 @@ export async function generateMetadata({params}): Promise<Metadata>  {
 }
 
 
-export default function AiToolBoard({lang: locale}) {
+export default function AiToolBoard({ params: { lang } }: { params: { lang: Locale } }) {
     const t = useTranslations('aitoolboard');
 
     // 处理URL，移除协议部分
