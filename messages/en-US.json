@@ -1,4 +1,8 @@
 {
+  "metadata": {
+    "title": "SoraFlows - Advanced Video Editing and Generation Tool with OpenAI",
+    "description": "SoraFlows is an open-source WebUi platform for users to easily create Advanced Video with OpenAI's Sora model."
+  },
   "homepage": {
     "lang": "English",
     "introduce": "Sora, the most advanced language-to-video model.",

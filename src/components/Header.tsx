@@ -63,7 +63,7 @@ export const LayoutHeader = ({
                 </div>
                 <div className="flex justify-end items-center space-x-4">
                     {!useIsMobile() ? <PCTopMenu /> : <MobileTopMenu />}
-                    <LanguageSwitcher locale={locale} />
+                    <LanguageSwitcher locale={locale} page={page} />
                 </div>
             </nav>
         </header>

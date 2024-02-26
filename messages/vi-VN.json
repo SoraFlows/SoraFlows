@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "title": "SoraFlows - Công cụ chỉnh sửa và tạo video nâng cao với OpenAI",
+    "description": "SoraFlows là một công cụ WebUi mã nguồn mở giúp người dùng tạo video nâng cao dễ dàng bằng mô hình Sora của OpenAI."
+  },
+  "homepage": {
+    "lang": "Tiếng Trung giản thể",
+    "introduce": "Sora, mô hình chuyển đổi ngôn ngữ sang video tiên tiến nhất.",
+    "introduce_2": "Bắt đầu từ đây, tham gia với chúng tôi và bắt đầu sử dụng.",
+    "pDescription": "SoraFlows là một nền tảng tạo video sử dụng mô hình chuyển đổi từ ngôn ngữ sang video tiên tiến nhất, Sora, để tạo video từ văn bản. Đây là công cụ mạnh mẽ để tạo video cho mục đích tiếp thị, giáo dục và giải trí.",
+    "email_lint": "Vui lòng nhập địa chỉ email chính xác",
+    "submit": "Bắt đầu tạo video với Sora",
+    "demo_title": "Video mẫu được tạo bởi Sora",
+    "more_video": "Thêm nhiều video mẫu"
+  },
+  "attention": {
+    "input_email": "Vui lòng nhập địa chỉ email của bạn"
+  },
+  "footer": {
+    "subtitle": "Sản xuất video SoraFlows",
+    "site": "Trang web",
+    "introduce": "Giới thiệu"
+  }
+}
+  

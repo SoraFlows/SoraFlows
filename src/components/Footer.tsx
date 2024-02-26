@@ -1,13 +1,7 @@
 import React from 'react'
-import { Dictionary } from '@/types/locale'
-import Link from 'next/link'; // 使用Next.js的Link组件来处理路由跳转
+import Link from 'next/link';
+import { useTranslations } from 'next-intl'
 
-// 定义Props类型
-interface FooterProps {
-    year: number;
-    companyName: string;
-    dictionary: Dictionary;
-}
 // 你提供的语言列表
 const languages = [
     { lang: "en-US", language: "English" },
@@ -22,12 +16,10 @@ const languages = [
     { lang: "de-DE", language: "Deutsch" },
     { lang: "fr-FR", language: "Français" },
     { lang: "vi-VN", language: "Tiếng Việt" },
-    // 更多语言根据需要添加
 ];
 
-export default function Footer({ year, companyName, dictionary }: FooterProps) {
-    
-    // 定义Props类型，如果需要的话
+export default function Footer({ year, companyName, intl }) {
+    const t = useTranslations('footer');
     return (
         <footer
             className="flex flex-col items-center justify-start text-center mt-auto p-5 bg-gray-50 text-gray-800 w-full  gap-20">
@@ -71,12 +63,12 @@ export default function Footer({ year, companyName, dictionary }: FooterProps) {
                         SoraFlows
                     </p>
                     <div>
-                        {dictionary.footer.subtitle}
+                        {intl.subtitle}
                     </div>
                 </div>
                 <div className={`flex flex-col items-start gap-4`}>
                     <p className={`text-xl font-bold`}>
-                        {dictionary.footer.introduce}
+                        {intl.introduce}
                     </p>
                     <a href={'/'} className={`hover:text-gray-500`} target='_blank'>
                         {'What\'s Sora'}
@@ -84,7 +76,7 @@ export default function Footer({ year, companyName, dictionary }: FooterProps) {
                 </div>
                 <div className={`flex flex-col items-start gap-4`}>
                     <p className={`text-xl font-bold`}>
-                        {dictionary.footer.site}
+                        {intl.site}
                     </p>
                     <a href={'https://openai.com/'} className={`hover:text-gray-500`} target='_blank'>
                         OpenAI

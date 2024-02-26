@@ -1,4 +1,4 @@
-const withMDX = require('@next/mdx')()
+import createNextIntlPlugin from 'next-intl/plugin';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -17,4 +17,7 @@ const nextConfig = {
     },
     pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx']
 }
-module.exports = withMDX(nextConfig)
+
+const withNextIntl = createNextIntlPlugin();
+
+export default withNextIntl(nextConfig);

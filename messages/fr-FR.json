@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "title": "SoraFlows - Outil d'édition et de création vidéo avancé avec OpenAI",
+    "description": "SoraFlows est une plateforme WebUi open-source permettant aux utilisateurs de créer facilement des vidéos avancées avec le modèle Sora d'OpenAI."
+  },
+  "homepage": {
+    "lang": "Français",
+    "introduce": "Sora, le modèle de conversion de langage en vidéo le plus avancé.",
+    "introduce_2": "Commencez ici, rejoignez-nous et commencez à utiliser.",
+    "pDescription": "SoraFlows est une plateforme de génération de vidéos qui utilise le modèle de langue à vidéo le plus avancé, Sora, pour générer des vidéos à partir de texte. C'est un outil puissant pour créer des vidéos pour le marketing, l'éducation et le divertissement.",
+    "email_lint": "Veuillez entrer une adresse e-mail correcte",
+    "get_started": "Commencer",
+    "submit": "Commencez à générer des vidéos avec Sora",
+    "demo_title": "Vidéos de démonstration générées par Sora",
+    "more_video": "Plus de vidéos de démonstration"
+  },
+  "attention": {
+    "input_email": "Veuillez entrer votre adresse e-mail"
+  },
+  "footer": {
+    "subtitle": "Génération de vidéos SoraFlows",
+    "site": "Site",
+    "introduce": "Introduction"
+  }
+}
+  

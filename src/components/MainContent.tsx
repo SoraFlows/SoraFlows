@@ -1,16 +1,15 @@
 'use client'
 import Image from 'next/image'
-import Head from 'next/head'
 import React, { useEffect, useState } from 'react'
-import { LocaleDictionary } from '@/types/locale'
 import { useRouter } from 'next/navigation'
 import {addEmail} from "@/api/fetchData";
 
-export default function MainContent({ dictionary }: LocaleDictionary) {
+export default function MainContent({intl}) {
     const router = useRouter(); // 使用 useRouter 钩子
     const [email, setEmail] = useState('');
     const [showPrompt, setShowPrompt] = useState(false);
     const [showAnimation, setShowAnimation] = useState(false); // 新状态控制动画显示
+    // const t = useTranslations('homepage');
 
     useEffect(() => {
         // 使用 useEffect 确保下面的逻辑在客户端执行
@@ -50,8 +49,8 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
         setShowPrompt(false); // 隐藏提示信息
         setShowAnimation(false); // 如果想要在用户输入时也立即停止任何动画效果，可以加上这行
     };
-    
-    
+
+
     // useEffect(() => {
     //     // 当邮箱输入为空时显示提示，否则不显示
     //     setShowPrompt(email.trim() === '');
@@ -85,23 +84,23 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
                 <div className='mx-auto flex max-w-4xl flex-col items-center text-center py-10'>
                     <div className='mb-5 max-w-[528px] lg:mb-8'>
                         <p className='text-xl font-bold'>
-                            {dictionary.homepage.pDescription}
+                            {intl.pDescription}
                         </p>
-                        
+
                     </div>
                     <a href="https://www.producthunt.com/posts/soraflows?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-soraflows" target="_blank">
                         <Image src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=440901&theme=light"
                         alt="SoraFlows - Open&#0045;source&#0032;AI&#0032;video&#0032;web&#0032;creation&#0032;with&#0032;Sora&#0032;Model | Product Hunt"
-                        width="250" 
+                        width="250"
                         height="54" />
                     </a>
                 </div>
             </div>
-            
-            
 
-            <p className="text-2xl font-bold">{dictionary.homepage.introduce}</p>
-            <p className="text-2xl font-bold">{dictionary.homepage.introduce_2}</p>
+
+
+            <p className="text-2xl font-bold">{intl.introduce}</p>
+            <p className="text-2xl font-bold">{intl.introduce_2}</p>
             { /* 
             <div className="py-10">
                 <form onSubmit={handleSubmit} className='flex flex-col md:flex-row justify-center items-center space-x-6'>
@@ -122,11 +121,11 @@ export default function MainContent({ dictionary }: LocaleDictionary) {
             </div>
             */}
             <br></br>
-            <button 
+            <button
             onClick={() => router.push('/studio')}
-            type="button" 
+            type="button"
             className="text-xl text-white rounded-xl bg-[#0c8ce9] hover:bg-[#0c8ce9] hover:scale-105 transform-gpu transition px-4 py-2">
-                        {dictionary.homepage.get_started}
+                        {intl.get_started}
             </button>
             <br></br>
 

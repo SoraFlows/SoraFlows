@@ -2,11 +2,11 @@ import { Menu, Transition } from '@headlessui/react'
 import { AiOutlineGlobal } from 'react-icons/ai'
 import { FaChevronDown } from 'react-icons/fa'
 import React, { Fragment } from 'react'
-import { languages } from '@/i18n-config'
 import Link from 'next/link'
 import { useCommonContext } from '@/context/common-context'
+import { languages } from '@/i18n'
 
-export default function LanguageSwitcher({ locale = '' }) {
+export default function LanguageSwitcher({ locale = '', page = '' }) {
     const { showLoadingModal, setShowLoadingModal } = useCommonContext()
     const checkLocalAndLoading = (lang: string) => {
         if (locale != lang) {
@@ -14,6 +14,7 @@ export default function LanguageSwitcher({ locale = '' }) {
             setShowLoadingModal(true)
         }
     }
+
     return (
         <Menu as="div" className="relative inline-block text-left">
             <div>
@@ -39,7 +40,7 @@ export default function LanguageSwitcher({ locale = '' }) {
                     <div className="py-1">
                         {
                             languages.map((item) => {
-                                let hrefValue = `/${item.lang}`
+                                let hrefValue = `/${item.lang}/${page}`
                                 return (
                                     <Menu.Item key={item.lang}>
                                         <Link href={hrefValue}
