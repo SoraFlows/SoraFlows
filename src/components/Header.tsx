@@ -50,14 +50,14 @@ export const LayoutHeader = ({
 
                 <div className="flex items-center space-x-2">
                     <a href={`/${locale}`} className="-m-1.5 p-1.5" onClick={() => setShowLoadingModal(true)}>
-                        <Image className="h-8 w-auto" src="/logo.png" alt="www.soraflows.com" width={32} height={32} />
+                        <Image className="h-14 w-auto" src="/logo.png" alt="www.soraflows.com" width={64} height={64} />
                     </a>
                     <a href={`/${locale}`} className="-m-1.5 ml-0.5 p-1.5" onClick={() => setShowLoadingModal(true)}>
                         <Image
-                            className="h-8 w-auto"
+                            className="h-20 w-auto"
                             src="/soraflows.svg"
-                            width={64}
-                            height={48}
+                            width={128}
+                            height={96}
                             alt="www.soraflows.com" />
                     </a>
                 </div>

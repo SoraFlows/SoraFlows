@@ -14,6 +14,12 @@
     "demo_title": "Sora 生成的示例视频",
     "more_video": "更多示例视频"
   },
+  "videos":{
+    "title": "",
+    "description":"",
+    "h1": "",
+    "pDescription": ""
+  },
   "attention": {
     "input_email": "请输入您的邮箱地址"
   },
