@@ -21,3 +21,22 @@ export async function generateMetadata({
         },
     };
 }
+
+export default function Article({ article }) {
+    return (
+        <div>
+            <h1>{article.title}</h1>
+            <p>{article.description}</p>
+            {/* 点赞 发表时间 */}
+            <p>{article.date}</p>
+            <p>{article.author}</p>
+            <p>{article.category}</p>
+            <p>{article.tags}</p>
+            
+            <p>{article.content}</p>
+            {/* 点赞 更新时间 */}
+            <p>{article.updatedAt}</p>
+            <img src={article.image} alt={article.title} />
+        </div>
+    );
+}
