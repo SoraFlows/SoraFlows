@@ -13,11 +13,11 @@ export default getRequestConfig(async ({ locale }) => {
 
 export const languages = [
     {
-        lang: 'en-US',
+        lang: 'en',
         language: 'English'
     },
     {
-        lang: 'zh-CN',
+        lang: 'zh',
         language: '简体中文'
     },
     {
@@ -25,35 +25,35 @@ export const languages = [
         language: '繁體中文'
     },
     {
-        lang: 'ja-JP',
+        lang: 'ja',
         language: '日本語'
     },
     {
-        lang: 'ar-SA',
+        lang: 'ar',
         language: 'العربية'
     },
     {
-        lang: 'ko-KR',
+        lang: 'ko',
         language: '한국어'
     },
     {
-        lang: 'pt-BR',
+        lang: 'pt',
         language: 'Português (Brasil)'
     },
     {
-        lang: 'es-ES',
+        lang: 'es',
         language: 'Español'
     },
     {
-        lang: 'de-DE',
+        lang: 'de',
         language: 'Deutsch'
     },
     {
-        lang: 'fr-FR',
+        lang: 'fr',
         language: 'Français'
     },
     {
-        lang: 'vi-VN',
+        lang: 'vi',
         language: 'Tiếng Việt'
     }
 ]
