@@ -54,7 +54,7 @@ One-Click to get a well-designed cross-platform Sora web UI
   - [ ] OpenAI's whisper API
   - [ ] Midjourney API
 - [x] Supported Language: English, 简体中文, 繁体中文, 日本語, Español, 한국어,
-
+- [x] AIToolsBoard: Click here 👉[AIToolsBoard](https://www.soraflows.com/aitoolboard)
 
 ## Quick Started
 Deploy on Railway
