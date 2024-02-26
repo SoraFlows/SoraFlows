@@ -25,13 +25,22 @@ export default function MobileTopMenu() {
                 leaveTo="transform opacity-0 scale-95"
             >
                 <Menu.Items
-                    className="absolute top-8 right-0 z-10 mt-2 w-26 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none flex flex-col">
+                    className="absolute top-8 right-0 z-50 mt-2 w-26 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none flex flex-col">
+                    
                     <Menu.Item>
                         <Link
                             href="/studio"
                             className="lg:flex font-bold opacity-90 md:text-base px-4 py-2 pr-4 hover:bg-gray-200 rounded-xl transition duration-300"
                         >
                             Studio
+                        </Link>
+                    </Menu.Item>
+                    <Menu.Item>
+                        <Link
+                            href="/videos"
+                            className="lg:flex font-bold opacity-90 md:text-base px-4 py-2 pr-4 hover:bg-gray-200 rounded-xl transition duration-300"
+                        >
+                            Videos
                         </Link>
                     </Menu.Item>
                     <Menu.Item>
@@ -63,7 +72,9 @@ export default function MobileTopMenu() {
                             className="lg:flex font-bold opacity-90 md:text-base p-4"
                             target="_blank"
                         >
-                            <FaGithub className="text-xl" />
+                            <FaGithub className="text-xl">
+                                <p className='lg:flex font-bold opacity-90 md:text-base px-4 py-2 pr-4 relative hover:bg-gray-200 rounded-xl transition duration-300'>GitHub</p>
+                            </FaGithub>
                         </Link>
                     </Menu.Item>
                 </Menu.Items>

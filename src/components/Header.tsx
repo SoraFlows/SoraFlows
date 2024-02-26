@@ -5,8 +5,8 @@ import LoadingModal from './LoadingModal'
 import Image from 'next/image'
 import { useCommonContext } from '@/context/common-context'
 import { useIsMobile } from '@/lib/useIsMobile'
-import MobileTopMenu from '@/components/MobileTopMenu'
-import PCTopMenu from '@/components/PCTopMenu'
+import MobileTopMenu from '@/components/Menu/MobileTopMenu'
+import PCTopMenu from '@/components/Menu/PCTopMenu'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 
 export const LayoutHeader = ({
@@ -56,14 +56,17 @@ export const LayoutHeader = ({
                         <Image
                             className="h-8 w-auto"
                             src="/soraflows.svg"
-                            width={32}
-                            height={24}
+                            width={64}
+                            height={48}
                             alt="www.soraflows.com" />
                     </a>
                 </div>
                 <div className="flex justify-end items-center space-x-4">
                     {!useIsMobile() ? <PCTopMenu /> : <MobileTopMenu />}
                     <LanguageSwitcher locale={locale} page={page} />
+                </div>
+                <div>
+                    {/* 登录按钮 */}
                 </div>
             </nav>
         </header>
