@@ -21,5 +21,11 @@
     "subtitle": "SoraFlows Video Generation",
     "site": "Site",
     "introduce": "Introduction"
+  },
+  "aitoolsdir": {
+    "h1": "",
+    "pDescription": "A directory of AI tools and resources for developers and researchers.",
+    "title": "AI Tools Directory",
+    "description": "A directory of AI tools and resources for developers and researchers."
   }
 }

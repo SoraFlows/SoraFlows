@@ -21,6 +21,10 @@
     "subtitle": "SoraFlows 視頻生成",
     "site": "站點",
     "introduce": "介紹"
+  },
+  "aitoolsdir": {
+    "title": "AI 工具目錄",
+    "description": "這是一個 AI 工具目錄，用於收集和展示 AI 工具。"
   }
 }
   
