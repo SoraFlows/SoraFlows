@@ -11,9 +11,9 @@
     "lint": "next lint",
     "eslint": "eslint src",
     "prisma-dev:push": "dotenv -e .env.development prisma db push --schema=./prisma/schema.prisma",
-    "prisma-dev:generate": "cross-env NODE_ENV=development prisma generate",
-    "prisma-pro:push": "cross-env NODE_ENV=production prisma db push --schema=./prisma/schema.prisma",
-    "prisma-pro:generate": "cross-env NODE_ENV=production prisma generate"
+    "prisma-dev:generate": "dotenv -e .env.development prisma generate",
+    "prisma-pro:push": "dotenv -e .env.production prisma db push --schema=./prisma/schema.prisma",
+    "prisma-pro:generate": "dotenv -e .env.production prisma generate"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
