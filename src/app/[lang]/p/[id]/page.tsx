@@ -3,7 +3,7 @@ import { getArticle } from '@/api/getArticle'
 import Markdown from 'markdown-to-jsx'
 import { LayoutHeader } from '@/components/Header'
 import { getQueryClient } from '@/lib/query-client.server'
-import { options } from '@/markdown-style.config'
+import { mainContentOptions } from '@/markdown-style.config'
 
 type Props = {
     params: { id: string }
@@ -23,9 +23,20 @@ export default async function Articles({ params, searchParams }: Props) {
     })
     return (
         <>
-            <div className={`m-auto max-w-[680px]`}>
-
-                <Markdown className={`mt-4`} options={options}>
+            <div className={`m-auto max-w-[680px] flex flex-col space-y-4 mb-10`}>
+                <div className={`text-[42px] font-bold`}>
+                    {article?.title}
+                </div>
+                <div>
+                    {article?.description}
+                </div>
+                <div className={`text-xl p-2`}>
+                    {article?.author}
+                </div>
+                <div className={`border-y-2 border-y-gray-100 p-2 m-2`}>
+                    Read: {article?.read_count}
+                </div>
+                <Markdown className={`mt-4`} options={mainContentOptions}>
                     {`${article?.content}`}
                 </Markdown>
 

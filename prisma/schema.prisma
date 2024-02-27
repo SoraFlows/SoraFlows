@@ -5,7 +5,8 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
+  binaryTargets = ["darwin-arm64"]
 }
 
 datasource db {
@@ -16,7 +17,7 @@ datasource db {
 model t_articles {
   id           Int      @id @default(autoincrement())
   title        String
-  subtitle     String?
+  description  String?
   author       String
   published_at DateTime
   content      String   @db.Text

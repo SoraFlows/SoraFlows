@@ -1,8 +1,9 @@
-import { PropsWithChildren } from 'react'
 import { getQueryClient } from '@/lib/query-client.server'
 import { getArticle } from '@/api/getArticle'
 import { Metadata } from 'next'
 import { LayoutHeader } from '@/components/Header'
+import { getTranslations } from "next-intl/server";
+import Footer from "@/components/Footer";
 
 export const generateMetadata = async (
     props: NextPageParams<{
@@ -20,10 +21,10 @@ export const generateMetadata = async (
     })
     return {
         title: article?.title,
-        description: article?.subtitle,
+        description: article?.description,
         openGraph: {
             title: article?.title,
-            description: article?.subtitle || '',
+            description: article?.description || '',
             images: [
                 {
                     url: article?.cover_image || ''
@@ -39,10 +40,17 @@ export default async function Layout(
         id: string
     }>
 ) {
+    const tFooter = await getTranslations('footer')
+    const footerIntlText = {
+        subtitle: tFooter('subtitle'),
+        introduce: tFooter('introduce'),
+        site: tFooter('site')
+    }
     return (
         <div>
-            <LayoutHeader locale={props.params.lang} page={`/p/${props.params.id}`} />
+            <LayoutHeader locale={props.params.lang} page={`/p/${props.params.id}`}/>
             {props.children}
+            <Footer year={new Date().getFullYear()} companyName="SoraFlows" intl={footerIntlText} />
         </div>
     )
 }

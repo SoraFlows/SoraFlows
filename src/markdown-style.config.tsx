@@ -5,8 +5,7 @@ const P = ({ children }) => <p className="mb-4">{children}</p>
 const UL = ({ children }) => <ul className="mb-4 list-disc" >{children}</ul>
 const OL = ({ children }) => <ol className="mb-4 list-decimal" >{children}</ol>
 
-
-export const options = {
+export const mainContentOptions = {
     overrides: {
         h1: H1,
         p: P,
