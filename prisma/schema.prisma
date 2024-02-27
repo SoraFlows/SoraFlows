@@ -1,0 +1,74 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "darwin-arm64"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model t_articles {
+  id           Int      @id @default(autoincrement())
+  title        String
+  description  String?
+  author       String
+  published_at DateTime
+  content      String   @db.Text
+  summary      String?  @db.Text
+  cate1        String?
+  cate2        String?
+  source       String?
+  cover_image  String?
+  word_count   Int?
+  read_count   Int?     @default(0)
+  created_time DateTime @default(now())
+  updated_time DateTime @default(dbgenerated("CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)"))
+  tags         String?
+}
+
+model t_comments {
+  id           Int      @id @default(autoincrement())
+  content      String
+  author       String
+  author_id    String
+  like_count   Int?     @default(0)
+  created_time DateTime @default(now())
+  updated_time DateTime @default(dbgenerated("CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)"))
+  article_id   Int
+}
+
+model t_user {
+  id           Int      @id @default(autoincrement()) // 主键id
+  uuid         String?  @unique
+  email        String?
+  nick_name    String?
+  avatar_url   String?
+  created_time DateTime @default(now())
+  updated_time DateTime @default(dbgenerated("CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)"))
+}
+
+model t_video {
+  id            Int       @id @default(autoincrement()) // 主键 id
+  user_uuid     String?
+  uuid          String    @unique
+  prompt        String?
+  prompt_type   String?
+  video_url     String?
+  thumbnail_url String?
+  source_name   String?
+  source_url    String?
+  created_time  DateTime? @default(now())
+}
+
+model t_wait_list {
+  id           Int      @id @default(autoincrement())
+  email        String
+  created_time DateTime @default(now())
+}

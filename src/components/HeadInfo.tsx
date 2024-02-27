@@ -1,4 +1,4 @@
-import { i18n,languages } from "@/i18n-config";
+// import { i18n,languages } from "@/i18n-config";
 
 
 const HeadInfo = ({

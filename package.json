@@ -5,10 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:dev": "dotenv -e .env.development next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "lint": "next lint",
-    "eslint": "eslint src"
+    "eslint": "eslint src",
+    "prisma-dev:push": "dotenv -e .env.development prisma db push --schema=./prisma/schema.prisma",
+    "prisma-dev:generate": "dotenv -e .env.development prisma generate",
+    "prisma-pro:push": "dotenv -e .env.production prisma db push --schema=./prisma/schema.prisma",
+    "prisma-pro:generate": "dotenv -e .env.production prisma generate"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
@@ -16,7 +21,13 @@
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.1.0",
     "@prisma/client": "^5.10.2",
+    "@tanstack/query-async-storage-persister": "^5.24.1",
+    "@tanstack/react-query": "^5.24.1",
+    "@tanstack/react-query-devtools": "^5.24.1",
+    "@tanstack/react-query-persist-client": "^5.24.1",
     "@types/mdx": "^2.0.11",
+    "markdown-to-jsx": "^7.4.1",
+    "mysql2": "^3.9.2",
     "next": "14.1.0",
     "next-intl": "^3.9.0",
     "next-sitemap": "^4.2.3",
@@ -31,10 +42,13 @@
     "@formatjs/intl-localematcher": "^0.5.4",
     "@iconify-json/mingcute": "^1.1.16",
     "@iconify/tailwind": "^0.1.4",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/dotenv": "^8.2.0",
+    "@types/next": "^9.0.0",
+    "@types/node": "^20.11.20",
+    "@types/react": "^18.2.58",
+    "@types/react-dom": "^18.2.19",
     "autoprefixer": "^10.0.1",
+    "cross-env": "^7.0.3",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "eslint-plugin-react": "^7.33.2",
@@ -44,6 +58,6 @@
     "postcss": "^8",
     "prisma": "^5.10.2",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "typescript": "^5.3.3"
   }
 }

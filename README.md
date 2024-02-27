@@ -29,6 +29,34 @@ One-Click to get a well-designed cross-platform Sora web UI
 
 ![starts](https://img.shields.io/github/stars/SoraFlows/SoraFlows.svg)  ![starts](https://img.shields.io/github/forks/SoraFlows/SoraFlows.svg)
 
+## Roadmap
+
+- [ ] Login
+  - [ ] Login with Github OAuth
+  - [ ] Login with Google OAuth
+  - [ ] Login with Email
+  - [ ] Login with WeChat login
+- [ ] Payments
+  - [ ] Stripe payments
+- [ ] Tools
+  - [ ] Prompt Editor
+- [ ] Features
+  - [ ] Voice to text
+  - [ ] Text to speech
+  - [ ] Voice clone
+  - [ ] Support for OSS
+- [ ] Deploy
+  - [ ] Add support for Docker and Docker Compose
+  - [x] Add support for Vercel
+  - [x] Add support for Railway
+- [ ] API
+  - [ ] OpenAI's Sora API (Waiting for OpenAI Sora API Launch) 
+  - [ ] OpenAI's ChatGPT API
+  - [ ] OpenAI's whisper API
+  - [ ] Midjourney API
+- [x] Supported Language: English, 简体中文, 繁体中文, 日本語, Español, 한국어,
+- [x] AIToolsBoard: Click here 👉[AIToolsBoard](https://www.soraflows.com/aitoolboard)
+
 ## Quick Started
 Deploy on Railway
 
@@ -68,7 +96,11 @@ pnpm dev
 
 ## Communication groups
 
-Welcom to Wechat Group
+Welcome to join our discord group
+
+[![Join Discord Group](./public/discord_icon.png)](https://discord.gg/VgbsfjWkfd)
+
+Welcome to Wechat Group
 <p align="center">
   <img src="./public/wx-group.jpg" alt="Wechat QR Code" width="300"/>
 </p>
@@ -141,7 +173,12 @@ Open AI Sora is a tool to create stunning videos from text effortlessly. It allo
 - [Sora by OpenAI Makers](https://www.producthunt.com/products/sora-by-openai-2/makers): Meet the founders, developers, designers, and product people who worked on Sora By OpenAI.
 - [ai sora tech](https://www.producthunt.com/products/ai-sora-tech/launches): Explore the latest OpenAI Sora-crafted video collection at aisoratech.com and effortlessly turn your prompts into videos.
 
+## LICENSE
+
+
 ## Contributors
+This project exists thanks to all the people who contribute.
+
 <a href="https://github.com/SoraFlows/SoraFlows/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=SoraFlows/SoraFlows" />
 </a>

@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "title": "SoraFlows - OpenAI 高級視頻編輯與生成工具",
+    "description": "SoraFlows 是一個開源的 WebUi 平台，用戶可以輕鬆地使用 OpenAI 的 Sora 模型創建高級視頻。"
+  },
+  "homepage": {
+    "lang": "繁體中文",
+    "introduce": "Sora 最先進的語言轉視頻模型。",
+    "introduce_2": "從這裡開始，加入我們，開始使用。",
+    "pDescription": "SoraFlows 是一個視頻生成平台，使用最先進的語言轉視頻模型 Sora 從文本生成視頻。它是一個強大的工具，用於創造行銷、教育和娛樂視頻。",
+    "email_lint": "請輸入正確的郵箱地址",
+    "get_started": "開始使用",
+    "submit": "開始 Sora 生成視頻",
+    "demo_title": "Sora 生成的示例視頻",
+    "more_video": "更多示例視頻"
+  },
+  "attention": {
+    "input_email": "請輸入您的郵箱地址"
+  },
+  "footer": {
+    "subtitle": "SoraFlows 視頻生成",
+    "site": "站點",
+    "introduce": "介紹"
+  },
+  "aitoolsdir": {
+    "title": "AI 工具目錄",
+    "description": "這是一個 AI 工具目錄，用於收集和展示 AI 工具。"
+  }
+}
+  

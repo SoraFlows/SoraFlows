@@ -1,17 +1,35 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
-import React from "react";
-const inter = Inter({ subsets: ["latin"] });
+import './globals.css'
+import React from 'react'
 
+export const metadata = {
+    title: "",
+    description: "",
+    icon: "/logo.png",
+    openGraph: {
+        type: "website",
+        locale: "en",
+        url: "",
+        title: "",
+        description: "",
+        image: "",
+    },
+    images: [
+        {
+            url: ""
+        }
+    ]
+}
 
-export default function RootLayout({
-    children
-}: Readonly<{
+export default function LocaleLayout({
+                                         children,
+                                         params: { lang }
+                                     }: {
     children: React.ReactNode;
-}>) {
+    params: { lang: string };
+}) {
     return (
-        <html lang="en">
-            <body className={inter.className}>{children}</body>
+        <html lang={lang}>
+        <body>{children}</body>
         </html>
-    );
+    )
 }
