@@ -15,7 +15,7 @@ export default function PCTopMenu() {
                     Studio
                 </Link>
                 <Link
-                    href="/vieos"
+                    href="/videos"
                     className="lg:flex font-bold opacity-90 md:text-base px-4 py-2 pr-4 hover:bg-gray-200 rounded-xl transition duration-300"
                 >
                     Videos
