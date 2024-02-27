@@ -5,10 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:dev": "dotenv -e .env.development next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "lint": "next lint",
-    "eslint": "eslint src"
+    "eslint": "eslint src",
+    "prisma-dev:push": "dotenv -e .env.development prisma db push --schema=./prisma/schema.prisma",
+    "prisma-dev:generate": "cross-env NODE_ENV=development prisma generate",
+    "prisma-pro:push": "cross-env NODE_ENV=production prisma db push --schema=./prisma/schema.prisma",
+    "prisma-pro:generate": "cross-env NODE_ENV=production prisma generate"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
@@ -37,11 +42,13 @@
     "@formatjs/intl-localematcher": "^0.5.4",
     "@iconify-json/mingcute": "^1.1.16",
     "@iconify/tailwind": "^0.1.4",
+    "@types/dotenv": "^8.2.0",
     "@types/next": "^9.0.0",
     "@types/node": "^20.11.20",
     "@types/react": "^18.2.58",
     "@types/react-dom": "^18.2.19",
     "autoprefixer": "^10.0.1",
+    "cross-env": "^7.0.3",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "eslint-plugin-react": "^7.33.2",
