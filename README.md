@@ -44,6 +44,7 @@ One-Click to get a well-designed cross-platform Sora web UI
   - [ ] Voice to text
   - [ ] Text to speech
   - [ ] Voice clone
+  - [ ] Support for OSS
 - [ ] Deploy
   - [ ] Add support for Docker and Docker Compose
   - [x] Add support for Vercel
@@ -95,7 +96,11 @@ pnpm dev
 
 ## Communication groups
 
-Welcom to Wechat Group
+Welcome to join our discord group
+
+[![Join Discord Group](./public/discord_icon.png)](https://discord.gg/VgbsfjWkfd)
+
+Welcome to Wechat Group
 <p align="center">
   <img src="./public/wx-group.jpg" alt="Wechat QR Code" width="300"/>
 </p>
