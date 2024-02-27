@@ -1,28 +1,18 @@
 import React from 'react'
 import Link from 'next/link';
 import { useTranslations } from 'next-intl'
+import { languages } from '@/i18n';
 
-// 你提供的语言列表
-const languages = [
-    { lang: "en-US", language: "English" },
-    { lang: "zh-CN", language: "简体中文" },
-    { lang: "zh-TW", language: "繁體中文" },
-    { lang: "ja-JP", language: "日本語" },
-    { lang: 'ar-SA', language: 'العربية'},
-    { lang: "ru-RU", language: "Русский"},
-    { lang: "ko-KR", language: "한국어" },
-    { lang: "pt-BR", language: "Português (Brasil)" },
-    { lang: "es-ES", language: "Español" },
-    { lang: "de-DE", language: "Deutsch" },
-    { lang: "fr-FR", language: "Français" },
-    { lang: "vi-VN", language: "Tiếng Việt" },
-];
 
 export default function Footer({ year, companyName, intl }) {
+    // 获取路由的语言
+    
     const t = useTranslations('footer');
+    const legal = useTranslations('legal');
+    console.log(legal)
     return (
         <footer
-            className="flex flex-col items-center justify-start text-center mt-auto p-5 bg-gray-50 text-gray-800 w-full  gap-20">
+            className="flex flex-col items-center justify-start text-center mt-auto p-4 bg-gray-50 text-gray-800 w-full gap-5">
             {/* 国际化路由展示 */}
             <div className="flex flex-col sm:flex-row justify-center items-center w-full mb-5">
                 {languages.map(({ lang, language }) => (
@@ -33,7 +23,7 @@ export default function Footer({ year, companyName, intl }) {
             </div>
             {/* 插入Google统计脚本*/}
             {/* <!-- Google tag (gtag.js) --> */}
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCB2RC3FFG"></script>
+            {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCB2RC3FFG"></script>
             <script
                 dangerouslySetInnerHTML={{
                     __html: `
@@ -43,9 +33,9 @@ export default function Footer({ year, companyName, intl }) {
           gtag('config', 'G-QYDXN91667');
         `
                 }}
-            />
+            /> */}
             {/* 插入百度统计脚本 */}
-            <script dangerouslySetInnerHTML={{
+            {/* <script dangerouslySetInnerHTML={{
                 __html: `
           var _hmt = _hmt || [];
           (function() {
@@ -55,7 +45,7 @@ export default function Footer({ year, companyName, intl }) {
             s.parentNode.insertBefore(hm, s);
           })();
         `
-            }} />
+            }} /> */}
 
             <div className={`flex flex-row justify-around w-full`}>
                 <div className={`flex flex-col items-start gap-4`}>
@@ -82,11 +72,24 @@ export default function Footer({ year, companyName, intl }) {
                         OpenAI
                     </a>
                 </div>
+                <div className={`flex flex-col items-start gap-4`}>
+                    <p className={`text-xl font-bold`}>
+                        {legal('legal')}
+                    </p>
+                    <a href={`/privacy-policy`} 
+                        className={`hover:text-gray-500`}>
+                        {legal('privacyPolicy')}
+                    </a>
+                    <a href={`/terms-of-service`} className={`hover:text-gray-500`} target='_blank'>
+                    {legal('termsOfService')}
+                    </a>
+                </div>
             </div>
 
             <div>
-                © Copyright 2023-{year}. <a href={`/`} className={`text-indigo-400 hover:text-indigo-300`}>{companyName}</a> All rights reserved.
+            &copy; Copyright 2023-{year}. <a href={`/`} className={`text-indigo-400 hover:text-indigo-300`}>{companyName}</a> All rights reserved.
             </div>
+
 
 
         </footer>
