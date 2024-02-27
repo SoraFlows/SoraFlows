@@ -20,7 +20,7 @@ export default async function VideoWrapper({randomTenVideos, intl}){
             </div>
             <Link
                 className={`text-3xl flex flex-row justify-center items-center gap-4 text-indigo-400 hover:text-indigo-600 transition duration-200 hover:scale-105 transform-gpu`}
-                href={`/video-showcase`}>
+                href={`/videos`}>
                 {intl.moreVideo} {'>>>'}
             </Link>
         </div>
