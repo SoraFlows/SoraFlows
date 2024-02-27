@@ -12,7 +12,7 @@ export default function VideoShowCase({ params: { lang } }: { params: { lang: Lo
     const videos = allExampleVideoList
     return (
         <>
-            <LayoutHeader locale={lang} page={'/video'}/>
+            <LayoutHeader lang={lang} page={'/video'}/>
 
             <div className="bg-white rounded-2xl border-[14px] border-b-blue-300 p-16 flex flex-col items-center">
                 <h1 className="">

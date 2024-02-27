@@ -16,7 +16,7 @@ export default function Footer({ year, companyName, intl }) {
             {/* 国际化路由展示 */}
             <div className="flex flex-col sm:flex-row justify-center items-center w-full mb-5">
                 {languages.map(({ lang, language }) => (
-                    <Link href={`/${lang}`} key={lang} locale={lang} className="px-2 py-1 hover:text-gray-500 text-center">
+                    <Link href={`/${lang}`} key={lang} lang={lang} className="px-2 py-1 hover:text-gray-500 text-center">
                         {language}
                     </Link>
                 ))}

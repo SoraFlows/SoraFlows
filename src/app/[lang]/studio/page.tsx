@@ -48,7 +48,7 @@ export default function Studio({ params: { lang } }: { params: { lang: Locale } 
     return (
         <>
             <div className='bg-white/80 p-4 h-screen'>
-                <LayoutHeader page={'studio'} locale={lang}/>
+                <LayoutHeader page={'studio'} lang={lang}/>
                 {showVideo && <VideoDisplay videoUrl={videoUrl} prompt={videoPrompt}/>}
                 <div
                     className="absolute border-black border-2 p-4 rounded-2xl bottom-[5vh] left-[50%] -translate-x-1/2 flex items-center bg-gray-200]">
