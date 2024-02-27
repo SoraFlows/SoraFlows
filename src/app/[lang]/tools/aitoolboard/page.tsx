@@ -3,9 +3,11 @@ import Image from 'next/image';
 import {useTranslations} from 'next-intl';
 import type { Metadata } from 'next'
 import sites from "@/data/aitools.json";
-import HeaderLayout from "@/components/aiToolsDir/Header";
 import GetDictLang from "@/lib/getdictlang"; // Import the getRequestConfig function from the i18n module
 import { Locale } from '@/i18n';
+import Footer from "@/components/Footer";
+import { getTranslations } from 'next-intl/server'
+import { LayoutHeader } from '@/components/Header';
 
 export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }){
     // 使用i18next获取翻译文本
@@ -36,6 +38,13 @@ export default function AiToolBoard({ params: { lang } }: { params: { lang: Loca
         const hostname = new URL(url).hostname; // 获取域名
         return `https://api.iowen.cn/favicon/${hostname}.png`; // 返回处理后的API URL
     };
+    // const tFooter = await getTranslations('footer')
+
+    // const footerIntlText = {
+    //     subtitle: tFooter('subtitle'),
+    //     introduce: tFooter('introduce'),
+    //     site: tFooter('site')
+    // }
     // const getFaviconUrl = (url) => {
     //         const hostname = new URL(url).hostname; // 获取域名
     //         return `http://inadequate-turquoise-macaw.faviconkit.com/${hostname}/64`; // 返回处理后的API URL
@@ -61,6 +70,7 @@ export default function AiToolBoard({ params: { lang } }: { params: { lang: Loca
                 <meta name="description" content={t('description')} />
                 <link rel="icon" href="/logo.png" type="image/png"/>
             </Head> */}
+            <LayoutHeader lang={lang}/>
             <div className='flex flex-col p-4'>
             <h1 className="text-2xl font-bold mb-4 text-center">{t('h1')}</h1>
             <p> {t('pDescription')} </p>
@@ -92,6 +102,7 @@ export default function AiToolBoard({ params: { lang } }: { params: { lang: Loca
                         ))}
                     </div>
             </div>
+            {/* <Footer year={new Date().getFullYear()} companyName="SoraFlows" intl={footerIntlText} /> */}
         </>
 
     );
