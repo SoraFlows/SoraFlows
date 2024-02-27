@@ -43,7 +43,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
             </header>
             <main
                 className="flex min-h-screen py-auto flex-col items-center justify-center p-4 bg-home-background bg-cover space-y-3 bg-center">
-                <LayoutHeader />
+                <LayoutHeader locale={lang}/>
                 <div className="top-[10%] left-[15%]">
                     <MainContent intl={homepageIntlText} />
                 </div>

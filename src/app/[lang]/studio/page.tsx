@@ -4,9 +4,10 @@ import VideoDisplay from '@/components/VideoDisplay'
 import {MdOutlineAttachFile} from "react-icons/md";
 import {FaStarOfDavid} from "react-icons/fa";
 import React, {useState} from "react";
+import { Locale } from '@/i18n'
 
 // This page only renders when the app is built statically (output: 'export')
-export default function Studio() {
+export default function Studio({ params: { lang } }: { params: { lang: Locale } }) {
     // const [url, setUrl] = useState('');
     const [prompt, setPrompt] = useState('');
     const [showVideo, setShowVideo] = useState(false); // 新增一个状态来控制视频的显示
@@ -47,7 +48,7 @@ export default function Studio() {
     return (
         <>
             <div className='bg-white/80 p-4 h-screen'>
-                <LayoutHeader page={'studio'}/>
+                <LayoutHeader page={'studio'} locale={lang}/>
                 {showVideo && <VideoDisplay videoUrl={videoUrl} prompt={videoPrompt}/>}
                 <div
                     className="absolute border-black border-2 p-4 rounded-2xl bottom-[5vh] left-[50%] -translate-x-1/2 flex items-center bg-gray-200]">

@@ -14,14 +14,13 @@ export default function LanguageSwitcher({ locale = '', page = '' }) {
             setShowLoadingModal(true)
         }
     }
-
     return (
         <Menu as="div" className="relative inline-block text-left">
             <div>
                 <Menu.Button
                     className="inline-flex w-full justify-center gap-x-1.5 border border-[rgba(255,255,255,0.5)] rounded-md px-3 py-2 text-sm font-semibold hover:border-[rgba(255,255,255,0.9)]">
                     <AiOutlineGlobal className="w-5 h-5" />
-                    {locale == 'default' ? 'zh-CN' : locale.toUpperCase()}
+                    {locale == '' ? 'English' : locale.toUpperCase()}
                     <FaChevronDown className="-mr-1 h-5 w-5 scale-75" aria-hidden="true" />
                 </Menu.Button>
             </div>

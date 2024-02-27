@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import LoadingModal from './LoadingModal'
 import Image from 'next/image'
 import { useCommonContext } from '@/context/common-context'
@@ -8,6 +8,8 @@ import { useIsMobile } from '@/lib/useIsMobile'
 import MobileTopMenu from '@/components/Menu/MobileTopMenu'
 import PCTopMenu from '@/components/Menu/PCTopMenu'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
+import Link from 'next/link'
+import { FaGithub } from 'react-icons/fa'
 
 export const LayoutHeader = ({
                                  locale = '',
@@ -21,7 +23,7 @@ export const LayoutHeader = ({
 
                              }) => {
     const { showLoadingModal, setShowLoadingModal } = useCommonContext()
-
+    const [hovered, setHovered] = useState(false)
     const useCustomEffect = (effect, deps) => {
         const isInitialMount = useRef(true)
         useEffect(() => {
@@ -43,12 +45,12 @@ export const LayoutHeader = ({
             className={`flex justify-between items-center w-full border-b-[0.5px] border-zinc-200 
             ${(mode === 'light') ? 'bg-white/80' : 'bg-gray-500'} pl-4 pr-4 md:pl-6 md:pr-6 backdrop-blur z-[19]`}
             // className="sticky top-0 bg-[#020d24] z-20 w-full"
-        >   <meta name="sogou_site_verification" content="zGBv6xzYV2" />
+        >
+            <meta name="sogou_site_verification" content="zGBv6xzYV2" />
             <meta name="yandex-verification" content="98ea1d5c6ffd0f84" />
             <LoadingModal loadingText={currentLanguageText.generateText} />
             <nav className="flex items-center justify-between w-full" aria-label="Global">
-
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center justify-center space-x-2">
                     <a href={`/${locale}`} className="-m-1.5 p-1.5" onClick={() => setShowLoadingModal(true)}>
                         <Image className="h-14 w-auto" src="/logo.png" alt="www.soraflows.com" width={64} height={64} />
                     </a>
@@ -61,9 +63,45 @@ export const LayoutHeader = ({
                             alt="www.soraflows.com" />
                     </a>
                 </div>
-                <div className="flex justify-end items-center space-x-4">
+                <div className={`mx-auto`}>
                     {!useIsMobile() ? <PCTopMenu /> : <MobileTopMenu />}
+                </div>
+                <div className="flex justify-end items-center space-x-4">
+                    <div className='flex flex-row items-center'>
+                        <Link
+                            href="/about"
+                            className="hidden lg:flex font-bold opacity-90 md:text-base px-4 py-2 pr-4 hover:bg-gray-200 rounded-xl transition duration-300"
+                        >
+                            About us
+                        </Link>
+                        <p
+                            className="hidden lg:flex font-bold opacity-90 md:text-base px-4 py-2 pr-4 relative hover:bg-gray-200 rounded-xl transition duration-300"
+                            onMouseEnter={() => setHovered(true)}
+                            onMouseLeave={() => setHovered(false)}
+                        >
+                            Wechat Group
+                            {hovered && (
+                                <Image
+                                    className="absolute top-12 rounded-xl p-2 border-2 shadow-md transition duration-150"
+                                    src="/wx-group.jpg" alt="wx-group" width={200}
+                                    height={200} />
+                            )}
+                        </p>
+
+                    </div>
+
+                    <Link
+                        href="https://github.com/SoraFlows/SoraFlows"
+                        className="hidden lg:flex font-bold opacity-90 md:text-base px-4 pr-4"
+                        target="_blank"
+                    >
+                        Star on Github
+                        <FaGithub className="text-xl mx-2" />
+                    </Link>
                     <LanguageSwitcher locale={locale} page={page} />
+                </div>
+                <div>
+                    Pricing
                 </div>
                 <div>
                     {/* 登录按钮 */}
