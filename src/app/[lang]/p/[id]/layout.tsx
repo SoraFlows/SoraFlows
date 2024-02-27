@@ -48,7 +48,7 @@ export default async function Layout(
     }
     return (
         <div>
-            <LayoutHeader locale={props.params.lang} page={`/p/${props.params.id}`}/>
+            <LayoutHeader lang={props.params.lang} page={`/p/${props.params.id}`}/>
             {props.children}
             <Footer year={new Date().getFullYear()} companyName="SoraFlows" intl={footerIntlText} />
         </div>

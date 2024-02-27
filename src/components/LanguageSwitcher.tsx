@@ -6,10 +6,10 @@ import Link from 'next/link'
 import { useCommonContext } from '@/context/common-context'
 import { languages } from '@/i18n'
 
-export default function LanguageSwitcher({ locale = '', page = '' }) {
+export default function LanguageSwitcher({ lang = '', page = '' }) {
     const { showLoadingModal, setShowLoadingModal } = useCommonContext()
-    const checkLocalAndLoading = (lang: string) => {
-        if (locale != lang) {
+    const checkLocalAndLoading = (langs: string) => {
+        if (lang != langs) {
             console.log('loading')
             setShowLoadingModal(true)
         }
@@ -20,7 +20,7 @@ export default function LanguageSwitcher({ locale = '', page = '' }) {
                 <Menu.Button
                     className="inline-flex w-full justify-center gap-x-1.5 border border-[rgba(255,255,255,0.5)] rounded-md px-3 py-2 text-sm font-semibold hover:border-[rgba(255,255,255,0.9)]">
                     <AiOutlineGlobal className="w-5 h-5" />
-                    {locale == '' ? 'English' : locale.toUpperCase()}
+                    {lang == '' ? 'English' : lang.toUpperCase()}
                     <FaChevronDown className="-mr-1 h-5 w-5 scale-75" aria-hidden="true" />
                 </Menu.Button>
             </div>

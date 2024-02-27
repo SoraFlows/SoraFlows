@@ -28,6 +28,68 @@
     "site": "Site",
     "introduce": "Introduction"
   },
+  "pricing": {
+    "title": "SoraFlows Pricing | SoraFlows",
+    "description": "SoraFlows pricing, SoraFlows is an open-source platform that enables users to easily create videos from text, images, and audio using OpenAI's Sora model. | www.soraflows.com",
+    "h1": "Pricing",
+    "pDescription": ""
+  },
+  "legal": {
+    "legal": "Legal Information",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy | SoraFlows",
+    "description": "SoraFlows is an open-source platform that enables users to easily create videos from text, images, and audio using OpenAI's Sora model.",
+    "h1": "Privacy Policy",
+    "date": "Last Updated Date: February 20, 2024",
+    "desc": "Thank you for choosing SoraFlows! This Privacy Policy outlines how we collect, use, and protect your information when you use our website located at.",
+    "h4_1": "1. Information we collect:",
+    "h4_1_pa": "a. Personal Data: When you use SoraFlows, we may collect your name, email address, and payment information for order processing.",
+    "h4_1_pb": "b. Non-personal Data: We may also collect non-personal data through web cookies to enhance your browsing experience.",
+    "h4_2": "2. Purpose of data collection:",
+    "h4_2_p": "We only collect your personal data for order processing.",
+    "h4_3": "3. Data sharing:",
+    "h4_3_p": "We do not share your personal data with any third parties.",
+    "h4_4": "4. Children's privacy:",
+    "h4_4_p": "SoraFlows does not knowingly collect any personal data from children.",
+    "h4_5": "5. Privacy Policy updates:",
+    "h4_5_p": "We will notify users about any updates to this Privacy Policy via email.",
+    "h4_6": "6. Contact information:",
+    "h4_6_p": "If you have any questions or concerns about our Privacy Policy, please contact us via the following means:"
+  },
+  "termsOfService": {
+    "title": "Terms of Service | SoraFlows",
+    "description": "SoraFlows is an open-source platform that enables users to easily create videos from text using OpenAI's Sora model.",
+    "h1": "Terms of Service",
+    "date": "Last Updated Date: February 20, 2024",
+    "desc": "These Terms of Service (\"Terms\") govern your access to and use of SoraFlows (\"Service\"), provided by SoraFlows (\"we\" or \"us\"). By accessing or using the Service, you agree to be bound by these Terms.",
+    "h4_1": "1. Service Description:",
+    "h4_1_p": "SoraFlows provides a browser interface for OpenAI Sora, allowing users to easily generate text-to-video.",
+    "h4_2": "2. Ownership:",
+    "h4_2_p": "The ownership of videos generated from text belongs to the original user.",
+    "h4_3": "3. Usage Rights:",
+    "h4_3_p": "SoraFlows owns the usage rights of videos generated from text.",
+    "h4_4": "4. User Data:",
+    "h4_4_p": "We collect and store user data, including names, email, and payment information. We process these data according to our Privacy Policy.",
+    "h4_5": "5. Non-personal Data Collection:",
+    "h4_5_p": "We use web cookies to collect non-personal data. For more information, please see our Privacy Policy.",
+    "h4_6": "6. Privacy Policy:",
+    "h4_6_p": "Our Privacy Policy explains how we collect, use, and disclose information about you. By using our Service, you agree to our Privacy Policy, which can be found at the following URL",
+    "h4_7": "7. Applicable Law:",
+    "h4_7_p": "These Terms are governed by the laws of the United States.",
+    "h4_8": "8. Terms Update:",
+    "h4_8_p": "We may update these Terms from time to time. We will notify users of any significant changes via email.",
+    "h4_9": "9. Contact Information:",
+    "h4_9_p": "If you have any questions or concerns about our Terms of Service, please contact us:"
+  },
+  "tools": {
+    "title": "Sora AI Video Generation Tools | Comprehensive Multimedia AI Tools",
+    "description": "Explore the powerful video generation tools and multimedia AI toolset of Sora AI, easily creating high-quality videos, audio, and images, providing unlimited power to your creativity. | www.soraflows.com",
+    "h1": "Sora AI Video and Multimedia Generation Tools",
+    "pDescription": ""
+  },
   "aitoolboard": {
     "title": "Unveil the Best AI Tools Directory | Top AI Tools Guide | AI ToolBoard",
     "description": "AI ToolBoard presents a professional guide to the top 200 AI tools globally. Whether you're seeking AI tools for specific purposes like SEO, writing, productivity, or need an extensive AI software directory, our recommendations have got you covered.",
