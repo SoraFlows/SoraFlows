@@ -5,7 +5,7 @@
 # SoraFlows
 SoraFlows is a browser interface for OpenAI Sora,can generate, edit, share text/picture-to-video simply. 
 
-Demo here 👉 [SoraWebui](https://www.soraflows.com)
+Try Demo here 👉 [SoraFlows](https://www.soraflows.com)
 
 One-Click to get a well-designed cross-platform Sora web UI
 
