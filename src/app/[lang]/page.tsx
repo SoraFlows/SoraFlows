@@ -39,7 +39,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
             <header>
                 <title>{metadataIntlText.title}</title>
                 <meta name="description" content={metadataIntlText.description} />
-                <link rel="icon" href="/logo.png"></link>
+                <link rel="icon" href="/favicon.ico" type="image/x-icon"></link>
             </header>
             <main
                 className="flex min-w-250 min-h-screen py-auto flex-col items-center justify-center p-4 bg-home-background bg-cover space-y-3 bg-center">
