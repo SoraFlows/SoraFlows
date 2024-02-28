@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:dev": "dotenv -e .env.development next build",
-    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "postbuild": "dotenv -e .env.production next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "lint": "next lint",
     "eslint": "eslint src",

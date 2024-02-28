@@ -12,7 +12,7 @@ User-agent: black-listed-bot
 Disallow: /admin
 
 # Host
-Host: http://localhost:3000
+Host: https://www.soraflows.com
 
 # Sitemaps
-Sitemap: http://localhost:3000/sitemap.xml
+Sitemap: https://www.soraflows.com/sitemap.xml
