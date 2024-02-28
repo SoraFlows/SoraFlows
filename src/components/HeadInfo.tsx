@@ -18,9 +18,9 @@ const HeadInfo = ({
           if (item.lang == 'en') {
             hrefLang = 'x-default';
           }
-          let href = `${process.env.NEXT_PUBLIC_BASE_URL}/${item.lang}${currentPage}`;
+          let href = `${process.env.NEXT_PUBLIC_SITE_URL}/${item.lang}${currentPage}`;
           if (item.lang == 'en') {
-            href = `${process.env.NEXT_PUBLIC_BASE_URL}${currentPage}`;
+            href = `${process.env.NEXT_PUBLIC_SITE_URL}${currentPage}`;
           }
           return <link key={href} rel="alternate" hrefLang={hrefLang} href={href}/>
         })
