@@ -18,7 +18,7 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: L
         title: data.aitoolboard.title,
         description: data.aitoolboard.description,
         icons: {
-            icon: '/logo.png',
+            icon: '/favicon.ico',
             shortcut: '/shortcut-icon.png',
             apple: '/apple-icon.png',
             other: {
