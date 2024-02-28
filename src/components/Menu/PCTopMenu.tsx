@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FaGithub } from 'react-icons/fa'
 import React, { useState } from 'react'
+import { Locale } from '@/i18n'
 
 export default function PCTopMenu() {
     return (
