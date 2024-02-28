@@ -66,7 +66,7 @@ export default function MainContent({intl}) {
 
             </Head> */}
             <div className="py-10">
-                <Image src="/logo.png" alt="logo" width={200} height={200} />
+                <Image src="/favicon.ico" alt="favicon" width={200} height={200} />
             </div>
             {/*<div className=''>*/}
             <div className='mx-auto w-full max-w-7xl px-5 mb-5'>

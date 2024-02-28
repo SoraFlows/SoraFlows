@@ -53,7 +53,7 @@ export const LayoutHeader = ({
             <nav className="flex items-center justify-between w-full" aria-label="Global">
                 <div className="flex items-center justify-center space-x-2">
                     <a href={`/${lang}`} className="-m-1.5 p-1.5" onClick={() => setShowLoadingModal(true)}>
-                        <Image className="h-14 w-auto" src="/logo.png" alt="www.soraflows.com" width={64} height={64} />
+                        <Image className="h-14 w-auto" src="/favicon.ico" alt="www.soraflows.com" width={64} height={64} />
                     </a>
                     <a href={`/${lang}`} className="-m-1.5 ml-0.5 p-1.5" onClick={() => setShowLoadingModal(true)}>
                         <Image
@@ -61,6 +61,7 @@ export const LayoutHeader = ({
                             src="/soraflows.svg"
                             width={128}
                             height={96}
+                            priority
                             alt="www.soraflows.com" />
                     </a>
                 </div>
