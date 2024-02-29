@@ -1,8 +1,5 @@
 import React from 'react'
-import {Inter} from 'next/font/google';
 import { LayoutHeader } from '@/components/Header'
-
-const inter = Inter({subsets: ['latin']});
 
 export const metadata = {
     title: "",
@@ -27,6 +24,7 @@ export default function LocaleLayout({
         <div>
             <LayoutHeader lang={lang} page={'/video'}/>
             {children}
+            {/*<Footer/>*/}
         </div>
     )
 }

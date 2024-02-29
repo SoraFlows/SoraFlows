@@ -69,7 +69,7 @@ export default async function PageContent({ params: { lang } }: { params: { lang
             </a>.
           </p>
         </div>
-        <Footer year={new Date().getFullYear()} companyName="SoraFlows" intl={footerIntlText} />
+        <Footer year={new Date().getFullYear()} companyName="SoraFlows" intl={footerIntlText} page={`privacy-policy`}/>
       </main>
 
       

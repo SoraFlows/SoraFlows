@@ -48,7 +48,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
                     <MainContent intl={homepageIntlText} />
                 </div>
                 <VideoWrapper randomTenVideos={randomTenVideos} intl={homepageIntlText} />
-                <Footer year={new Date().getFullYear()} companyName="SoraFlows" intl={footerIntlText} />
+                <Footer year={new Date().getFullYear()} companyName="SoraFlows" intl={footerIntlText} page={'/'}/>
             </main>
         </>
     )
