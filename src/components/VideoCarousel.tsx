@@ -1,9 +1,8 @@
 'use client'
-import React, {useEffect, useRef, useState} from 'react'
+import React from 'react'
 import {useInView} from 'react-intersection-observer'
 import {RiOpenaiFill, RiOpenaiLine} from 'react-icons/ri'
 
-// @ts-ignore
 const VideoCarousel = ({videos}) => {
     const {ref, inView} = useInView({
         triggerOnce: true,

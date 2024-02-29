@@ -22,7 +22,7 @@ export const LayoutHeader = ({
     currentLanguageText = {
         loginText: 'Log in',
         loadingText: 'Loading...',
-        generateText: 'Generating',
+        generateText: 'Loading...',
         loginModalDesc: 'Login In',
         loginModalButtonText: 'Login',
         logoutModalDesc: 'Logout',
@@ -64,8 +64,10 @@ export const LayoutHeader = ({
                 name='yandex-verification'
                 content='98ea1d5c6ffd0f84'
             />
-            <LoadingModal loadingText={currentLanguageText.generateText} />
-            <GeneratingModal generatingText={'While generating...'} />
+            <LoadingModal loadingText={currentLanguageText.loadingText} />
+            <GeneratingModal
+                generatingText={currentLanguageText.generateText}
+            />
             {/*TODO 这里后续修改成多语言*/}
             <LoginModal
                 loadingText={currentLanguageText.loadingText}
