@@ -10,6 +10,9 @@ import PCTopMenu from '@/components/Menu/PCTopMenu'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import Link from 'next/link'
 import { FaGithub } from 'react-icons/fa'
+import { loginIn } from '@/lib/nextAuthClient'
+import LoginButton from '@/components/LoginButton'
+import LoginModal from '@/components/LoginModal'
 
 export const LayoutHeader = ({
     lang = '',
@@ -18,13 +21,17 @@ export const LayoutHeader = ({
     currentLanguageText = {
         loginText: 'Log in',
         loadingText: 'Loading...',
-        generateText: 'Generating'
+        generateText: 'Generating',
+        loginModalDesc: 'Login In',
+        loginModalButtonText: 'Login'
     }
 }
 ) => {
     const langs = lang
-    const { showLoadingModal, setShowLoadingModal } = useCommonContext()
     const [hovered, setHovered] = useState(false)
+    const {setShowLoadingModal, userData, showLoadingModal} = useCommonContext();
+
+
     const useCustomEffect = (effect, deps) => {
         const isInitialMount = useRef(true)
         useEffect(() => {
@@ -50,6 +57,12 @@ export const LayoutHeader = ({
             <meta name="sogou_site_verification" content="zGBv6xzYV2" />
             <meta name="yandex-verification" content="98ea1d5c6ffd0f84" />
             <LoadingModal loadingText={currentLanguageText.generateText} />
+            <LoginModal
+                loadingText={currentLanguageText.loadingText}
+                redirectPath={`http://localhost`}
+                loginModalDesc={currentLanguageText.loginModalDesc}
+                loginModalButtonText={currentLanguageText.loginModalButtonText}
+            />
             <nav className="flex items-center justify-between w-full" aria-label="Global">
                 <div className="flex items-center justify-center space-x-2">
                     <a href={`/${lang}`} className="-m-1.5 p-1.5" onClick={() => setShowLoadingModal(true)}>
@@ -107,6 +120,8 @@ export const LayoutHeader = ({
                     <LanguageSwitcher lang={lang} page={page} />
                 </div>
                 <div>
+                    <LoginButton buttonType={userData ? 1 : 0}/>
+                    {/*<button onClick={() => loginIn({redirectPath: ''})}> 登录</button>*/}
                     {/* 登录按钮 */}
                 </div>
             </nav>
