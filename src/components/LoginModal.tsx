@@ -3,7 +3,6 @@ import React from 'react'
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { FcGoogle } from 'react-icons/fc'
-// import { blackLoadingSvg } from './svg'
 import { useCommonContext } from '@/context/common-context'
 import { loginIn } from '@/lib/nextAuthClient'
 import { useSession } from 'next-auth/react'
@@ -63,10 +62,10 @@ const LoginModal = ({
                                             <a className="-m-1.5 ml-0.5 p-1.5">
                                                 <Image
                                                     className="h-8 w-auto"
-                                                    src="/sorawebui.svg"
+                                                    src="/logo.png"
                                                     width={32}
-                                                    height={24}
-                                                    alt="Whooper" />
+                                                    height={32}
+                                                    alt="Website logo" />
                                             </a>
                                         </Dialog.Title>
                                         <div className="mt-2">

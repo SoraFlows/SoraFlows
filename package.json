@@ -39,7 +39,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
-    "react-intersection-observer": "^9.8.0"
+    "react-intersection-observer": "^9.8.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.4",
@@ -51,6 +52,7 @@
     "@types/node": "^20.11.20",
     "@types/react": "^18.2.58",
     "@types/react-dom": "^18.2.19",
+    "@types/uuid": "^9.0.8",
     "autoprefixer": "^10.0.1",
     "cross-env": "^7.0.3",
     "eslint": "^8",

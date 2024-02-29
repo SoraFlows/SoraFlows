@@ -42,6 +42,10 @@ export default function LoginButton({
         }
     }
 
+    async function logout() {
+        setShowLogoutModal(true)
+    }
+
     return (
         <>
             {
@@ -75,7 +79,7 @@ export default function LoginButton({
                         {
                             <button
                                 className="my-auto mx-auto mr-4 mt-1 inline-flex w-full justify-center gap-x-1.5 rounded-md text-sm font-semibold"
-                                // onClick={logout}
+                                onClick={logout}
                             >
                                 <img className="h-8 w-auto rounded-full" src={userData.image} alt="" />
                             </button>
