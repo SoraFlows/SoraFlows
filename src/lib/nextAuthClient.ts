@@ -1,7 +1,10 @@
-import { signIn } from "next-auth/react";
+import { signIn } from 'next-auth/react'
 
-export async function loginIn({redirectPath}) {
-    const result = await signIn('google', {
+export async function loginIn({ redirectPath, provider }: {
+    redirectPath: string;
+    provider: string;
+}) {
+    const result = await signIn(provider, {
         callbackUrl: redirectPath
     })
 }

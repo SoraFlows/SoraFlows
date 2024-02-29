@@ -3,6 +3,8 @@ import React from 'react'
 import { Inter } from 'next/font/google'
 import clsx from 'clsx'
 import Script from 'next/script'
+import { CommonProvider } from '@/context/common-context'
+import { NextAuthProvider } from '@/context/next-auth-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -81,7 +83,13 @@ export default function LocaleLayout({
                     }} 
                 /> */}
         </head>
-        <body suppressHydrationWarning={true} className={clsx(inter.className, '')}>{children}</body>
+        <body suppressHydrationWarning={true} className={clsx(inter.className, '')}>
+        <NextAuthProvider>
+            <CommonProvider>
+                {children}
+            </CommonProvider>
+        </NextAuthProvider>
+        </body>
         </html>
     )
 }

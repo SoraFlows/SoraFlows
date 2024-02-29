@@ -8,6 +8,7 @@ import { useCommonContext } from '@/context/common-context'
 import { loginIn } from '@/lib/nextAuthClient'
 import { useSession } from 'next-auth/react'
 import Image from 'next/image'
+import { BsGithub } from 'react-icons/bs'
 
 const style = {
     loginGoogleBtn: 'inline-flex w-full justify-center items-center space-x-3 rounded-md  px-3 py-2 text-sm font-semibold shadow-sm hover:border-indigo-400 border-2  border-indigo-600  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
@@ -21,7 +22,8 @@ const LoginModal = ({
                     }) => {
 
     const { data: session, status } = useSession()
-    const [loadGoogle, setLoadGoogle] = useState(false)
+    const [googleLoadingState, setGoogleLoadingState] = useState(false)
+    const [githubLoadingState, setGithubLoadingState] = useState(false)
     const { showLoginModal, setShowLoginModal } = useCommonContext()
 
 
@@ -76,7 +78,7 @@ const LoginModal = ({
                                 </div>
                                 <div className="mt-5 sm:mt-6 space-y-3">
                                     {
-                                        loadGoogle ? (
+                                        googleLoadingState ? (
                                             <button
                                                 type="button"
                                                 className={style.loginGoogleBtn}
@@ -91,12 +93,40 @@ const LoginModal = ({
                                                 className={'inline-flex w-full justify-center items-center space-x-3 rounded-md px-3 py-2 text-sm font-semibold shadow-sm hover:border-indigo-400 border-2 border-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'}
                                                 onClick={async () => {
                                                     await loginIn({
+                                                        provider: 'google',
                                                         redirectPath: redirectPath
                                                     })
-                                                    setLoadGoogle(true)
+                                                    setGoogleLoadingState(true)
                                                 }}
                                             >
                                                 <FcGoogle className="text-xl" />
+                                                <p>{loginModalButtonText}</p>
+                                            </button>
+                                        )
+                                    }
+                                    {
+                                        githubLoadingState ? (
+                                            <button
+                                                type="button"
+                                                className={style.loginGoogleBtn}
+                                                disabled
+                                            >
+
+                                                <p>{loadingText}</p>
+                                            </button>
+                                        ) : (
+                                            <button
+                                                type="button"
+                                                className={'inline-flex w-full justify-center items-center space-x-3 rounded-md px-3 py-2 text-sm font-semibold shadow-sm hover:border-indigo-400 border-2 border-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'}
+                                                onClick={async () => {
+                                                    await loginIn({
+                                                        provider: 'github',
+                                                        redirectPath: redirectPath
+                                                    })
+                                                    setGithubLoadingState(true)
+                                                }}
+                                            >
+                                                <BsGithub className="text-xl" />
                                                 <p>{loginModalButtonText}</p>
                                             </button>
                                         )
