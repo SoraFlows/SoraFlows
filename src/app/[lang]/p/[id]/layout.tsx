@@ -50,7 +50,7 @@ export default async function Layout(
         <div>
             <LayoutHeader lang={props.params.lang} page={`/p/${props.params.id}`}/>
             {props.children}
-            <Footer year={new Date().getFullYear()} companyName="SoraFlows" intl={footerIntlText} />
+            <Footer year={new Date().getFullYear()} companyName="SoraFlows" intl={footerIntlText} page={`p/${props.params.id}`}/>
         </div>
     )
 }

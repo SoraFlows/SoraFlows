@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 import { languages } from '@/i18n';
 
 
-export default function Footer({ year, companyName, intl }) {
+export default function Footer({ year, companyName, intl, page }) {
     // 获取路由的语言
     
     const t = useTranslations('footer');
@@ -16,7 +16,7 @@ export default function Footer({ year, companyName, intl }) {
             {/* 国际化路由展示 */}
             <div className="flex flex-col sm:flex-row justify-center items-center w-full mb-5">
                 {languages.map(({ lang, language }) => (
-                    <Link href={`/${lang}`} key={lang} lang={lang} className="px-2 py-1 hover:text-gray-500 text-center">
+                    <Link href={`/${lang}/${page}`} key={lang} lang={lang} className="px-2 py-1 hover:text-gray-500 text-center">
                         {language}
                     </Link>
                 ))}
