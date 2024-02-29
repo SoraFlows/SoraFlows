@@ -1,13 +1,11 @@
 'use client'
-import { createContext, useContext, useState } from 'react'
-import { useSession } from 'next-auth/react'
-import { useInterval } from 'ahooks'
-
+import {createContext, useContext, useState} from 'react'
+import {useSession} from 'next-auth/react'
+import {useInterval} from 'ahooks'
 
 const CommonContext = createContext<any>(undefined)
-export const CommonProvider = ({ children }) => {
-
-    const { data: session, status } = useSession()
+export const CommonProvider = ({children}) => {
+    const {data: session, status} = useSession()
     const [userData, setUserData] = useState()
     const [intervalUserData, setIntervalUserData] = useState(1000)
     const [showLoginModal, setShowLoginModal] = useState(false)
@@ -25,11 +23,11 @@ export const CommonProvider = ({ children }) => {
             const requestData = {
                 name: session.user?.name,
                 email: session.user?.email,
-                image: session.user?.image
+                image: session.user?.image,
             }
             const response = await fetch(`/api/checkAndSaveUser`, {
                 method: 'POST',
-                body: JSON.stringify(requestData)
+                body: JSON.stringify(requestData),
             })
             if (response.status != 200) {
                 return
@@ -40,7 +38,6 @@ export const CommonProvider = ({ children }) => {
             }
             setIntervalUserData(0)
         } else if (status == 'loading') {
-
         } else if (status == 'unauthenticated') {
             setIntervalUserData(0)
         }
@@ -49,17 +46,20 @@ export const CommonProvider = ({ children }) => {
     return (
         <CommonContext.Provider
             value={{
-                userData, setUserData,
-                showLoginModal, setShowLoginModal,
-                showLogoutModal, setShowLogoutModal,
-                showLoadingModal, setShowLoadingModal,
-                showGeneratingModal, setShowGeneratingModal
-            }}
-        >
+                userData,
+                setUserData,
+                showLoginModal,
+                setShowLoginModal,
+                showLogoutModal,
+                setShowLogoutModal,
+                showLoadingModal,
+                setShowLoadingModal,
+                showGeneratingModal,
+                setShowGeneratingModal,
+            }}>
             {children}
         </CommonContext.Provider>
     )
-
 }
 
 export const useCommonContext = () => useContext(CommonContext)
