@@ -1,3 +1,5 @@
+import { shuffleArray } from '@/lib/shuffle'
+
 export const allExampleVideoList = [
   {
     "number": "a1",
@@ -289,6 +291,13 @@ export const allExampleVideoList = [
   }
 ]
 
+export interface ExampleVideo{
+  number: string,
+  prompt: string,
+  videoUrl: string,
+  keywords: string
+}
+
 // 假设 allExampleVideoList 的类型是这样的数组
 interface Video {
   id: number;
@@ -296,21 +305,7 @@ interface Video {
   // 可能还有其他属性...
 }
 
-export const randomVideo = (): Video[] => {
-  // 使用类型注解显式声明数组类型
-  let randomNumbers: number[] = [];
-  const resultVideoList: Video[] = [];
-
-  while (randomNumbers.length < 5 && randomNumbers.length < allExampleVideoList.length) {
-    let randomNumber = Math.floor(Math.random() * allExampleVideoList.length);
-    if (!randomNumbers.includes(randomNumber)) {
-      randomNumbers.push(randomNumber);
-      const video: Video = {
-        id: randomNumber,
-        title: allExampleVideoList[randomNumber].prompt,
-      };
-      resultVideoList.push(video);
-    }
-  }
-  return resultVideoList;
+export const getRandomVideo = (count: number): ExampleVideo[] => {
+  shuffleArray(allExampleVideoList)
+  return allExampleVideoList.slice(0, count);
 }

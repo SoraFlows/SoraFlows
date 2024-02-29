@@ -14,6 +14,7 @@ import { loginIn } from '@/lib/nextAuthClient'
 import LoginButton from '@/components/LoginButton'
 import LoginModal from '@/components/LoginModal'
 import LogoutModal from '@/components/LogoutModal'
+import GeneratingModal from '@/components/GeneratingModal'
 
 export const LayoutHeader = ({
                                  lang = '',
@@ -61,6 +62,7 @@ export const LayoutHeader = ({
             <meta name="sogou_site_verification" content="zGBv6xzYV2" />
             <meta name="yandex-verification" content="98ea1d5c6ffd0f84" />
             <LoadingModal loadingText={currentLanguageText.generateText} />
+            <GeneratingModal generatingText={'While generating...'}/>
             {/*TODO 这里后续修改成多语言*/}
             <LoginModal
                 loadingText={currentLanguageText.loadingText}
