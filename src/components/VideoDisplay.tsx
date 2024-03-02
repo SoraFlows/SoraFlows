@@ -1,17 +1,24 @@
-import {FaStarOfDavid} from 'react-icons/fa'
-import {AiFillFileImage} from 'react-icons/ai'
-import {MdOutlineAttachFile} from 'react-icons/md'
 import React, {useEffect, useRef} from 'react'
-import {allExampleVideoList} from '@/app/data/openaiExampleVideo'
 import {IoCopy} from 'react-icons/io5'
+import {Dialog} from "@headlessui/react";
+import LoadingModal from "@/components/LoadingModal";
 
 export default function VideoDisplay({videoUrl, prompt}) {
-    // const allExampleVideos = allExampleVideoList
-    // console.log('当前视频url', videoUrl)
-    // console.log('当前视频prompt', prompt)
+    const [showDialog, setShowDialog] = React.useState(false)
+    const handleCopyToClipboard = async () => {
+        try {
+            await navigator.clipboard.writeText(prompt);
+            // Display some feedback here if you want, like a toast notification
+            console.log('Prompt copied to clipboard');
+            setShowDialog(true)
+        } catch (err) {
+            console.error('Failed to copy: ', err);
+        }
+    };
+
     return (
         <>
-            <div className='flex h-screen flex-col items-center'>
+            <div className='flex flex-col items-center'>
                 <div className='max-h-[80vh] max-w-[80vh] pt-6'>
                     <div className='rounded-xl bg-gray-200 px-16'>
                         <video
@@ -29,12 +36,11 @@ export default function VideoDisplay({videoUrl, prompt}) {
 
                     <div className='flex '>
                         <div className='py-2 text-white'>
-                            <button className='hover:opacity-75'>
-                                <IoCopy className='scale-125 text-gray-600' />
+                            <button className='hover:opacity-75' onClick={() => handleCopyToClipboard()}>
+                                <IoCopy className='scale-125 text-gray-600'/>
                             </button>
                             <span className='pl-4 text-black'>
                                 {prompt}
-                                {/*{allExampleVideos[0].prompt}*/}
                             </span>
                         </div>
                     </div>
