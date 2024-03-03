@@ -1,23 +1,23 @@
-import { getQueryClient } from '@/lib/query-client.server'
-import { getArticle } from '@/api/getArticle'
-import { Metadata } from 'next'
-import { LayoutHeader } from '@/components/Header'
-import { getTranslations } from "next-intl/server";
-import Footer from "@/components/Footer";
+import {getQueryClient} from '@/lib/query-client.server'
+import {getArticle} from '@/api/getArticle'
+import {Metadata} from 'next'
+import {LayoutHeader} from '@/components/Header'
+import {getTranslations} from 'next-intl/server'
+import Footer from '@/components/Footer'
 
 export const generateMetadata = async (
     props: NextPageParams<{
         id: string
-    }>
+    }>,
 ) => {
     const queryClient = getQueryClient()
-    const { id } = props.params
+    const {id} = props.params
     const queryKey = ['p', id]
     const article = await queryClient.fetchQuery({
         queryKey,
         queryFn: async () => {
-            return (await getArticle(id))
-        }
+            return await getArticle(id)
+        },
     })
     return {
         title: article?.title,
@@ -27,30 +27,38 @@ export const generateMetadata = async (
             description: article?.description || '',
             images: [
                 {
-                    url: article?.cover_image || ''
-                }
-            ]
-        }
+                    url: article?.cover_image || '',
+                },
+            ],
+        },
     } satisfies Metadata
 }
 
 export default async function Layout(
     props: NextPageParams<{
-        lang: string,
+        lang: string
         id: string
-    }>
+    }>,
 ) {
     const tFooter = await getTranslations('footer')
     const footerIntlText = {
         subtitle: tFooter('subtitle'),
         introduce: tFooter('introduce'),
-        site: tFooter('site')
+        site: tFooter('site'),
     }
     return (
         <div>
-            <LayoutHeader lang={props.params.lang} page={`/p/${props.params.id}`}/>
+            <LayoutHeader
+                lang={props.params.lang}
+                page={`/p/${props.params.id}`}
+            />
             {props.children}
-            <Footer year={new Date().getFullYear()} companyName="SoraFlows" intl={footerIntlText} />
+            <Footer
+                year={new Date().getFullYear()}
+                companyName='SoraFlows'
+                intl={footerIntlText}
+                page={`p/${props.params.id}`}
+            />
         </div>
     )
 }

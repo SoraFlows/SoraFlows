@@ -1,4 +1,4 @@
-export default async function Post(){
+export default async function Post() {
     return (
         <div>
             <h1>Post</h1>

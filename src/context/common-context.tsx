@@ -1,29 +1,65 @@
-import React, { createContext, useContext, useState, Dispatch, SetStateAction } from "react";
+'use client'
+import {createContext, useContext, useState} from 'react'
+import {useSession} from 'next-auth/react'
+import {useInterval} from 'ahooks'
 
-// 定义上下文类型
-interface CommonContextType {
-  showLoadingModal: boolean;
-  setShowLoadingModal: Dispatch<SetStateAction<boolean>>;
+const CommonContext = createContext<any>(undefined)
+export const CommonProvider = ({children}) => {
+    const {data: session, status} = useSession()
+    const [userData, setUserData] = useState()
+    const [intervalUserData, setIntervalUserData] = useState(1000)
+    const [showLoginModal, setShowLoginModal] = useState(false)
+    const [showLogoutModal, setShowLogoutModal] = useState(false)
+    const [showLoadingModal, setShowLoadingModal] = useState(false)
+    const [showGeneratingModal, setShowGeneratingModal] = useState(false)
+
+    useInterval(() => {
+        init()
+    }, intervalUserData)
+
+    async function init() {
+        if (status == 'authenticated') {
+            // 获取用户
+            const requestData = {
+                name: session.user?.name,
+                email: session.user?.email,
+                image: session.user?.image,
+            }
+            const response = await fetch(`/api/checkAndSaveUser`, {
+                method: 'POST',
+                body: JSON.stringify(requestData),
+            })
+            if (response.status != 200) {
+                return
+            }
+            const result = await response.json()
+            if (result.user_id) {
+                setUserData(result)
+            }
+            setIntervalUserData(0)
+        } else if (status == 'loading') {
+        } else if (status == 'unauthenticated') {
+            setIntervalUserData(0)
+        }
+    }
+
+    return (
+        <CommonContext.Provider
+            value={{
+                userData,
+                setUserData,
+                showLoginModal,
+                setShowLoginModal,
+                showLogoutModal,
+                setShowLogoutModal,
+                showLoadingModal,
+                setShowLoadingModal,
+                showGeneratingModal,
+                setShowGeneratingModal,
+            }}>
+            {children}
+        </CommonContext.Provider>
+    )
 }
-// 使用具有正确类型的默认值创建上下文
-const CommonContext = createContext<CommonContextType>({
-  showLoadingModal: false, // 默认的 showLoadingModal 状态
-  setShowLoadingModal: () => {}, // 空函数作为初始的 setter，注意这里不执行任何操作
-});
 
-export const CommonProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [showLoadingModal, setShowLoadingModal] = useState(false);
-
-  return (
-    <CommonContext.Provider
-      value={{
-        showLoadingModal,
-        setShowLoadingModal,
-      }}
-    >
-      {children}
-    </CommonContext.Provider>
-  );
-};
-
-export const useCommonContext = () => useContext(CommonContext);
+export const useCommonContext = () => useContext(CommonContext)

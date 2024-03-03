@@ -1,18 +1,15 @@
-'use client';
-import {useEffect} from 'react';
+'use client'
+import {useEffect} from 'react'
 
 type Props = {
-  error: Error;
-  reset(): void;
-};
+    error: Error
+    reset(): void
+}
 
 export default function Error({error, reset}: Props) {
+    useEffect(() => {
+        console.error(error)
+    }, [error])
 
-  useEffect(() => {
-    console.error(error);
-  }, [error]);
-
-  return (
-    <div>not found</div>
-  );
+    return <div>not found</div>
 }
