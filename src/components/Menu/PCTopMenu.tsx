@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import React from 'react';
-import { topNavigation } from '@/config/top-navigation';
+import Link from 'next/link'
+import React from 'react'
+import {topNavigation} from '@/config/top-navigation'
 
 export default function PCTopMenu() {
     return (
@@ -15,9 +15,9 @@ export default function PCTopMenu() {
                                 {item.name}
                             </Link>
                         </>
-                    );
+                    )
                 })}
             </div>
         </div>
-    );
+    )
 }
