@@ -8,13 +8,12 @@ export default function PCTopMenu() {
             <div className='flex flex-row items-center justify-center'>
                 {topNavigation.topMenu.map((item) => {
                     return (
-                        <>
                             <Link
+                                key={item.href}
                                 href={`${item.href}`}
                                 className='rounded-xl px-4 py-2 pr-4 font-bold opacity-90 transition duration-300 hover:bg-gray-200 md:text-base lg:flex'>
                                 {item.name}
                             </Link>
-                        </>
                     )
                 })}
             </div>
