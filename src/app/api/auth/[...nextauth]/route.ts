@@ -32,6 +32,7 @@ const authOptions: NextAuthOptions = {
             return baseUrl
         },
     },
+    secret: process.env.NEXT_AUTH_SECRET || 'secret',
 }
 
 const handler = NextAuth(authOptions)
