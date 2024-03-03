@@ -6,12 +6,13 @@ export default createMiddleware({
     locales,
     defaultLocale,
     localePrefix,
+    localeDetection: false,
 })
 
 export const config = {
     matcher: [
         '/',
-        '/(en-US|zh-CN|zh-TW|ja-JP|ar-SA|ko-KR|pt-BR|es-ES|de-DE|fr-FR|vi-VN)/:path*',
+        '/(en|zh|zh-TW|ja|ar|ko|pt|es|de|fr|vi)/:path*',
         '/((?!api|_next|_vercel|.*\\..*).*)',
     ],
 }
