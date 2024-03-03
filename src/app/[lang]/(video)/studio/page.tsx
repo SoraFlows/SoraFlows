@@ -68,6 +68,7 @@ export default function Studio({params: {lang}}: { params: { lang: Locale } }) {
                 <div className={`max-h-[70vh] overflow-scroll`} ref={videoListRef}>
                     {videoList.map((item) => {
                         return <VideoDisplay
+                            key={item.url}
                             videoUrl={item.url}
                             prompt={item.prompt}
                         />

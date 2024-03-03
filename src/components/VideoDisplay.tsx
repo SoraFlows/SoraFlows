@@ -3,7 +3,7 @@ import {IoCopy} from 'react-icons/io5'
 import {Dialog} from '@headlessui/react'
 import LoadingModal from '@/components/LoadingModal'
 
-export default function VideoDisplay({videoUrl, prompt}) {
+export default function VideoDisplay({key, videoUrl, prompt}) {
     const [showDialog, setShowDialog] = React.useState(false)
     const handleCopyToClipboard = async () => {
         try {
@@ -22,7 +22,7 @@ export default function VideoDisplay({videoUrl, prompt}) {
                 <div className='max-h-[80vh] max-w-[80vh] pt-6'>
                     <div className='rounded-xl bg-gray-200 px-16'>
                         <video
-                            key={videoUrl}
+                            key={key}
                             controls
                             preload='metadata'
                             className='left-0 top-0 h-full w-full'>
