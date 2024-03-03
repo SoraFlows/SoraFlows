@@ -1,14 +1,14 @@
-import { Menu, Transition } from '@headlessui/react';
-import { IoIosMenu } from 'react-icons/io';
-import React, { Fragment, useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { FaGithub } from 'react-icons/fa';
-import { topNavigation } from '@/config/top-navigation';
+import {Menu, Transition} from '@headlessui/react'
+import {IoIosMenu} from 'react-icons/io'
+import React, {Fragment, useState} from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import {FaGithub} from 'react-icons/fa'
+import {topNavigation} from '@/config/top-navigation'
 
-export default function MobileTopMenu({ lang = '', page = '' }) {
-    const [hovered, setHovered] = useState(false);
-    const langs = lang;
+export default function MobileTopMenu({lang = '', page = ''}) {
+    const [hovered, setHovered] = useState(false)
+    const langs = lang
     return (
         <Menu>
             <div>
@@ -36,7 +36,7 @@ export default function MobileTopMenu({ lang = '', page = '' }) {
                                     </Link>
                                 </Menu.Item>
                             </>
-                        );
+                        )
                     })}
                     {/* 设置只有中文路由才展示 */}
                     {langs === 'zh' && (
@@ -73,5 +73,5 @@ export default function MobileTopMenu({ lang = '', page = '' }) {
                 </Menu.Items>
             </Transition>
         </Menu>
-    );
+    )
 }

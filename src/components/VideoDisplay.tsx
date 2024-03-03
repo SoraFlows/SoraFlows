@@ -1,20 +1,20 @@
 import React, {useEffect, useRef} from 'react'
 import {IoCopy} from 'react-icons/io5'
-import {Dialog} from "@headlessui/react";
-import LoadingModal from "@/components/LoadingModal";
+import {Dialog} from '@headlessui/react'
+import LoadingModal from '@/components/LoadingModal'
 
 export default function VideoDisplay({videoUrl, prompt}) {
     const [showDialog, setShowDialog] = React.useState(false)
     const handleCopyToClipboard = async () => {
         try {
-            await navigator.clipboard.writeText(prompt);
+            await navigator.clipboard.writeText(prompt)
             // Display some feedback here if you want, like a toast notification
-            console.log('Prompt copied to clipboard');
+            console.log('Prompt copied to clipboard')
             setShowDialog(true)
         } catch (err) {
-            console.error('Failed to copy: ', err);
+            console.error('Failed to copy: ', err)
         }
-    };
+    }
 
     return (
         <>
@@ -36,12 +36,12 @@ export default function VideoDisplay({videoUrl, prompt}) {
 
                     <div className='flex '>
                         <div className='py-2 text-white'>
-                            <button className='hover:opacity-75' onClick={() => handleCopyToClipboard()}>
-                                <IoCopy className='scale-125 text-gray-600'/>
+                            <button
+                                className='hover:opacity-75'
+                                onClick={() => handleCopyToClipboard()}>
+                                <IoCopy className='scale-125 text-gray-600' />
                             </button>
-                            <span className='pl-4 text-black'>
-                                {prompt}
-                            </span>
+                            <span className='pl-4 text-black'>{prompt}</span>
                         </div>
                     </div>
                 </div>
