@@ -13,7 +13,7 @@ export const languages = [
         language: '简体中文',
     },
     {
-        lang: 'zh-TW',
+        lang: 'tw',
         code: 'zh-TW',
         language: '繁體中文',
     },
