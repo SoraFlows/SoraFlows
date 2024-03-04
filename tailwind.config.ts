@@ -20,6 +20,7 @@ const config: Config = {
                 "home-background": "url('/background.png')",
             }, fontFamily: {
                 sans: ['Poppins', 'sans-serif'],
+                "serif-pro": ['"Source Serif 4"', 'sans-serif'],
             },
         },
     },

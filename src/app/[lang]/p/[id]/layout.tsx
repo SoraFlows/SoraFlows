@@ -40,9 +40,5 @@ export default async function Layout(
         id: string
     }>,
 ) {
-    return (
-        <div>
-            {props.children}
-        </div>
-    )
+    return <div>{props.children}</div>
 }

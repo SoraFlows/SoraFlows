@@ -53,7 +53,7 @@ export default async function Home({params: {lang}}: {params: {lang: Locale}}) {
                     page='/'
                     mode='light'
                 />
-                <div className='left-[15%] top-[10%]'>
+                <div className='left-[15%] top-[10%]  font-serif-pro'>
                     <MainContent intl={homepageIntlText} />
                 </div>
                 <VideoWrapper

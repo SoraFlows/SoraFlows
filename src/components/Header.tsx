@@ -53,7 +53,7 @@ export const LayoutHeader = ({
 
     return (
         <header
-            className={`flex w-full items-center justify-between border-b-[0.5px] border-zinc-200 
+            className={`flex w-full items-center justify-between border-b-[0.5px] border-zinc-200 font-serif-pro 
             ${mode === 'light' ? 'bg-white/80' : 'bg-gray-500'} z-[19] pl-4 pr-4 backdrop-blur md:pl-6 md:pr-6`}>
             {/* // className="sticky top-0 bg-[#020d24] z-20 w-full" */}
             <meta

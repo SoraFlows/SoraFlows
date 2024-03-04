@@ -1,53 +1,53 @@
-'use client';
-import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { addEmail } from '@/api/fetchData';
-import Soraflows from '@/components/Soraflows';
+'use client'
+import Image from 'next/image'
+import React, {useEffect, useState} from 'react'
+import {useRouter} from 'next/navigation'
+import {addEmail} from '@/api/fetchData'
+import Soraflows from '@/components/Soraflows'
 
-export default function MainContent({ intl }) {
-    const router = useRouter(); // 使用 useRouter 钩子
-    const [email, setEmail] = useState('');
-    const [showPrompt, setShowPrompt] = useState(false);
-    const [showAnimation, setShowAnimation] = useState(false); // 新状态控制动画显示
+export default function MainContent({intl}) {
+    const router = useRouter() // 使用 useRouter 钩子
+    const [email, setEmail] = useState('')
+    const [showPrompt, setShowPrompt] = useState(false)
+    const [showAnimation, setShowAnimation] = useState(false) // 新状态控制动画显示
     // const t = useTranslations('homepage');
 
     useEffect(() => {
         // 使用 useEffect 确保下面的逻辑在客户端执行
-        console.log('Router path:', router);
-    }, [router]);
+        console.log('Router path:', router)
+    }, [router])
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault()
         // 检查邮箱输入是否为空（或只包含空格）
         // 简单的邮箱格式验证
-        const emailRegex = /\S+@\S+\.\S+/;
-        const isValidEmail = emailRegex.test(email);
+        const emailRegex = /\S+@\S+\.\S+/
+        const isValidEmail = emailRegex.test(email)
 
         if (email.trim() === '' || !emailRegex.test(email)) {
             // 如果邮箱不符合格式，则显示提示且不跳转
-            setShowPrompt(true); // 显示提示信息
-            setShowAnimation(true); // 激活动画
-            setTimeout(() => setShowAnimation(false), 1500); // 1.5秒后移除动画效果
-            return; // 阻止表单提交和页面跳转
+            setShowPrompt(true) // 显示提示信息
+            setShowAnimation(true) // 激活动画
+            setTimeout(() => setShowAnimation(false), 1500) // 1.5秒后移除动画效果
+            return // 阻止表单提交和页面跳转
         } else {
-            console.log('Form submitted with email:', email);
-            await addEmail(email);
+            console.log('Form submitted with email:', email)
+            await addEmail(email)
             // 表单提交后跳转
             try {
-                router.push('/studio');
+                router.push('/studio')
             } catch (error) {
-                console.error('Failed to navigate:', error);
+                console.error('Failed to navigate:', error)
             }
         }
-    };
+    }
     // 用于处理邮箱输入字段的变化
     const handleEmailChange = (e) => {
-        setEmail(e.target.value); // 更新 email 状态，存储输入的值
+        setEmail(e.target.value) // 更新 email 状态，存储输入的值
         // 用户开始输入时隐藏提示
-        setShowPrompt(false); // 隐藏提示信息
-        setShowAnimation(false); // 如果想要在用户输入时也立即停止任何动画效果，可以加上这行
-    };
+        setShowPrompt(false) // 隐藏提示信息
+        setShowAnimation(false) // 如果想要在用户输入时也立即停止任何动画效果，可以加上这行
+    }
 
     // useEffect(() => {
     //     // 当邮箱输入为空时显示提示，否则不显示
@@ -120,5 +120,5 @@ export default function MainContent({ intl }) {
             </button>
             <br></br>
         </div>
-    );
+    )
 }
