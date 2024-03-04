@@ -1,12 +1,13 @@
-import './globals.css'
-import React from 'react'
-import {Inter} from 'next/font/google'
-import clsx from 'clsx'
-import Script from 'next/script'
-import {CommonProvider} from '@/context/common-context'
-import {NextAuthProvider} from '@/context/next-auth-provider'
+import './globals.css';
+import React from 'react';
+import { Inter } from 'next/font/google';
+import clsx from 'clsx';
+import Script from 'next/script';
+import { CommonProvider } from '@/context/common-context';
+import { NextAuthProvider } from '@/context/next-auth-provider';
+import ScrollTop from '@/components/ScrollTop';
 
-const inter = Inter({subsets: ['latin']})
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
     title: '',
@@ -27,14 +28,14 @@ export const metadata = {
             },
         ],
     },
-}
+};
 
 export default function LocaleLayout({
     children,
-    params: {lang},
+    params: { lang },
 }: {
-    children: React.ReactNode
-    params: {lang: string}
+    children: React.ReactNode;
+    params: { lang: string };
 }) {
     return (
         <html lang={lang}>
@@ -47,9 +48,7 @@ export default function LocaleLayout({
                     strategy='afterInteractive'
                 />
                 {/* 直接在页面中执行的脚本 */}
-                <Script
-                    id='google-analytics'
-                    strategy='afterInteractive'>
+                <Script id='google-analytics' strategy='afterInteractive'>
                     {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
@@ -88,10 +87,12 @@ export default function LocaleLayout({
             <body
                 suppressHydrationWarning={true}
                 className={clsx(inter.className, '')}>
+                <ScrollTop />
+
                 <NextAuthProvider>
                     <CommonProvider>{children}</CommonProvider>
                 </NextAuthProvider>
             </body>
         </html>
-    )
+    );
 }

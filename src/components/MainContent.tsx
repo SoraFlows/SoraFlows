@@ -1,52 +1,53 @@
-'use client'
-import Image from 'next/image'
-import React, {useEffect, useState} from 'react'
-import {useRouter} from 'next/navigation'
-import {addEmail} from '@/api/fetchData'
+'use client';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { addEmail } from '@/api/fetchData';
+import Soraflows from '@/components/Soraflows';
 
-export default function MainContent({intl}) {
-    const router = useRouter() // 使用 useRouter 钩子
-    const [email, setEmail] = useState('')
-    const [showPrompt, setShowPrompt] = useState(false)
-    const [showAnimation, setShowAnimation] = useState(false) // 新状态控制动画显示
+export default function MainContent({ intl }) {
+    const router = useRouter(); // 使用 useRouter 钩子
+    const [email, setEmail] = useState('');
+    const [showPrompt, setShowPrompt] = useState(false);
+    const [showAnimation, setShowAnimation] = useState(false); // 新状态控制动画显示
     // const t = useTranslations('homepage');
 
     useEffect(() => {
         // 使用 useEffect 确保下面的逻辑在客户端执行
-        console.log('Router path:', router)
-    }, [router])
+        console.log('Router path:', router);
+    }, [router]);
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
         // 检查邮箱输入是否为空（或只包含空格）
         // 简单的邮箱格式验证
-        const emailRegex = /\S+@\S+\.\S+/
-        const isValidEmail = emailRegex.test(email)
+        const emailRegex = /\S+@\S+\.\S+/;
+        const isValidEmail = emailRegex.test(email);
 
         if (email.trim() === '' || !emailRegex.test(email)) {
             // 如果邮箱不符合格式，则显示提示且不跳转
-            setShowPrompt(true) // 显示提示信息
-            setShowAnimation(true) // 激活动画
-            setTimeout(() => setShowAnimation(false), 1500) // 1.5秒后移除动画效果
-            return // 阻止表单提交和页面跳转
+            setShowPrompt(true); // 显示提示信息
+            setShowAnimation(true); // 激活动画
+            setTimeout(() => setShowAnimation(false), 1500); // 1.5秒后移除动画效果
+            return; // 阻止表单提交和页面跳转
         } else {
-            console.log('Form submitted with email:', email)
-            await addEmail(email)
+            console.log('Form submitted with email:', email);
+            await addEmail(email);
             // 表单提交后跳转
             try {
-                router.push('/studio')
+                router.push('/studio');
             } catch (error) {
-                console.error('Failed to navigate:', error)
+                console.error('Failed to navigate:', error);
             }
         }
-    }
+    };
     // 用于处理邮箱输入字段的变化
     const handleEmailChange = (e) => {
-        setEmail(e.target.value) // 更新 email 状态，存储输入的值
+        setEmail(e.target.value); // 更新 email 状态，存储输入的值
         // 用户开始输入时隐藏提示
-        setShowPrompt(false) // 隐藏提示信息
-        setShowAnimation(false) // 如果想要在用户输入时也立即停止任何动画效果，可以加上这行
-    }
+        setShowPrompt(false); // 隐藏提示信息
+        setShowAnimation(false); // 如果想要在用户输入时也立即停止任何动画效果，可以加上这行
+    };
 
     // useEffect(() => {
     //     // 当邮箱输入为空时显示提示，否则不显示
@@ -71,53 +72,7 @@ export default function MainContent({intl}) {
             </div>
             {/*<div className=''>*/}
             <div className='mx-auto mb-5 w-full max-w-7xl px-5'>
-                <h1 className='flex justify-center overflow-visible py-8 text-7xl'>
-                    <span
-                        className='wave text-red-500'
-                        style={{animationDelay: '0.1s'}}>
-                        S
-                    </span>
-                    <span
-                        className='wave text-green-500'
-                        style={{animationDelay: '0.2s'}}>
-                        o
-                    </span>
-                    <span
-                        className='wave text-blue-500'
-                        style={{animationDelay: '0.3s'}}>
-                        r
-                    </span>
-                    <span
-                        className='wave text-yellow-500'
-                        style={{animationDelay: '0.4s'}}>
-                        a
-                    </span>
-                    <span
-                        className='wave text-purple-500'
-                        style={{animationDelay: '0.5s'}}>
-                        F
-                    </span>
-                    <span
-                        className='wave text-pink-500'
-                        style={{animationDelay: '0.4s'}}>
-                        l
-                    </span>
-                    <span
-                        className='wave text-indigo-500'
-                        style={{animationDelay: '0.3s'}}>
-                        o
-                    </span>
-                    <span
-                        className='wave text-orange-500'
-                        style={{animationDelay: '0.2s'}}>
-                        w
-                    </span>
-                    <span
-                        className='wave text-lime-500'
-                        style={{animationDelay: '0.1s'}}>
-                        s
-                    </span>
-                </h1>
+                <Soraflows />
                 <div className='mx-auto flex max-w-4xl flex-col items-center py-10 text-center'>
                     <div className='mb-5 max-w-[528px] lg:mb-8'>
                         <p className='text-xl font-bold'>{intl.pDescription}</p>
@@ -164,31 +119,6 @@ export default function MainContent({intl}) {
                 {intl.get_started}
             </button>
             <br></br>
-
-            <style jsx>{`
-                .wave {
-                    display: inline-block;
-                    font-family: serif;
-                    transition: transform 0.5s ease;
-                    animation: wave-animation 0.5s ease forwards;
-                }
-
-                .wave:hover {
-                    transform: scale(1.2);
-                }
-
-                @keyframes wave-animation {
-                    0% {
-                        transform: translateY(0);
-                    }
-                    50% {
-                        transform: translateY(-10px) scale(1.2);
-                    }
-                    100% {
-                        transform: translateY(0) scale(1);
-                    }
-                }
-            `}</style>
         </div>
-    )
+    );
 }

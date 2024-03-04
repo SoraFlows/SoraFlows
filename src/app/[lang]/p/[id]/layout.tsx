@@ -40,25 +40,9 @@ export default async function Layout(
         id: string
     }>,
 ) {
-    const tFooter = await getTranslations('footer')
-    const footerIntlText = {
-        subtitle: tFooter('subtitle'),
-        introduce: tFooter('introduce'),
-        site: tFooter('site'),
-    }
     return (
         <div>
-            <LayoutHeader
-                lang={props.params.lang}
-                page={`/p/${props.params.id}`}
-            />
             {props.children}
-            <Footer
-                year={new Date().getFullYear()}
-                companyName='SoraFlows'
-                intl={footerIntlText}
-                page={`p/${props.params.id}`}
-            />
         </div>
     )
 }
