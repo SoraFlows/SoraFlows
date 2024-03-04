@@ -12,7 +12,7 @@ User-agent: black-listed-bot
 Disallow: /admin
 
 # Host
-Host: https://www.soraflows.com
+Host: https://soraflows.com
 
 # Sitemaps
-Sitemap: https://www.soraflows.com/sitemap.xml
+Sitemap: https://soraflows.com/sitemap.xml

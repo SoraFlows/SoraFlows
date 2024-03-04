@@ -3,7 +3,7 @@ import GithubProvider from 'next-auth/providers/github'
 import GoogleProvider from 'next-auth/providers/google'
 import {upsertUser} from '@/api/user/upsertUser'
 
-export const authOptions: NextAuthOptions = {
+const authOptions: NextAuthOptions = {
     // Configure one or more authentication providers
     providers: [
         GithubProvider({
@@ -32,6 +32,7 @@ export const authOptions: NextAuthOptions = {
             return baseUrl
         },
     },
+    secret: process.env.NEXT_AUTH_SECRET || 'secret',
 }
 
 const handler = NextAuth(authOptions)

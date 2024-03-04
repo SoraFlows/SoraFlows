@@ -16,6 +16,7 @@ datasource db {
 
 model t_articles {
   id           Int      @id @default(autoincrement())
+  uuid         String   @unique
   title        String
   description  String?
   author       String
@@ -35,7 +36,7 @@ model t_articles {
 
 model t_comments {
   id           Int      @id @default(autoincrement())
-  content      String
+  content      String   @db.Text
   author       String
   author_id    String
   like_count   Int?     @default(0)
@@ -46,7 +47,7 @@ model t_comments {
 
 model t_user {
   id           Int      @id @default(autoincrement()) // 主键id
-  uuid         String?  @unique
+  uuid         String   @unique
   email        String?
   nick_name    String?
   avatar_url   String?

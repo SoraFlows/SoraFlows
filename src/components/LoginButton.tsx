@@ -3,6 +3,7 @@ import {useRouter} from 'next/navigation'
 import {useSession} from 'next-auth/react'
 import {useState} from 'react'
 import {useCommonContext} from '@/context/common-context'
+import Image from 'next/image'
 
 export default function LoginButton({buttonType = 0, loginText = 'Log in'}) {
     const router = useRouter()
@@ -69,7 +70,7 @@ export default function LoginButton({buttonType = 0, loginText = 'Log in'}) {
                         <button
                             className='mx-auto my-auto mr-4 mt-1 inline-flex w-full justify-center gap-x-1.5 rounded-md text-sm font-semibold'
                             onClick={logout}>
-                            <img
+                            <Image
                                 className='h-8 w-auto rounded-full'
                                 src={userData.image}
                                 alt=''
