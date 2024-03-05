@@ -3,14 +3,21 @@ import Image from 'next/image'
 import {t_articles} from '@prisma/client'
 
 export default function ArticleLink({article}: {article: t_articles}) {
+    const urlLink =
+        (article.short_title == null ? '' : article.short_title)
+            .split(' ')
+            .join('-') +
+        '-' +
+        article.uuid
+
     return (
         <div className={'h-[140px] w-[580px]'}>
             <div className={'flex flex-row justify-between'}>
                 <div className={'flex w-[390px] flex-col justify-around gap-1'}>
-                    <a>Author name</a>
+                    <a>{article.author}</a>
                     <a
                         className={'text-3xl font-bold'}
-                        href={`/p/${article.id}`}>
+                        href={`/p/${urlLink}`}>
                         {article.title}
                     </a>
                     <a className={'text-gray-700'}>{article.description}</a>
@@ -22,20 +29,13 @@ export default function ArticleLink({article}: {article: t_articles}) {
                 </div>
                 <a href={`/p/${article.id}`}>
                     <Image
-                        src={'/demo1.png'}
+                        src={article.cover_image || ''}
                         alt={'png'}
                         width={250}
                         height={170}
                     />
                 </a>
             </div>
-            {/*<motion.a*/}
-            {/*    transition={{ duration: 0.2 }}*/}
-            {/*    key={article.number}*/}
-            {/*    className={`px-12 py-4 my-6 mx-12 bg-yellow-100 hover:bg-amber-50 hover:scale-105 border-2 border-black transform-gpu transition duration-100 hover:border-blue-300`}*/}
-            {/*    href={`/p/${article.number}`}>*/}
-            {/*    <span>{article.name}</span>*/}
-            {/*</motion.a>*/}
         </div>
     )
 }

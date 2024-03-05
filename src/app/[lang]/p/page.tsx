@@ -17,16 +17,14 @@ export default async function Post({
             return await getArticleList(skip, take)
         },
     })
-    console.log(articles)
+    // console.log(articles)
     return (
         <div
             className={`flex min-h-screen flex-col items-center p-10 font-serif-pro`}>
-            {/*<div>*/}
             <Soraflows />
             <span className={'border-gray-300 pb-6 text-2xl text-blue-500'}>
                 Catch up everything about AI
             </span>
-            {/*</div>*/}
             <div
                 className={`mt-12 flex flex-row justify-center space-x-[40vh]`}>
                 <ul

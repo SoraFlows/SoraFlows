@@ -13,13 +13,15 @@ type Props = {
 
 export default async function Articles({params, searchParams}: Props) {
     const queryClient = getQueryClient()
+    let {id} = params
 
-    const {id} = params
-    const queryKey = ['p', id]
+    const idList = id.split('-')
+    const uuid = idList[idList.length - 1]
+    const queryKey = ['p', uuid]
     const article = await queryClient.fetchQuery({
         queryKey,
         queryFn: async () => {
-            return await getArticle(id)
+            return await getArticle(uuid)
         },
     })
     return (
@@ -29,7 +31,7 @@ export default async function Articles({params, searchParams}: Props) {
                 {article != undefined ? (
                     <>
                         <img
-                            src={'/demo1.png'}
+                            src={article.cover_image || ''}
                             alt={'banner'}
                             className={'w-screen'}
                         />
