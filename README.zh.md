@@ -30,7 +30,7 @@ SoraFlows 是一个面向 OpenAI Sora 的浏览器界面，可以简单地生成
 
 在 Vercel 上部署
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/import?s=https%3A%2F%2Fgithub.com%2FSoraflows%2FSoraFlows&hasTrialAvailable=0&showOptionalTeamCreation=false&project-name=SoraFlows&framework=nextjs&totalProjects=1&remainingProjects=1&external-id=https%3A%2F%2Fgithub.com%2FSoraflows%2FSoraFlows%2Ftree%2Fmain&build-command=prisma%20generate%20%26%26%20next%20build)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2FSoraflows%2FSoraFlows&hasTrialAvailable=0&showOptionalTeamCreation=false&project-name=SoraFlows&framework=nextjs&totalProjects=1&remainingProjects=1&external-id=https%3A%2F%2Fgithub.com%2FSoraflows%2FSoraFlows%2Ftree%2Fmain&build-command=prisma%20generate%20%26%26%20next%20build)
 
 在 Zeabur 上部署
 
