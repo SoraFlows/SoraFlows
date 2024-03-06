@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React, {useEffect, useState} from 'react'
 import {useRouter} from 'next/navigation'
 import {addEmail} from '@/api/fetchData'
+import Soraflows from '@/components/Soraflows'
 
 export default function MainContent({intl}) {
     const router = useRouter() // 使用 useRouter 钩子
@@ -71,53 +72,7 @@ export default function MainContent({intl}) {
             </div>
             {/*<div className=''>*/}
             <div className='mx-auto mb-5 w-full max-w-7xl px-5'>
-                <h1 className='flex justify-center overflow-visible py-8 text-7xl'>
-                    <span
-                        className='wave text-red-500'
-                        style={{animationDelay: '0.1s'}}>
-                        S
-                    </span>
-                    <span
-                        className='wave text-green-500'
-                        style={{animationDelay: '0.2s'}}>
-                        o
-                    </span>
-                    <span
-                        className='wave text-blue-500'
-                        style={{animationDelay: '0.3s'}}>
-                        r
-                    </span>
-                    <span
-                        className='wave text-yellow-500'
-                        style={{animationDelay: '0.4s'}}>
-                        a
-                    </span>
-                    <span
-                        className='wave text-purple-500'
-                        style={{animationDelay: '0.5s'}}>
-                        F
-                    </span>
-                    <span
-                        className='wave text-pink-500'
-                        style={{animationDelay: '0.4s'}}>
-                        l
-                    </span>
-                    <span
-                        className='wave text-indigo-500'
-                        style={{animationDelay: '0.3s'}}>
-                        o
-                    </span>
-                    <span
-                        className='wave text-orange-500'
-                        style={{animationDelay: '0.2s'}}>
-                        w
-                    </span>
-                    <span
-                        className='wave text-lime-500'
-                        style={{animationDelay: '0.1s'}}>
-                        s
-                    </span>
-                </h1>
+                <Soraflows />
                 <div className='mx-auto flex max-w-4xl flex-col items-center py-10 text-center'>
                     <div className='mb-5 max-w-[528px] lg:mb-8'>
                         <p className='text-xl font-bold'>{intl.pDescription}</p>
@@ -164,31 +119,6 @@ export default function MainContent({intl}) {
                 {intl.get_started}
             </button>
             <br></br>
-
-            <style jsx>{`
-                .wave {
-                    display: inline-block;
-                    font-family: serif;
-                    transition: transform 0.5s ease;
-                    animation: wave-animation 0.5s ease forwards;
-                }
-
-                .wave:hover {
-                    transform: scale(1.2);
-                }
-
-                @keyframes wave-animation {
-                    0% {
-                        transform: translateY(0);
-                    }
-                    50% {
-                        transform: translateY(-10px) scale(1.2);
-                    }
-                    100% {
-                        transform: translateY(0) scale(1);
-                    }
-                }
-            `}</style>
         </div>
     )
 }

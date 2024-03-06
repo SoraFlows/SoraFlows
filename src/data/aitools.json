@@ -3,35 +3,45 @@
         "href": "https://www.producthunt.com",
         "title": "Product Hunt",
         "icon": "https://api.iowen.cn/favicon/www.producthunt.com.png",
-        "is_free": "",
+        "is_submit": true,
+        "is_free": true,
+        "price": "0",
         "is_alive": false
     },
     {
         "href": "https://uneedbest.com",
         "title": "Uneedbest",
         "icon": "https://api.iowen.cn/favicon/uneedbest.com.png",
-        "is_free": "",
+        "is_submit": true,
+        "is_free": false,
+        "price": "7$-32$",
         "is_alive": true
     },
     {
         "href": "https://trendingaitools.com",
         "title": "Trending AI Tools",
         "icon": "https://api.iowen.cn/favicon/trendingaitools.com.png",
-        "is_free": "",
+        "is_submit": false,
+        "is_free": true,
+        "price": "0",
         "is_alive": true
     },
     {
         "href": "https://www.aitoolmate.com",
         "title": "Ai Tool Mate",
         "icon": "https://api.iowen.cn/favicon/www.aitoolmate.com.png",
-        "is_free": "",
+        "is_submit": true,
+        "is_free": false,
+        "price": "9$",
         "is_alive": true
     },
     {
         "href": "https://faind.ai",
         "title": "Faind.ai",
         "icon": "https://api.iowen.cn/favicon/faind.ai.png",
-        "is_free": "",
+        "is_submit": true,
+        "is_free": true,
+        "price": "0",
         "is_alive": true
     },
     {

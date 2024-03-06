@@ -18,8 +18,10 @@ model t_articles {
   id           Int      @id @default(autoincrement())
   uuid         String   @unique
   title        String
+  short_title  String
   description  String?
   author       String
+  author_id    String
   published_at DateTime
   content      String   @db.Text
   summary      String?  @db.Text

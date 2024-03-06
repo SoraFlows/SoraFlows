@@ -5,6 +5,7 @@ import clsx from 'clsx'
 import Script from 'next/script'
 import {CommonProvider} from '@/context/common-context'
 import {NextAuthProvider} from '@/context/next-auth-provider'
+import ScrollTop from '@/components/ScrollTop'
 
 const inter = Inter({subsets: ['latin']})
 
@@ -42,6 +43,7 @@ export default function LocaleLayout({
                 {/* 插入Google统计脚本*/}
                 {/* <!-- Google tag (gtag.js) --> */}
                 {/* 异步加载Google Tag Manager的脚本 */}
+
                 <Script
                     src='https://www.googletagmanager.com/gtag/js?id=G-CCB2RC3FFG'
                     strategy='afterInteractive'
@@ -88,6 +90,8 @@ export default function LocaleLayout({
             <body
                 suppressHydrationWarning={true}
                 className={clsx(inter.className, '')}>
+                <ScrollTop />
+
                 <NextAuthProvider>
                     <CommonProvider>{children}</CommonProvider>
                 </NextAuthProvider>
